@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gijs\\source\\repos\\Corona_B.I.E.R\\Corona_B.I.E.R\\Corona_B.I.E.R.csproj": {}
+    "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R\\Corona_B.I.E.R\\Corona_B.I.E.R.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gijs\\source\\repos\\Corona_B.I.E.R\\Corona_B.I.E.R\\Corona_B.I.E.R.csproj": {
+    "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R\\Corona_B.I.E.R\\Corona_B.I.E.R.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gijs\\source\\repos\\Corona_B.I.E.R\\Corona_B.I.E.R\\Corona_B.I.E.R.csproj",
+        "projectUniqueName": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R\\Corona_B.I.E.R\\Corona_B.I.E.R.csproj",
         "projectName": "Corona_B.I.E.R",
-        "projectPath": "C:\\Users\\gijs\\source\\repos\\Corona_B.I.E.R\\Corona_B.I.E.R\\Corona_B.I.E.R.csproj",
+        "projectPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R\\Corona_B.I.E.R\\Corona_B.I.E.R.csproj",
         "packagesPath": "C:\\Users\\gijs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gijs\\source\\repos\\Corona_B.I.E.R\\Corona_B.I.E.R\\obj\\",
+        "outputPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R\\Corona_B.I.E.R\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
