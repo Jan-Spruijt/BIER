@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corona_B.I.E.R_V1", "Corona_B.I.E.R_V1\Corona_B.I.E.R_V1.csproj", "{24BCC27C-9117-496F-B4E6-6AAC837601EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24BCC27C-9117-496F-B4E6-6AAC837601EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24BCC27C-9117-496F-B4E6-6AAC837601EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24BCC27C-9117-496F-B4E6-6AAC837601EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24BCC27C-9117-496F-B4E6-6AAC837601EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1F201DE-BFF2-4234-B3A5-AD060633D504}
+	EndGlobalSection
+EndGlobal
