@@ -9,7 +9,7 @@ namespace Corona_B.I.E.R.Models
 {
     public class AccountViewModel
     {
-        //123
+       
         public string Username { get; 
             set; }
         public string Password { get; 

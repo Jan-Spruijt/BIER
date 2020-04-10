@@ -19,19 +19,22 @@ namespace Corona_B.I.E.R.Controllers
         }
         public IActionResult Login()
         {
-            ViewData["Message"] = "Your login page.";
             return View();
         }
 
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(IFormCollection collection)
+        public ActionResult Login(String Username, String Password, String End)
         {
             try
             {
+                //string Username = [0];
+                //string Password = [1];
                 // TODO: Add update logic here
-
+                //string End = AccountController.Login123( Username , Password );
+                string i = Login123(Username, Password);
+                //return i;
                 return RedirectToAction(nameof(Index));
             }
             catch
