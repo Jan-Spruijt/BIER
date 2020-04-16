@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Maik\\source\\repos\\BIER\\Corona_B.I.E.R\\Corona_B.I.E.R\\Corona_B.I.E.R.csproj": {}
+    "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R\\Corona_B.I.E.R\\Corona_B.I.E.R.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Maik\\source\\repos\\BIER\\Corona_B.I.E.R\\Corona_B.I.E.R\\Corona_B.I.E.R.csproj": {
+    "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R\\Corona_B.I.E.R\\Corona_B.I.E.R.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Maik\\source\\repos\\BIER\\Corona_B.I.E.R\\Corona_B.I.E.R\\Corona_B.I.E.R.csproj",
+        "projectUniqueName": "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R\\Corona_B.I.E.R\\Corona_B.I.E.R.csproj",
         "projectName": "Corona_B.I.E.R",
-        "projectPath": "C:\\Users\\Maik\\source\\repos\\BIER\\Corona_B.I.E.R\\Corona_B.I.E.R\\Corona_B.I.E.R.csproj",
+        "projectPath": "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R\\Corona_B.I.E.R\\Corona_B.I.E.R.csproj",
         "packagesPath": "C:\\Users\\Maik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Maik\\source\\repos\\BIER\\Corona_B.I.E.R\\Corona_B.I.E.R\\obj\\",
+        "outputPath": "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R\\Corona_B.I.E.R\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -73,7 +73,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
