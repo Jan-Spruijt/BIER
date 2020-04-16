@@ -50,7 +50,7 @@ namespace Corona_B.I.E.R_V1
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Dashboard}/{id?}");
             });
         }
     }

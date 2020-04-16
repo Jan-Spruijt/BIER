@@ -3,34 +3,83 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Corona_B.I.E.R_V1</title>
+    <title>@ViewData["Title"] - B.I.E.R</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/sidebar.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Corona_B.I.E.R_V1</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+   
     <div class="container">
         <main role="main" class="pb-3">
+            <div class="area"></div><nav class="main-menu">
+                <ul>
+                    <div class="text-center mb-4">
+                        <img class="mb-4" src="~/images/logo.png" alt="" height="62">
+                    </div>
+                    <li class="margin">
+                        <a href="">
+                            <i class="fa fa-home nav-icon"></i>
+                            <span class="nav-text">
+                                Dashboard
+                            </span>
+                        </a>
+
+                    </li>
+                    <li class="margin">
+                        <a href="#">
+                            <i class="fa fa-times nav-icon"></i>
+                            <span class="nav-text">
+                                Incidenten
+                            </span>
+                        </a>
+
+                    </li>
+                    <li class="margin">
+                        <a href="#">
+                            <i class="fa fa-user nav-icon"></i>
+                            <span class="nav-text">
+                                Profiel
+                            </span>
+                        </a>
+
+                    </li>
+                  
+                </ul>
+
+                <ul class="logout">
+                    <li class="margin">
+                        <a href="#">
+                            <i class="fa fa-calendar nav-icon"></i>
+                            <span class="nav-text">
+                                Planning maken
+                            </span>
+                        </a>
+                    </li>
+                    <li class="margin">
+                        <a href="#">
+                            <i class="fa fa-users nav-icon"></i>
+                            <span class="nav-text">
+                                Gebruikers beheer
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="#" />
+                        <p>Ingelogd als "Username"</p>
+                    </li>
+                        <a href="#">
+                                Logout
+                        </a>
+                        <a href="#">
+                                Contact
+                        </a>
+                </ul>
+            </nav>
+
+
             @RenderBody()
         </main>
     </div>

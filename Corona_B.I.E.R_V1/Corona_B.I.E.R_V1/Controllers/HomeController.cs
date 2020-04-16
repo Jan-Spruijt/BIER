@@ -23,6 +23,16 @@ namespace Corona_B.I.E.R_V1.Controllers
             return View();
         }
 
+        public IActionResult login()
+        {
+            return View();
+        }
+
+        public IActionResult Dashboard()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
