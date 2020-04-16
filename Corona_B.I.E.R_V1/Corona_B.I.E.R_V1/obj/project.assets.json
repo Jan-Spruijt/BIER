@@ -2244,6 +2244,16 @@
         "runtime": {
           "bin/placeholder/DataLayerLibrary.dll": {}
         }
+      },
+      "LogicLayerLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/LogicLayerLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LogicLayerLibrary.dll": {}
+        }
       }
     }
   },
@@ -7350,12 +7360,18 @@
       "type": "project",
       "path": "../DataLayerLibrary/DataLayerLibrary.csproj",
       "msbuildProject": "../DataLayerLibrary/DataLayerLibrary.csproj"
+    },
+    "LogicLayerLibrary/1.0.0": {
+      "type": "project",
+      "path": "../Logic/LogicLayerLibrary.csproj",
+      "msbuildProject": "../Logic/LogicLayerLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Dapper >= 2.0.35",
       "DataLayerLibrary >= 1.0.0",
+      "LogicLayerLibrary >= 1.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.1",
       "MySql.Data >= 8.0.19"
     ]
@@ -7388,6 +7404,9 @@
           "projectReferences": {
             "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj": {
               "projectPath": "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj"
+            },
+            "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj": {
+              "projectPath": "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj"
             }
           }
         }

@@ -1,4 +1,4 @@
-﻿using Corona_B.I.E.R_V1.DataAcces;
+﻿using Corona_B.I.E.R_V1.DataAccess;
 using Corona_B.I.E.R_V1.DataModels;
 using Corona_B.I.E.R_V1;
 using System.Collections.Generic;
@@ -7,8 +7,8 @@ namespace Corona_B.I.E.R_V1.DataLogic
 {
     public class EmployeeProcessor
     {
-        public static void CreateUser(string firstname, string prefix, string lastname, string city, string postalCode,
-                                        string address, string profilePicturePath, string email, string phone,
+        public static void CreateEmployee(string firstname, string prefix, string lastname, string city, string postalCode,
+                                        string address, string profilePicturePath, string email, string phone, string salt,
                                         string password, string profession, string role)
         {
             EmployeeDataModel data = new EmployeeDataModel
@@ -23,7 +23,7 @@ namespace Corona_B.I.E.R_V1.DataLogic
                 ProfilePicturePath = profilePicturePath,
                 Email = email,
                 Phone = phone,
-                Salt = "bruh",
+                Salt = salt,
                 PasswordHash = password,
                 Profession = profession,
                 Role = role
@@ -42,6 +42,12 @@ namespace Corona_B.I.E.R_V1.DataLogic
                          "phone, salt, passwordHash, profession, role FROM employee;";
             return SQLDataAccess.LoadData<EmployeeDataModel>(sql);
 
+        }
+
+        public static EmployeeDataModel GetUserByEmail(string email)
+        {
+            string sql = $"SELECT * FROM employee WHERE email = '{email}';";
+            return SQLDataAccess.LoadFirstData<EmployeeDataModel>(sql);
         }
     }
 }

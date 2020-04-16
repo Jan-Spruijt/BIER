@@ -8,14 +8,13 @@ using Dapper;
 using System.Linq;
 using MySql.Data.MySqlClient;
 
-namespace Corona_B.I.E.R_V1.DataAcces
+namespace Corona_B.I.E.R_V1.DataAccess
 {
     public class SQLDataAccess
     {
-        public static string GetConnectionString(string connectionName = "DefaultConnection")
-        {
-
-          return "Server=localhost;user=root;password=;database=bier_db;";
+        public static string GetConnectionString() { 
+        
+            return "Server=5.39.113.7;port=3306;user=CORONA;password=K?5zrU2~GmsV;database=bier_db;";
         }
 
         public static List<T> LoadData<T>(string sql)
@@ -23,6 +22,15 @@ namespace Corona_B.I.E.R_V1.DataAcces
             using (IDbConnection con = new MySqlConnection(GetConnectionString()))
             {
                 return con.Query<T>(sql).ToList();
+            }
+        }
+
+        // word gebruikt als je één item terug wilt krijgen
+        public static T LoadFirstData<T>(string sql)
+        {
+            using (IDbConnection con = new MySqlConnection(GetConnectionString()))
+            {
+                return con.Query<T>(sql).First();
             }
         }
 

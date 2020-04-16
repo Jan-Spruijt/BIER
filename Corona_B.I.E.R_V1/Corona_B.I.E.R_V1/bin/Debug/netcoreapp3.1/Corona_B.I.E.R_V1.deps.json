@@ -26,6 +26,7 @@
         "dependencies": {
           "Dapper": "2.0.35",
           "DataLayerLibrary": "1.0.0",
+          "LogicLayerLibrary": "1.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.1",
           "MySql.Data": "8.0.19",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -1853,6 +1854,14 @@
         },
         "compile": {
           "DataLayerLibrary.dll": {}
+        }
+      },
+      "LogicLayerLibrary/1.0.0": {
+        "runtime": {
+          "LogicLayerLibrary.dll": {}
+        },
+        "compile": {
+          "LogicLayerLibrary.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -4412,6 +4421,11 @@
       "hashPath": "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
     },
     "DataLayerLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LogicLayerLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
