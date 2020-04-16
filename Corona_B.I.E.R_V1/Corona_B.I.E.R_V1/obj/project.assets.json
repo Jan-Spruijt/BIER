@@ -7369,11 +7369,9 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Dapper >= 2.0.35",
       "DataLayerLibrary >= 1.0.0",
       "LogicLayerLibrary >= 1.0.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.1",
-      "MySql.Data >= 8.0.19"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.1"
     ]
   },
   "packageFolders": {
@@ -7420,17 +7418,9 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
-          "Dapper": {
-            "target": "Package",
-            "version": "[2.0.35, )"
-          },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[3.1.1, )"
-          },
-          "MySql.Data": {
-            "target": "Package",
-            "version": "[8.0.19, )"
           }
         },
         "imports": [
