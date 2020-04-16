@@ -38,8 +38,7 @@ namespace Corona_B.I.E.R_V1.DataLogic
 
         public static List<EmployeeDataModel> LoadEmployees()
         {
-            string sql = "SELECT firstname, lastnamePrefix, lastname, city, postalCode, address, profilePicturePath, email," +
-                         "phone, salt, passwordHash, profession, role FROM employee;";
+            string sql = "SELECT * FROM employee;";
             return SQLDataAccess.LoadData<EmployeeDataModel>(sql);
 
         }
@@ -48,6 +47,12 @@ namespace Corona_B.I.E.R_V1.DataLogic
         {
             string sql = $"SELECT * FROM employee WHERE email = '{email}';";
             return SQLDataAccess.LoadFirstData<EmployeeDataModel>(sql);
+        }
+
+        public static void DeleteEmployee(int id)
+        {
+            string sql = $"DELETE FROM employee WHERE id = '{id}';"; 
+            SQLDataAccess.DeleteData(sql);
         }
     }
 }

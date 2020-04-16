@@ -41,5 +41,13 @@ namespace Corona_B.I.E.R_V1.DataAccess
                 con.Execute(sql, data);
             }
         }
+
+        public static void DeleteData(string sql)
+        {
+            using (IDbConnection con = new MySqlConnection(GetConnectionString()))
+            {
+                con.Execute(sql);
+            }
+        }
     }
 }

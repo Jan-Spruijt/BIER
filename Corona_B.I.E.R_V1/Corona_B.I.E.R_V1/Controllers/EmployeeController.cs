@@ -54,7 +54,7 @@ namespace Corona_B.I.E.R_V1.Controllers
             {
                 employees.Add(new EmployeeModel
                 {
-
+                    Id = row.ID,
                     Firstname = row.Firstname,
                     Prefix = row.Lastnameprefix,
                     Lastname = row.Lastname,
@@ -87,6 +87,12 @@ namespace Corona_B.I.E.R_V1.Controllers
                 return RedirectToAction("Index", "Home");
             }
             return View();
+        }
+
+        public IActionResult Delete(int id)
+        {
+            EmployeeProcessor.DeleteEmployee(id);
+            return RedirectToAction("ViewEmployees");
         }
     }
 }

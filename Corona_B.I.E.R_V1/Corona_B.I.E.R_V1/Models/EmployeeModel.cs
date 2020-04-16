@@ -9,6 +9,7 @@ namespace Corona_B.I.E.R_V1.Models
 {
     public class EmployeeModel
     {
+        public int Id { get; set; }
         [Required(ErrorMessage = "Vul een voornaam in")]
         [Display(Name = "Voor naam")]
         public string Firstname { get; set; }
