@@ -11,7 +11,7 @@ namespace Corona_B.I.E.R_V1.Models
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "Vul een voornaam in")]
-        [Display(Name = "Voor naam")]
+        [Display(Name = "Voornaam")]
         public string Firstname { get; set; }
 
         [Display(Name = "Tussenvoegsel")]
