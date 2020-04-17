@@ -7407,11 +7407,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj": {
-              "projectPath": "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj"
+            "D:\\Git\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj": {
+              "projectPath": "D:\\Git\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj"
             },
-            "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj": {
-              "projectPath": "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj"
+            "D:\\Git\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj": {
+              "projectPath": "D:\\Git\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj"
             }
           }
         }
@@ -7448,7 +7448,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
