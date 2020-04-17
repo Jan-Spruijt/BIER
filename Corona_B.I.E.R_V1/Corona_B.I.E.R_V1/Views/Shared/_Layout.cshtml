@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/sidebar.css" />
+    <link rel="stylesheet" href="~/css/dashboard.css" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,800&display=swap" rel="stylesheet">
 </head>
@@ -14,70 +15,89 @@
    
     <div class="container">
         <main role="main" class="pb-3">
-            <div class="area"></div><nav class="main-menu">
-                <ul>
-                    <div class="text-center mb-4">
-                        <img class="mb-4" src="~/images/logo.png" alt="" height="62">
-                    </div>
-                    <li class="margin">
-                        <a href="">
-                            <i class="fa fa-home nav-icon"></i>
-                            <span class="nav-text">
-                                Dashboard
-                            </span>
-                        </a>
+            <div class="area"></div>
+                <nav class="main-menu">
+                    <ul>
+                        <li class="margin">
+                            <div class="padding table">
+                                <div class="size_width cell"></div>
+                                <img class="mb-4 cell show" src="~/images/logo.png">
+                            </div>
+                        </li>
+                        <li class="margin">
+                            <a href="">
+                                <i class="fa fa-home nav-icon"></i>
+                                <span class="nav-text">
+                                    Dashboard
+                                </span>
+                            </a>
 
-                    </li>
-                    <li class="margin">
-                        <a href="#">
-                            <i class="fa fa-times nav-icon"></i>
-                            <span class="nav-text">
-                                Incidenten
-                            </span>
-                        </a>
+                        </li>
+                        <div class="line"></div>
+                        <li class="margin">
+                            <a href="#">
+                                <i class="fa fa-times nav-icon"></i>
+                                <span class="nav-text">
+                                    Incidenten
+                                </span>
+                            </a>
 
-                    </li>
-                    <li class="margin">
-                        <a href="#">
-                            <i class="fa fa-user nav-icon"></i>
-                            <span class="nav-text">
-                                Profiel
-                            </span>
-                        </a>
+                        </li>
+                        <div class="line"></div>
+                        <li class="margin">
+                            <a href="#">
+                                <i class="fa fa-user nav-icon"></i>
+                                <span class="nav-text">
+                                    Profiel
+                                </span>
+                            </a>
 
-                    </li>
-                  
-                </ul>
+                        </li>
+                        <div class="line"></div>
 
-                <ul class="logout">
-                    <li class="margin">
-                        <a href="#">
-                            <i class="fa fa-calendar nav-icon"></i>
-                            <span class="nav-text">
-                                Planning maken
-                            </span>
-                        </a>
-                    </li>
-                    <li class="margin">
-                        <a href="#">
-                            <i class="fa fa-users nav-icon"></i>
-                            <span class="nav-text">
-                                Gebruikers beheer
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <img src="#" />
-                        <p>Ingelogd als "Username"</p>
-                    </li>
-                        <a href="#">
-                                Logout
-                        </a>
-                        <a href="#">
-                                Contact
-                        </a>
-                </ul>
-            </nav>
+                    </ul>
+                    
+                    <ul class="logout">
+                            <li class="margin">
+                                <a href="#">
+                                    <i class="fa fa-calendar nav-icon"></i>
+                                    <span class="nav-text">
+                                        Planning maken
+                                    </span>
+                                </a>
+                            </li>
+                            <div class="line"></div>
+                            <li class="margin">
+                                <a href="#">
+                                    <i class="fa fa-users nav-icon"></i>
+                                    <span class="nav-text">
+                                        Gebruikers beheer
+                                    </span>
+                                </a>
+                            </li>
+                            <div class="line"></div>
+
+                            <div class="table paddingtop">
+                                <div class="size_width">
+                                    <img class="user_img" src="~/images/user-male-icon.png"/>
+                                </div>
+                                <p class="cell">Ingelogd als "Username"</p>
+                            </div>
+
+                            <div class="table">
+                                <div class="size_width cell"></div>
+                                <div class="cell">
+                                    <a class="link_style" href="#">
+                                        Uitloggen
+                                    </a>
+                                    <p class="d-inline"> | </p>
+                                    <a class="link_style" href="#">
+                                        Contact
+                                    </a>
+                                </div>
+                            </div>
+                    </ul>
+                </nav>
 
 
             @RenderBody()

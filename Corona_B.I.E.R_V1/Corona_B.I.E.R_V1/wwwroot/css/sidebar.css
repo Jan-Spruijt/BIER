@@ -17,9 +17,17 @@
 }*/
 
 
+.table {
+    width: 250px;
+}
+
 .main-menu:hover, nav.main-menu.expanded {
     width: 250px;
-    overflow: visible;
+    overflow: hidden;
+}
+
+.paddingtop {
+    padding-top: 20px;
 }
 
 .main-menu {
@@ -32,13 +40,61 @@
     left: 0;
     width: 60px;
     overflow: hidden;
-    -webkit-transition: width .05s linear;
-    transition: width .05s linear;
+    transition-timing-function: ease-in;
+    -webkit-transition: width .2s linear;
+    transition: width .2s linear;
     -webkit-transform: translateZ(0) scale(1,1);
     z-index: 1000;
 }
+.size_width {
+    width: 60px;
+}
 
-  
+.user_img {
+    margin: 0 auto;
+    width: 40px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #919191;
+    position: relative;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 25px;
+}
+
+.link_style {
+    color: #E11937;
+}
+    .link_style:hover {
+        color: #991F3D;
+    }
+
+.padding {
+    padding-top: 20px
+}
+.show {
+    width: 100px;
+}
+
+.line {
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-color: #D5D6D8;
+    margin: 0px 20px 0px 20px;
+}
+
+.table {
+    position: relative;
+    display: table;
+}
+
+.cell {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+}
 
     .main-menu > ul {
         margin: 7px 0;
@@ -63,7 +119,6 @@
         }
 
     .main-menu .nav-icon {
-        color: #E11937;
         position: relative;
         display: table-cell;
         width: 60px;
@@ -81,9 +136,7 @@
     }
 
     .main-menu > ul.logout {
-        position: absolute;
-        left: 0;
-        bottom: 0;
+        margin-top: 200px;
     }
 
 .no-touch .scrollable.hover {
@@ -112,11 +165,6 @@ nav {
         margin: 0;
         padding: 0;
     }
-
-    .nav-icon:hover {
-        color: white !important;
-    }
-
     .main-menu li:hover > a, nav.main-menu li.active > a, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus, .no-touch .dashboard-page nav.dashboard-menu ul li:hover a, .dashboard-page nav.dashboard-menu ul li.active a {
         color: #fff ;
         background-color: #E11937;
