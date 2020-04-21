@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Corona_B.I.E.R_V1.DataLogic;
 using Corona_B.I.E.R_V1.DataModels;
 using Corona_B.I.E.R_V1.Models;
+using DataLayerLibrary.DataLogic;
 using Microsoft.AspNetCore.Mvc;
 using LogicLayerLibrary;
 using LogicLayerLibrary.ExtensionMethods;
@@ -25,10 +27,41 @@ namespace Corona_B.I.E.R_V1.Controllers
         {
             if (ModelState.IsValid)
             {
-                
+                IncidentProcessor.CreateIncident(
+                    incident.Title,
+                    incident.Context,
+                    incident.Customer,
+                    incident.CustomerEmail
+                );
+                return RedirectToAction("Index", "Home");
             }
 
             return View();
+        }
+
+        public IActionResult ViewIncidents()
+        {
+            var data = IncidentProcessor.LoadIncidents();
+            List<IncidentModel> incidents = new List<IncidentModel>();
+            foreach (var row in data)
+            {
+                incidents.Add(new IncidentModel
+                    {
+                    ID = row.ID,
+                    Title = row.Title,
+                    Context = row.Context,
+                    Customer = row.Customer,
+                    Employee_ID_CreatedBy = row.Employee_ID_CreatedBy,
+                    Employee_ID_EndedBy = row.Employee_ID_EndedBy,
+                    CustomerEmail = row.CustomerEmail,
+                    DateTimeStart = row.DateTimeStart,
+                    DateTimeEnded = row.DateTimeEnd,
+                    Status = row.Status
+                    }
+                );
+            }
+
+            return View(incidents);
         }
     }
 }
