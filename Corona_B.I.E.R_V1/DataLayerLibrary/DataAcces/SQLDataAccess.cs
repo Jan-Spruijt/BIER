@@ -30,7 +30,7 @@ namespace Corona_B.I.E.R_V1.DataAccess
         {
             using (IDbConnection con = new MySqlConnection(GetConnectionString()))
             {
-                return con.Query<T>(sql).First();
+                return con.Query<T>(sql).FirstOrDefault();
             }
         }
 

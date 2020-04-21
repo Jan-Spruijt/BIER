@@ -11,7 +11,7 @@ namespace Corona_B.I.E.R_V1.Models
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "Vul een voornaam in")]
-        [Display(Name = "Voor naam")]
+        [Display(Name = "Voornaam")]
         public string Firstname { get; set; }
 
         [Display(Name = "Tussenvoegsel")]
@@ -20,7 +20,7 @@ namespace Corona_B.I.E.R_V1.Models
         [Display(Name = "Achternaam")]
         [Required(ErrorMessage = "Vul een achternaam in")]
         public string Lastname { get; set; }
-
+        
         [Required]
         [Display(Name = "Plaats")]
         public string City { get; set; }
@@ -52,7 +52,7 @@ namespace Corona_B.I.E.R_V1.Models
         [Display(Name = "Telefoon")]
         [DataType(DataType.PhoneNumber, ErrorMessage = "Vul een geldig telefoonummer in")]
         public string Phone { get; set; }
-
+        
         [Required]
         [DataType(DataType.Password)]
         [StringLength(100, MinimumLength = 8, ErrorMessage = "Wachtwoord moet minimaal 8 characters lang zijn")]
