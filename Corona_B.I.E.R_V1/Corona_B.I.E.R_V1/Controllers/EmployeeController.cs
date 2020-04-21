@@ -41,8 +41,9 @@ namespace Corona_B.I.E.R_V1.Controllers
                     employee.Profession,
                     employee.Role.ToString()
                 );
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("Index", "Home");
             }
+
             return View();
         }
 
@@ -68,6 +69,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                     Role = row.Role.ToEnum<EmployeeRole>()
                 });
             }
+
             return View(employees);
         }
 
@@ -75,24 +77,28 @@ namespace Corona_B.I.E.R_V1.Controllers
         {
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult LoginEmployee(LoginEmployeeModel login)
         {
-            EmployeeDataModel userData = EmployeeProcessor.GetUserByEmail(login.Email);
-            bool isValid = PasswordHashingLogic.ValidateUser(login.Password, userData.Salt, userData.PasswordHash);
-
-            if (isValid)
+            if (ModelState.IsValid)
             {
-                return RedirectToAction("Index", "Home");
+                EmployeeDataModel userData = EmployeeProcessor.GetUserByEmail(login.Email);
+                if (userData != null)
+                {
+                    if (PasswordHashingLogic.ValidateUser(login.Password, userData.Salt, userData.PasswordHash))
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("incorrectLogin", "The provided email and password do not match.");
+                }
             }
-            return View();
-        }
 
-        public IActionResult Delete(int id)
-        {
-            EmployeeProcessor.DeleteEmployee(id);
-            return RedirectToAction("ViewEmployees");
+            return View();
         }
     }
 }
