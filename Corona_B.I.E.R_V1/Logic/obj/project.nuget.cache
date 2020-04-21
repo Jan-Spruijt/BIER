@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "iInaPFe5SOS4oCx75dvoY3pvdKrRbQ7MgBPyt0KDwj5Ii7AvCWuret7MOQQyWiSdt5OvPcbXj8jjl6EWVTWpRw==",
+  "dgSpecHash": "ELNmhlAh04/VfN8DD0u2y4TeBSe1m7jwibTa0g1P+pY2ZA5qb/LxTZN17pCMcL4nYvAFtVcchKCqvhZ7E3SAZA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj",
+  "projectFilePath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\DRoze\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\DRoze\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }
