@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "4orn4+N9sm5PVKada8d+UjyGHyKRePJhrh6OBOdQLLlIDboy89skGvFOiQFI//v8BIvmJXwiKu5dBlSUmHYd2g==",
+  "dgSpecHash": "6mZP1TeIy1Ji/kPBY2ZHVvCbbFcASLqRFLy2dJT4YAt1if/mao3CEVlibbmBhNgrglyl9kE3NszqzODlQHZkKg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gijs\\source\\repos\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Git\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\jquery\\3.2.1\\jquery.3.2.1.nupkg.sha512",
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\jquery.fullcalendar\\3.9.0\\jquery.fullcalendar.3.9.0.nupkg.sha512",
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\moment.js\\2.18.2\\moment.js.2.18.2.nupkg.sha512"
+  ],
   "logs": []
 }
