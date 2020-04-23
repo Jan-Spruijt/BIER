@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -11,24 +12,40 @@ using LogicLayerLibrary;
 using LogicLayerLibrary.ExtensionMethods;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Corona_B.I.E.R_V1.Controllers
 {
     public class EmployeeController : Controller
     {
+        private readonly IWebHostEnvironment _hostingEnvironment;
+        public EmployeeController(IWebHostEnvironment hostingEnvironment)
+        {
+            _hostingEnvironment = hostingEnvironment;
+        }
         public IActionResult RegisterEmployee()
         {
             return View();
         }
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult RegisterEmployee(EmployeeModel employee)
+        public IActionResult RegisterEmployee(EmployeeCreateModel employee)
         {
             if (ModelState.IsValid)
             {
                 string salt = PasswordHashingLogic.GenerateSalt();
                 string PasswordHash = PasswordHashingLogic.GeneratePasswordHash(employee.Password, salt);
+                string uniqueFileName = null;
+                if (employee.ProfilePicture != null)
+                {
+                  string uploadsFolder = Path.Combine(_hostingEnvironment.WebRootPath, "img", "ProfilePictures");
+                  uniqueFileName = Guid.NewGuid().ToString() + "_" + employee.ProfilePicture.FileName;
+                  string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                  employee.ProfilePicture.CopyTo(new FileStream(filePath, FileMode.Create));
+
+                }
                 EmployeeProcessor.CreateEmployee(
                     employee.Firstname,
                     employee.Prefix,
@@ -36,7 +53,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                     employee.City,
                     employee.Postalcode,
                     employee.Address,
-                    employee.ProfilePicturePath,
+                    uniqueFileName,
                     employee.Email,
                     employee.Phone,
                     salt,
