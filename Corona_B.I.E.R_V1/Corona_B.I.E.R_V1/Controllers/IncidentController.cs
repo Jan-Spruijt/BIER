@@ -63,5 +63,11 @@ namespace Corona_B.I.E.R_V1.Controllers
 
             return View(incidents);
         }
+
+        public IActionResult Edit(int id)
+        {
+            IncidentProcessor.UpdateIncidentData(id, 11, DateTime.Now, "closed");
+            return RedirectToAction("ViewIncidents");
+        }
     }
 }

@@ -299,3 +299,4 @@ D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Debug\netcoreapp3.1\Syste
 D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
 D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
 D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Incident\CreateIncident.cshtml.g.cs
+D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Incident\ViewIncidents.cshtml.g.cs
