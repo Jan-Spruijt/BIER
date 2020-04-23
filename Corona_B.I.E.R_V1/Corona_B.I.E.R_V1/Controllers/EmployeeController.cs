@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Corona_B.I.E.R_V1.DataLogic;
 using Corona_B.I.E.R_V1.DataModels;
@@ -8,6 +9,8 @@ using Corona_B.I.E.R_V1.Models;
 using Microsoft.AspNetCore.Mvc;
 using LogicLayerLibrary;
 using LogicLayerLibrary.ExtensionMethods;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Corona_B.I.E.R_V1.Controllers
 {
@@ -46,7 +49,7 @@ namespace Corona_B.I.E.R_V1.Controllers
 
             return View();
         }
-
+        [Authorize(Policy = "Admin")]
         public IActionResult ViewEmployees()
         {
             var data = EmployeeProcessor.LoadEmployees();
@@ -84,12 +87,23 @@ namespace Corona_B.I.E.R_V1.Controllers
         {
             if (ModelState.IsValid)
             {
-                EmployeeDataModel userData = EmployeeProcessor.GetUserByEmail(login.Email);
-                if (userData != null)
+                EmployeeDataModel employeeData = EmployeeProcessor.GetUserByEmail(login.Email);
+                if (employeeData != null)
                 {
-                    if (PasswordHashingLogic.ValidateUser(login.Password, userData.Salt, userData.PasswordHash))
+                    if (PasswordHashingLogic.ValidateUser(login.Password, employeeData.Salt, employeeData.PasswordHash))
                     {
+                        var employeeClaims = new List<Claim>()
+                        {
+                            new Claim(ClaimTypes.Email, employeeData.Email),
+                            new Claim(ClaimTypes.Role , employeeData.Role )
+                        };
+
+                        var employeeIdentity = new ClaimsIdentity(employeeClaims, "Employee Identity");
+                        var employeePrincipal = new ClaimsPrincipal(new[] { employeeIdentity });
+
+                        HttpContext.SignInAsync(employeePrincipal);
                         return RedirectToAction("Index", "Home");
+
                     }
                 }
                 else
