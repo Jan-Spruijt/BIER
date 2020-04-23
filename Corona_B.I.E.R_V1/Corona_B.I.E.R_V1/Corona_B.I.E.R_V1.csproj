@@ -8,12 +8,15 @@
     <PackageReference Include="Dapper" Version="2.0.35" />
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
-    <PackageReference Include="MySql.Data" Version="8.0.19" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DataLayerLibrary\DataLayerLibrary.csproj" />
     <ProjectReference Include="..\Logic\LogicLayerLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\img\ProfilePictures\" />
   </ItemGroup>
 
 </Project>

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Net.Mime;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace Corona_B.I.E.R_V1.Models
 {
-    public class EmployeeModel
+    public class EmployeeCreateModel
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "Vul een voornaam in")]
@@ -20,7 +20,7 @@ namespace Corona_B.I.E.R_V1.Models
         [Display(Name = "Achternaam")]
         [Required(ErrorMessage = "Vul een achternaam in")]
         public string Lastname { get; set; }
-        
+
         [Required]
         [Display(Name = "Plaats")]
         public string City { get; set; }
@@ -35,9 +35,9 @@ namespace Corona_B.I.E.R_V1.Models
         public string Address { get; set; }
 
         [Display(Name = "Profielfoto")]
-     //   [DataType(DataType.ImageUrl)]
-        public string ProfilePicturePath { get; set; }
-    
+        //   [DataType(DataType.ImageUrl)]
+        public IFormFile ProfilePicture { get; set; }
+
 
         [Display(Name = "E-mailadres")]
         [Required(ErrorMessage = "Vul een e-mailadres in.")]
@@ -52,7 +52,7 @@ namespace Corona_B.I.E.R_V1.Models
         [Display(Name = "Telefoon")]
         [DataType(DataType.PhoneNumber, ErrorMessage = "Vul een geldig telefoonummer in")]
         public string Phone { get; set; }
-        
+
         [Required]
         [DataType(DataType.Password)]
         [StringLength(100, MinimumLength = 8, ErrorMessage = "Wachtwoord moet minimaal 8 characters lang zijn")]
@@ -71,14 +71,6 @@ namespace Corona_B.I.E.R_V1.Models
         [Required]
         [Display(Name = "Rechten")]
         public EmployeeRole Role { get; set; }
-        
-    }
 
-    public enum EmployeeRole
-    {
-        [Display(Name = "User")]
-        User,
-        [Display(Name = "Admin")]
-        Admin
     }
 }

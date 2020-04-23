@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Corona_B.I.E.R_V1.DataLogic;
 using Corona_B.I.E.R_V1.DataModels;
@@ -8,24 +10,42 @@ using Corona_B.I.E.R_V1.Models;
 using Microsoft.AspNetCore.Mvc;
 using LogicLayerLibrary;
 using LogicLayerLibrary.ExtensionMethods;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Corona_B.I.E.R_V1.Controllers
 {
     public class EmployeeController : Controller
     {
+        private readonly IWebHostEnvironment _hostingEnvironment;
+        public EmployeeController(IWebHostEnvironment hostingEnvironment)
+        {
+            _hostingEnvironment = hostingEnvironment;
+        }
         public IActionResult RegisterEmployee()
         {
             return View();
         }
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult RegisterEmployee(EmployeeModel employee)
+        public IActionResult RegisterEmployee(EmployeeCreateModel employee)
         {
             if (ModelState.IsValid)
             {
                 string salt = PasswordHashingLogic.GenerateSalt();
                 string PasswordHash = PasswordHashingLogic.GeneratePasswordHash(employee.Password, salt);
+                string uniqueFileName = null;
+                if (employee.ProfilePicture != null)
+                {
+                  string uploadsFolder = Path.Combine(_hostingEnvironment.WebRootPath, "img", "ProfilePictures");
+                  uniqueFileName = Guid.NewGuid().ToString() + "_" + employee.ProfilePicture.FileName;
+                  string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                  employee.ProfilePicture.CopyTo(new FileStream(filePath, FileMode.Create));
+
+                }
                 EmployeeProcessor.CreateEmployee(
                     employee.Firstname,
                     employee.Prefix,
@@ -33,7 +53,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                     employee.City,
                     employee.Postalcode,
                     employee.Address,
-                    employee.ProfilePicturePath,
+                    uniqueFileName,
                     employee.Email,
                     employee.Phone,
                     salt,
@@ -41,11 +61,12 @@ namespace Corona_B.I.E.R_V1.Controllers
                     employee.Profession,
                     employee.Role.ToString()
                 );
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("Index", "Home");
             }
+
             return View();
         }
-
+        [Authorize(Policy = "Admin")]
         public IActionResult ViewEmployees()
         {
             var data = EmployeeProcessor.LoadEmployees();
@@ -68,6 +89,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                     Role = row.Role.ToEnum<EmployeeRole>()
                 });
             }
+
             return View(employees);
         }
 
@@ -75,24 +97,39 @@ namespace Corona_B.I.E.R_V1.Controllers
         {
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult LoginEmployee(LoginEmployeeModel login)
         {
-            EmployeeDataModel userData = EmployeeProcessor.GetUserByEmail(login.Email);
-            bool isValid = PasswordHashingLogic.ValidateUser(login.Password, userData.Salt, userData.PasswordHash);
-
-            if (isValid)
+            if (ModelState.IsValid)
             {
-                return RedirectToAction("Index", "Home");
-            }
-            return View();
-        }
+                EmployeeDataModel employeeData = EmployeeProcessor.GetUserByEmail(login.Email);
+                if (employeeData != null)
+                {
+                    if (PasswordHashingLogic.ValidateUser(login.Password, employeeData.Salt, employeeData.PasswordHash))
+                    {
+                        var employeeClaims = new List<Claim>()
+                        {
+                            new Claim(ClaimTypes.Email, employeeData.Email),
+                            new Claim(ClaimTypes.Role , employeeData.Role )
+                        };
 
-        public IActionResult Delete(int id)
-        {
-            EmployeeProcessor.DeleteEmployee(id);
-            return RedirectToAction("ViewEmployees");
+                        var employeeIdentity = new ClaimsIdentity(employeeClaims, "Employee Identity");
+                        var employeePrincipal = new ClaimsPrincipal(new[] { employeeIdentity });
+
+                        HttpContext.SignInAsync(employeePrincipal);
+                        return RedirectToAction("Index", "Home");
+
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("incorrectLogin", "The provided email and password do not match.");
+                }
+            }
+
+            return View();
         }
     }
 }

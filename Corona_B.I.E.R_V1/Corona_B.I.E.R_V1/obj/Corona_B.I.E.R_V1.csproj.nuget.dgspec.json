@@ -59,10 +59,6 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.1, )"
-            },
-            "MySql.Data": {
-              "target": "Package",
-              "version": "[8.0.19, )"
             }
           },
           "imports": [
@@ -189,6 +185,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
