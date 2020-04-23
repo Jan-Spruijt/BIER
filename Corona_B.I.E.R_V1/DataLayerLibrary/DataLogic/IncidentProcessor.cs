@@ -9,12 +9,11 @@ namespace DataLayerLibrary.DataLogic
 {
     public class IncidentProcessor
     {
-        public static void CreateIncident(string title, string context, string customer, string customerEmail)
+        public static void CreateIncident(string title, string context, string customer, string customerEmail, int employee_ID_CreatedBy)
         {
             IncidentDataModel data = new IncidentDataModel
             {
-                Employee_ID_CreatedBy = 11,
-                //Employee_ID_EndedBy = 11,
+                Employee_ID_CreatedBy = employee_ID_CreatedBy,
                 DateTimeStart = DateTime.Now,
                 Title = title,
                 Context = context,
@@ -29,12 +28,12 @@ namespace DataLayerLibrary.DataLogic
         }
 
         //closeincident moet nog aangepast worden met custom invul waardes 
-        public static void CloseIncident(int id)
+        public static void CloseIncident(int id, int employee_ID_EndedBy)
         {
             IncidentDataModel data = LoadIncidentById(id);
             data.DateTimeEnd = DateTime.Now;
             data.Status = "closed";
-            data.Employee_ID_EndedBy = 11;
+            data.Employee_ID_EndedBy = employee_ID_EndedBy;
             UpdateIncidentData(id, data.Employee_ID_EndedBy, data.DateTimeEnd, data.Status);
         }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Corona_B.I.E.R_V1.DataLogic;
 using Corona_B.I.E.R_V1.DataModels;
@@ -31,7 +32,8 @@ namespace Corona_B.I.E.R_V1.Controllers
                     incident.Title,
                     incident.Context,
                     incident.Customer,
-                    incident.CustomerEmail
+                    incident.CustomerEmail,
+                    1
                 );
                 return RedirectToAction("Index", "Home");
             }
