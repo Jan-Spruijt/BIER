@@ -26,7 +26,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"99464617055fdb505bb0bb7fd91f9b14f7b0d030", @"/Views/Home/Index.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"be6fd5fe357b9e79ffaa8602a319c371333e6095", @"/Views/Home/Index.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6b1d5b3fe91d0c9aedbf4c4df65d917f00b093a1", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
@@ -36,6 +36,7 @@ using Corona_B.I.E.R_V1.Models;
 #nullable restore
 #line 1 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Home\Index.cshtml"
   
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "Home Page";
 
 #line default

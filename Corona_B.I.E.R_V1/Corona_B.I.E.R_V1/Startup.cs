@@ -1,7 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using LogicLayerLibrary;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -23,6 +26,21 @@ namespace Corona_B.I.E.R_V1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication("CookieAuth")
+                .AddCookie("CookieAuth", config =>
+                {
+                    config.Cookie.Name = "EmployeeCookie";
+                    config.LoginPath = "/employee/LoginEmployee";
+                });
+            services.AddAuthorization(config =>
+            {
+
+                config.AddPolicy("Admin", policyBuilder =>
+                {
+                    policyBuilder.RequireClaim(ClaimTypes.Role, "admin");
+                });
+            });
+            services.AddScoped<IAuthorizationHandler, CustomRequireClaimHandler>();
             services.AddControllersWithViews();
         }
 
@@ -43,14 +61,14 @@ namespace Corona_B.I.E.R_V1
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Employee}/{action=LoginEmployee}/{id?}");
             });
         }
     }
