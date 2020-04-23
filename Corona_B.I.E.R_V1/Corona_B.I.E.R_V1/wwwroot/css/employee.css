@@ -1,0 +1,29 @@
+﻿.table-striped {
+    margin: 0 auto;
+}
+
+.container-fluid {
+    padding-right: 150px !important;
+    padding-left: 150px !important ;
+}
+
+.bg_white_block {
+    padding: 20px;
+    background-color: white;
+    -webkit-box-shadow: 0px 9px 4px -6px rgba(194,190,194,1);
+    -moz-box-shadow: 0px 9px 4px -6px rgba(194,190,194,1);
+    box-shadow: 0px 9px 4px -6px rgba(194,190,194,1);
+}
+
+
+.btn-primary {
+    outline: none;
+    background-color: #E11937 !important;
+    border-color: #E11937 !important;
+}
+
+.btn-primary:hover {
+    outline: none;
+    background-color: #991F3D !important;
+    border-color: #991F3D !important;
+}

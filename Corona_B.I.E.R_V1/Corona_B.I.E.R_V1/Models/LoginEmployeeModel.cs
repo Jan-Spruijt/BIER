@@ -8,12 +8,12 @@ namespace Corona_B.I.E.R_V1.Models
 {
     public class LoginEmployeeModel
     {
-        [Display(Name = "E-mailadres")]
-        [Required(ErrorMessage = "Vul een e-mailadres in.")]
-        [DataType(DataType.EmailAddress, ErrorMessage = "Vul een geldig e-mailadres in")]
+        //[Display(Name = "E-mailadres")]
+        //[Required(ErrorMessage = "Vul een e-mailadres in.")]
+        //[DataType(DataType.EmailAddress, ErrorMessage = "Vul een geldig e-mailadres in")]
         public string Email { get; set; }
-        [Required]
-        [DataType(DataType.Password)]
+        //[Required]
+        //[DataType(DataType.Password)]
         public string Password { get; set; }
     }
 }

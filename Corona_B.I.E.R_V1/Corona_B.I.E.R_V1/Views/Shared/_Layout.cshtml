@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/sidebar.css" />
     <link rel="stylesheet" href="~/css/dashboard.css" />
+    <link rel="stylesheet" href="~/css/employee.css" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,800&display=swap" rel="stylesheet">
 </head>
@@ -25,7 +26,7 @@
                             </div>
                         </li>
                         <li class="margin">
-                            <a href="">
+                            <a href="../Home/Dashboard">
                                 <i class="fa fa-home nav-icon"></i>
                                 <span class="nav-text">
                                     Dashboard
@@ -68,7 +69,7 @@
                             </li>
                             <div class="line"></div>
                             <li class="margin">
-                                <a href="#">
+                                <a href="../Employee/ViewEmployees">
                                     <i class="fa fa-users nav-icon"></i>
                                     <span class="nav-text">
                                         Gebruikers beheer
@@ -87,7 +88,7 @@
                             <div class="table">
                                 <div class="size_width cell"></div>
                                 <div class="cell">
-                                    <a class="link_style" href="#">
+                                    <a class="link_style" href="../Employee/LoginEmployee">
                                         Uitloggen
                                     </a>
                                     <p class="d-inline"> | </p>
@@ -104,11 +105,11 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    @*<footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2020 - Corona_B.I.E.R_V1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-    </footer>
+    </footer>*@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

@@ -89,7 +89,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                 {
                     if (PasswordHashingLogic.ValidateUser(login.Password, userData.Salt, userData.PasswordHash))
                     {
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Dashboard", "Home");
                     }
                 }
                 else

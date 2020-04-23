@@ -166,3 +166,4 @@ C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Debu
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Employee\LoginEmployee.cshtml.g.cs
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Employee\RegisterEmployee.cshtml.g.cs
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Employee\ViewEmployees.cshtml.g.cs
+C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutEmployeesView.cshtml.g.cs
