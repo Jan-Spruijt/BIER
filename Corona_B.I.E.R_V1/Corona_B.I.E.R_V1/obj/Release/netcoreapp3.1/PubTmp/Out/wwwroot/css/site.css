@@ -1,0 +1,18 @@
+﻿/*@font-face {
+    font-family: 'Nexa-bold';
+    src: url('../../fonts/Nexa/nexa-bold.ttf') format('truetype');
+}*/
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+body {
+    background-color: #EDEDED;
+}
