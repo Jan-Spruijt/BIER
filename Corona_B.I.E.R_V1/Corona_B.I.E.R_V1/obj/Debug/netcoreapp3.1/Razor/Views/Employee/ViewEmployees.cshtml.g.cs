@@ -31,6 +31,7 @@ using Corona_B.I.E.R_V1.Models;
     public class Views_Employee_ViewEmployees : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<Corona_B.I.E.R_V1.Models.EmployeeModel>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "RegisterEmployee", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("btn btn-lg btn-primary btn-block"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         #line hidden
         #pragma warning disable 0649
         private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext __tagHelperExecutionContext;
@@ -59,6 +60,7 @@ using Corona_B.I.E.R_V1.Models;
 #nullable restore
 #line 3 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
   
+    Layout = "~/Views/Shared/_LayoutEmployeesView.cshtml";
     ViewData["Title"] = "ViewEmployees";
 
 #line default
@@ -73,6 +75,7 @@ using Corona_B.I.E.R_V1.Models;
             __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper);
             __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper.Action = (string)__tagHelperAttribute_0.Value;
             __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_0);
+            __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_1);
             await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
             if (!__tagHelperExecutionContext.Output.IsContentModified)
             {
@@ -80,7 +83,7 @@ using Corona_B.I.E.R_V1.Models;
             }
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
-            WriteLiteral("\r\n</p>\r\n<table class=\"table\">\r\n    <thead>\r\n        <tr>\r\n            <th>\r\n                ");
+            WriteLiteral("\r\n            </p>\r\n        </div>\r\n        \r\n    </div>\r\n\r\n    <div class=\"row\">\r\n\r\n\r\n        <table class=\"table table-striped\">\r\n            <thead class=\"thead-ligh\">\r\n                <tr>\r\n                    <th>\r\n                        ");
 #nullable restore
 #line 16 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayNameFor(model => model.Id));
@@ -96,7 +99,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
+            WriteLiteral("\r\n                    </th>\r\n                    <th>\r\n                        ");
 #nullable restore
 #line 22 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayNameFor(model => model.Prefix));
@@ -104,7 +107,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
+            WriteLiteral("\r\n                    </th>\r\n                    <th>\r\n                        ");
 #nullable restore
 #line 25 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayNameFor(model => model.Lastname));
@@ -112,7 +115,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
+            WriteLiteral("\r\n                    </th>\r\n                    <th>\r\n                        ");
 #nullable restore
 #line 28 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayNameFor(model => model.City));
@@ -120,7 +123,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
+            WriteLiteral("\r\n                    </th>\r\n                    <th>\r\n                        ");
 #nullable restore
 #line 31 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayNameFor(model => model.Postalcode));
@@ -128,7 +131,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
+            WriteLiteral("\r\n                    </th>\r\n                    <th>\r\n                        ");
 #nullable restore
 #line 34 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayNameFor(model => model.Address));
@@ -136,7 +139,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
+            WriteLiteral("\r\n                    </th>\r\n                    <th>\r\n                        ");
 #nullable restore
 #line 37 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayNameFor(model => model.ProfilePicturePath));
@@ -144,7 +147,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
+            WriteLiteral("\r\n                    </th>\r\n                    <th>\r\n                        ");
 #nullable restore
 #line 40 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayNameFor(model => model.Email));
@@ -152,7 +155,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
+            WriteLiteral("\r\n                    </th>\r\n                    <th>\r\n                        ");
 #nullable restore
 #line 43 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayNameFor(model => model.ConfirmEmail));
@@ -168,7 +171,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
+            WriteLiteral("\r\n                    </th>\r\n                    <th>\r\n                        ");
 #nullable restore
 #line 49 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayNameFor(model => model.Password));
@@ -192,7 +195,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
+            WriteLiteral("\r\n                    </th>\r\n                    <th scope=\"col\">Beheer</th>\r\n                </tr>\r\n            </thead>\r\n            <tbody>\r\n");
 #nullable restore
 #line 58 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayNameFor(model => model.Role));
@@ -224,7 +227,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
+            WriteLiteral("                    <tr>\r\n                        <td>\r\n                            ");
 #nullable restore
 #line 73 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayFor(modelItem => item.Prefix));
@@ -232,7 +235,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
+            WriteLiteral("\r\n                        </td>\r\n                        <td>\r\n                            ");
 #nullable restore
 #line 76 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayFor(modelItem => item.Lastname));
@@ -240,7 +243,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
+            WriteLiteral("\r\n                        </td>\r\n                        <td>\r\n                            ");
 #nullable restore
 #line 79 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayFor(modelItem => item.City));
@@ -248,7 +251,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
+            WriteLiteral("\r\n                        </td>\r\n                        <td>\r\n                            ");
 #nullable restore
 #line 82 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayFor(modelItem => item.Postalcode));
@@ -256,7 +259,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
+            WriteLiteral("\r\n                        </td>\r\n                        <td>\r\n                            ");
 #nullable restore
 #line 85 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayFor(modelItem => item.Address));
@@ -264,7 +267,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
+            WriteLiteral("\r\n                        </td>\r\n                        <td>\r\n                            ");
 #nullable restore
 #line 88 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayFor(modelItem => item.ProfilePicturePath));
@@ -272,7 +275,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
+            WriteLiteral("\r\n                        </td>\r\n                        <td>\r\n                            ");
 #nullable restore
 #line 91 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayFor(modelItem => item.Email));
@@ -280,7 +283,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
+            WriteLiteral("\r\n                        </td>\r\n                        <td>\r\n                            ");
 #nullable restore
 #line 94 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayFor(modelItem => item.ConfirmEmail));
@@ -296,7 +299,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
+            WriteLiteral("\r\n                        </td>\r\n                        <td>\r\n                            ");
 #nullable restore
 #line 100 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayFor(modelItem => item.Password));
@@ -320,7 +323,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
+            WriteLiteral("\r\n                        </td>\r\n                        <td>\r\n                            ");
 #nullable restore
 #line 109 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.DisplayFor(modelItem => item.Role));
@@ -328,7 +331,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
+            WriteLiteral("\r\n                        </td>\r\n                        <td>\r\n                            ");
 #nullable restore
 #line 112 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }));
@@ -336,7 +339,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral(" |\r\n                ");
+            WriteLiteral(" <br>\r\n                            ");
 #nullable restore
 #line 113 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }));
@@ -344,7 +347,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral(" |\r\n                ");
+            WriteLiteral(" <br>\r\n                            ");
 #nullable restore
 #line 114 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
            Write(Html.ActionLink("Delete", "Delete", new { id=item.Id }));
@@ -352,7 +355,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("\r\n            </td>\r\n        </tr>\r\n");
+            WriteLiteral("\r\n                        </td>\r\n                    </tr>\r\n");
 #nullable restore
 #line 117 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Employee\ViewEmployees.cshtml"
 }
@@ -360,7 +363,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("    </tbody>\r\n</table>\r\n");
+            WriteLiteral("            </tbody>\r\n        </table>\r\n\r\n    </div>\r\n</div>\r\n\r\n");
         }
         #pragma warning restore 1998
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]

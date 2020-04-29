@@ -3,58 +3,113 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Corona_B.I.E.R_V1</title>
+    <title>@ViewData["Title"] - B.I.E.R</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/sidebar.css" />
+    <link rel="stylesheet" href="~/css/dashboard.css" />
+    <link rel="stylesheet" href="~/css/employee.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Corona_B.I.E.R_V1</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Employee" asp-action="RegisterEmployee">Registreer werknemer</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Employee" asp-action="ViewEmployees">Beheer Werknemers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Employee" asp-action="LoginEmployee">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Incident" asp-action="CreateIncident">maar een incident aan</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Incident" asp-action="ViewIncidents">maar een incident aan</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+   
     <div class="container">
         <main role="main" class="pb-3">
+            <div class="area"></div>
+                <nav class="main-menu">
+                    <ul>
+                        <li class="margin">
+                            <div class="padding table">
+                                <div class="size_width cell"></div>
+                                <img class="mb-4 cell show" src="~/images/logo.png">
+                            </div>
+                        </li>
+                        <li class="margin">
+                            <a href="../Home/Dashboard">
+                                <i class="fa fa-home nav-icon"></i>
+                                <span class="nav-text">
+                                    Dashboard
+                                </span>
+                            </a>
+
+                        </li>
+                        <div class="line"></div>
+                        <li class="margin">
+                            <a href="#">
+                                <i class="fa fa-times nav-icon"></i>
+                                <span class="nav-text">
+                                    Incidenten
+                                </span>
+                            </a>
+
+                        </li>
+                        <div class="line"></div>
+                        <li class="margin">
+                            <a href="#">
+                                <i class="fa fa-user nav-icon"></i>
+                                <span class="nav-text">
+                                    Profiel
+                                </span>
+                            </a>
+
+                        </li>
+                        <div class="line"></div>
+
+                    </ul>
+                    
+                    <ul class="logout">
+                            <li class="margin">
+                                <a href="#">
+                                    <i class="fa fa-calendar nav-icon"></i>
+                                    <span class="nav-text">
+                                        Planning maken
+                                    </span>
+                                </a>
+                            </li>
+                            <div class="line"></div>
+                            <li class="margin">
+                                <a href="../Employee/ViewEmployees">
+                                    <i class="fa fa-users nav-icon"></i>
+                                    <span class="nav-text">
+                                        Gebruikers beheer
+                                    </span>
+                                </a>
+                            </li>
+                            <div class="line"></div>
+
+                            <div class="table paddingtop">
+                                <div class="size_width">
+                                    <img class="user_img" src="~/images/user-male-icon.png"/>
+                                </div>
+                                <p class="cell">Ingelogd als "Username"</p>
+                            </div>
+
+                            <div class="table">
+                                <div class="size_width cell"></div>
+                                <div class="cell">
+                                    <a class="link_style" href="../Employee/LoginEmployee">
+                                        Uitloggen
+                                    </a>
+                                    <p class="d-inline"> | </p>
+                                    <a class="link_style" href="#">
+                                        Contact
+                                    </a>
+                                </div>
+                            </div>
+                    </ul>
+                </nav>
+
+
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    @*<footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2020 - Corona_B.I.E.R_V1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-    </footer>
+    </footer>*@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

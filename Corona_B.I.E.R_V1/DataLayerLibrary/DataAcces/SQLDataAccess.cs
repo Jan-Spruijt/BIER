@@ -32,9 +32,10 @@ namespace Corona_B.I.E.R_V1.DataAccess
             {
                 try
                 {
+
                     return con.Query<T>(sql).FirstOrDefault();
                 }
-                catch (Exception e)
+                catch(InvalidCastException e)
                 {
                     return default;
                 }
