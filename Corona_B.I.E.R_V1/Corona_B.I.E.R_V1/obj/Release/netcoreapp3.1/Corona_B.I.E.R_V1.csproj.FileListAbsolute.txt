@@ -255,3 +255,14 @@ C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Rele
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Shared\_LayoutEmployeesView.cshtml.g.cs
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Release\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Release\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Release\netcoreapp3.1\DataLayerLibrary.dll
+C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Release\netcoreapp3.1\LogicLayerLibrary.dll
+C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Release\netcoreapp3.1\DataLayerLibrary.pdb
+C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Release\netcoreapp3.1\LogicLayerLibrary.pdb
+C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Employee\LoginEmployee.cshtml.g.cs
+C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Home\Dashboard.cshtml.g.cs
+C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
+C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Shared\_LayoutEmployeesView.cshtml.g.cs
+C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Shared\_LayoutLoginPage.cshtml.g.cs
