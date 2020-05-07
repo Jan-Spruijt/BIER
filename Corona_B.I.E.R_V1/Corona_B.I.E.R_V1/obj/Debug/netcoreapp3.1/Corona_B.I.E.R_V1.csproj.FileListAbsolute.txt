@@ -172,8 +172,6 @@ C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Debug\netcoreapp3.1\DataLayerLibrary.pdb
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Debug\netcoreapp3.1\LogicLayerLibrary.pdb
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.csprojAssemblyReference.cache
-C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.csproj.CoreCompileInputs.cache
-C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.RazorAssemblyInfo.cache
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.RazorAssemblyInfo.cs
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.AssemblyInfoInputs.cache
@@ -204,3 +202,6 @@ C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.dll
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.pdb
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.genruntimeconfig.cache
+C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Agenda\schedule.cshtml.g.cs
+C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.csproj.CoreCompileInputs.cache
+C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.MvcApplicationPartsAssemblyInfo.cache

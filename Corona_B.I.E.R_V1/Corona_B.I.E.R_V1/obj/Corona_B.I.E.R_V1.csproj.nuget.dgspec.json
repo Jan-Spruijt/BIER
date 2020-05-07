@@ -47,7 +47,11 @@
           "dependencies": {
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.2, )"
+            },
+            "jQuery.Fullcalendar": {
+              "target": "Package",
+              "version": "[3.9.0, )"
             }
           },
           "imports": [
