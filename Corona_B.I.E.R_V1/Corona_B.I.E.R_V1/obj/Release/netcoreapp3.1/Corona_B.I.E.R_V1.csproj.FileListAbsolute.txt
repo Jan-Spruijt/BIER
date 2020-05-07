@@ -389,3 +389,4 @@ C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Rele
 C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Corona_B.I.E.R_V1.dll
 C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Corona_B.I.E.R_V1.pdb
 C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Corona_B.I.E.R_V1.genruntimeconfig.cache
+C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Hours\HourView.cshtml.g.cs
