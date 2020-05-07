@@ -7,3 +7,12 @@ C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\obj\Release\netstand
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\obj\Release\netstandard2.0\LogicLayerLibrary.AssemblyInfo.cs
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\obj\Release\netstandard2.0\LogicLayerLibrary.dll
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\obj\Release\netstandard2.0\LogicLayerLibrary.pdb
+C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\bin\Release\netstandard2.0\LogicLayerLibrary.deps.json
+C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\bin\Release\netstandard2.0\LogicLayerLibrary.dll
+C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\bin\Release\netstandard2.0\LogicLayerLibrary.pdb
+C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\obj\Release\netstandard2.0\LogicLayerLibrary.csprojAssemblyReference.cache
+C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\obj\Release\netstandard2.0\LogicLayerLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\obj\Release\netstandard2.0\LogicLayerLibrary.AssemblyInfoInputs.cache
+C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\obj\Release\netstandard2.0\LogicLayerLibrary.AssemblyInfo.cs
+C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\obj\Release\netstandard2.0\LogicLayerLibrary.dll
+C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\obj\Release\netstandard2.0\LogicLayerLibrary.pdb

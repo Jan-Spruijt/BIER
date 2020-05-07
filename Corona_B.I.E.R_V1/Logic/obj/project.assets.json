@@ -4077,23 +4077,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gijs\\.nuget\\packages\\": {},
+    "C:\\Users\\Maik\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj",
       "projectName": "LogicLayerLibrary",
-      "projectPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj",
-      "packagesPath": "C:\\Users\\gijs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\obj\\",
+      "projectPath": "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj",
+      "packagesPath": "C:\\Users\\Maik\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\gijs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Maik\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4141,13 +4141,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

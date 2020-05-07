@@ -7,3 +7,12 @@ C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Relea
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Release\netcoreapp3.1\DataLayerLibrary.AssemblyInfo.cs
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Release\netcoreapp3.1\DataLayerLibrary.dll
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Release\netcoreapp3.1\DataLayerLibrary.pdb
+C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\bin\Release\netcoreapp3.1\DataLayerLibrary.deps.json
+C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\bin\Release\netcoreapp3.1\DataLayerLibrary.dll
+C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\bin\Release\netcoreapp3.1\DataLayerLibrary.pdb
+C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Release\netcoreapp3.1\DataLayerLibrary.csprojAssemblyReference.cache
+C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Release\netcoreapp3.1\DataLayerLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Release\netcoreapp3.1\DataLayerLibrary.AssemblyInfoInputs.cache
+C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Release\netcoreapp3.1\DataLayerLibrary.AssemblyInfo.cs
+C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Release\netcoreapp3.1\DataLayerLibrary.dll
+C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Release\netcoreapp3.1\DataLayerLibrary.pdb
