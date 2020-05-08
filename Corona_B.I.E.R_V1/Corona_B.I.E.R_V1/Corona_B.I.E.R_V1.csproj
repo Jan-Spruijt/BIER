@@ -15,4 +15,8 @@
     <ProjectReference Include="..\Logic\LogicLayerLibrary.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\img\ProfilePictures\" />
+  </ItemGroup>
+
 </Project>

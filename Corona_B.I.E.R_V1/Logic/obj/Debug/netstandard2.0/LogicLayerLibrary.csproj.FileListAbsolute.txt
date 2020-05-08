@@ -2,7 +2,6 @@ C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Logic\bin\Debu
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Logic\bin\Debug\netstandard2.0\LogicLayerLibrary.dll
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Logic\bin\Debug\netstandard2.0\LogicLayerLibrary.pdb
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.csprojAssemblyReference.cache
-C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.csproj.CoreCompileInputs.cache
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.AssemblyInfoInputs.cache
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.AssemblyInfo.cs
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.dll

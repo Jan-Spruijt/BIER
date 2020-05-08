@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Corona_B.I.E.R_V1", "Corona
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayerLibrary", "DataLayerLibrary\DataLayerLibrary.csproj", "{9856FC6C-785F-4BD7-8649-5B27929AAF72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicLayerLibrary", "Logic\LogicLayerLibrary.csproj", "{7A18D6D1-EC8E-40E5-8F95-A1D465D6160E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogicLayerLibrary", "Logic\LogicLayerLibrary.csproj", "{7A18D6D1-EC8E-40E5-8F95-A1D465D6160E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
