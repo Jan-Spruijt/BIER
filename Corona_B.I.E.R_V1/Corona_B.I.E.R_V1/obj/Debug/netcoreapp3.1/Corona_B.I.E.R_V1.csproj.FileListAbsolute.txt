@@ -47,8 +47,6 @@ D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Debug\netcoreapp3.1\Corona_B
 D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.Views.dll
 D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.Views.pdb
 D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.csprojAssemblyReference.cache
-D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.csproj.CoreCompileInputs.cache
-D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.MvcApplicationPartsAssemblyInfo.cache
 D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.RazorAssemblyInfo.cache
 D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.RazorAssemblyInfo.cs
 D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.AssemblyInfoInputs.cache
@@ -163,3 +161,10 @@ D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Debug\netcoreapp3.1\LogicLay
 D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Employee\LoginEmployee.cshtml.g.cs
 D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Employee\RegisterEmployee.cshtml.g.cs
 D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Employee\ViewEmployees.cshtml.g.cs
+D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll
+D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.Streams.dll
+D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Debug\netcoreapp3.1\K4os.Hash.xxHash.dll
+D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Debug\netcoreapp3.1\Zstandard.Net.dll
+D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.csproj.CoreCompileInputs.cache
+D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.MvcApplicationPartsAssemblyInfo.cache
+D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Date\ViewDates.cshtml.g.cs

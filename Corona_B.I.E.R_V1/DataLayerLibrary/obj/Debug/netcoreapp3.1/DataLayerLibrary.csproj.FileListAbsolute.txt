@@ -15,3 +15,4 @@ D:\Git\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Debug\netcoreapp3.1\DataLayer
 D:\Git\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Debug\netcoreapp3.1\DataLayerLibrary.AssemblyInfo.cs
 D:\Git\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Debug\netcoreapp3.1\DataLayerLibrary.dll
 D:\Git\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Debug\netcoreapp3.1\DataLayerLibrary.pdb
+D:\Git\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Debug\netcoreapp3.1\DataLayerLibrary.csproj.CoreCompileInputs.cache

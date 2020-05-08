@@ -4,12 +4,13 @@ using Corona_B.I.E.R_V1;
 using System.Collections.Generic;
 using Corona_B.I.E.R_V1.Models;
 using System.Security.Principal;
+using System;
 
 namespace DataLayerLibrary.DataLogic
 {
-    public class EventProcessor
+    public class DateProcessor
     {
-        public static void CreateEvent(int id , string title , string description , string type , string start , string end)
+        public static void CreateEvent(int id , string title , string description , string type , DateTime start , DateTime end)
         {
             DateDataModel data = new DateDataModel
             {
@@ -17,8 +18,8 @@ namespace DataLayerLibrary.DataLogic
                 Title = title,
                 Description = description,
                 Type = type,
-                Start = start,
-                End = end
+                datetimeStart = start,
+                datetimeEnd = end
             };
 
             string sql = @"INSERT INTO schedule (id, datetimeStart, datetimeENd, title, description, type)
