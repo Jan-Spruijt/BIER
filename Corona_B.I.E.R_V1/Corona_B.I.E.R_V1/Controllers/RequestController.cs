@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Corona_B.I.E.R_V1.DataLogic;
 using Corona_B.I.E.R_V1.DataModels;
+using Corona_B.I.E.R_V1.ExtensionMethods;
 using Corona_B.I.E.R_V1.Models;
 using DataLayerLibrary.DataLogic;
 using Microsoft.AspNetCore.Mvc;
@@ -24,8 +25,9 @@ namespace Corona_B.I.E.R_V1.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 RequestProcessor.CreateRequest(
-                    request.EmployeeId,
+                    HttpContext.GetCurrentEmployeeModel().Id,
                     request.DateStart,
                     request.DateEnd,
                     request.Status.ToString(),

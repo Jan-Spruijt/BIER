@@ -8350,19 +8350,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DRoze\\.nuget\\packages\\": {}
+    "C:\\Users\\gijs\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj",
+      "projectUniqueName": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj",
       "projectName": "Corona_B.I.E.R_V1",
-      "projectPath": "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj",
-      "packagesPath": "C:\\Users\\DRoze\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\obj\\",
+      "projectPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj",
+      "packagesPath": "C:\\Users\\gijs\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\DRoze\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gijs\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8375,11 +8379,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj": {
-              "projectPath": "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj"
+            "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj": {
+              "projectPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj"
             },
-            "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj": {
-              "projectPath": "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj"
+            "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj": {
+              "projectPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj"
             }
           }
         }
@@ -8420,7 +8424,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
