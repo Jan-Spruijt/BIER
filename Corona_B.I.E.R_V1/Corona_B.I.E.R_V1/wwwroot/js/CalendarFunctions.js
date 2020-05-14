@@ -58,35 +58,13 @@
             },
             events: event,
             editable: true,
-            droppable: true, // this allows things to be dropped onto the calendar
-            drop: function (info) {
-                // is the "remove after drop" checkbox checked?
-                if (checkbox.checked) {
-                    // if so, remove the element from the "Draggable Events" list
-                    info.draggedEl.parentNode.removeChild(info.draggedEl);
+            droppable: true, 
+            eventDrop: function (info) {
+                if (!confirm("Weet u zeker dat u " + info.event.title + " wilt verplaatsen naar " + moment(info.event.start).format("DD/MM/YYYY"))) {
+                    info.revert();
                 }
             }
         });
         calendar.render();
     }
-    /*var calendar = new Calendar(calendarEl, {
-        plugins: ['interaction', 'dayGrid', 'timeGrid'],
-        header: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay'
-        },
-        events: events,
-        editable: true,
-        droppable: true, // this allows things to be dropped onto the calendar
-        drop: function (info) {
-            // is the "remove after drop" checkbox checked?
-            if (checkbox.checked) {
-                // if so, remove the element from the "Draggable Events" list
-                info.draggedEl.parentNode.removeChild(info.draggedEl);
-            }
-        }
-    });
-
-    calendar.render();*/
 });
