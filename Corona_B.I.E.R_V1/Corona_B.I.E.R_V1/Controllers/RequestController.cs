@@ -12,6 +12,35 @@ namespace Corona_B.I.E.R_V1.Controllers
 {
     public class RequestController : Controller
     {
+
+        public IActionResult NewRequest()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult NewRequest(RequestModel request)
+        {
+            if (ModelState.IsValid)
+            {
+                RequestProcessor.CreateRequest(
+                    request.EmployeeId,
+                    request.DateStart,
+                    request.DateEnd,
+                    request.Status.ToString(),
+                    request.Type.ToString(),
+                    request.Reason
+
+                );
+                return RedirectToAction("ViewRequests", "Request");
+            }
+
+            return View();
+        }
+
+
+
         public IActionResult ViewRequests()
         {
             var data = RequestProcessor.LoadRequests();
