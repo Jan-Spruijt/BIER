@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj": {}
+    "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj": {
+    "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj",
         "projectName": "LogicLayerLibrary",
-        "projectPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj",
-        "packagesPath": "C:\\Users\\gijs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\obj\\",
+        "projectPath": "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj",
+        "packagesPath": "C:\\Users\\DRoze\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\Logic\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gijs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DRoze\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -41,6 +38,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -58,7 +59,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

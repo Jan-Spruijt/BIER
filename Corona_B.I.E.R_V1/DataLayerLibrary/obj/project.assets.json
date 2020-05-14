@@ -5810,23 +5810,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gijs\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\DRoze\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj",
       "projectName": "DataLayerLibrary",
-      "projectPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj",
-      "packagesPath": "C:\\Users\\gijs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\obj\\",
+      "projectPath": "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj",
+      "packagesPath": "C:\\Users\\DRoze\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DRoze\\Documents\\school\\githubBier\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\gijs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DRoze\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5874,7 +5870,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

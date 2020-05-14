@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="jQuery.Fullcalendar" Version="3.9.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
   </ItemGroup>
 
@@ -18,6 +19,10 @@
     <Folder Include="wwwroot\images\" />
     <ProjectReference Include="..\DataLayerLibrary\DataLayerLibrary.csproj" />
     <ProjectReference Include="..\Logic\LogicLayerLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\img\ProfilePictures\" />
   </ItemGroup>
 
 </Project>

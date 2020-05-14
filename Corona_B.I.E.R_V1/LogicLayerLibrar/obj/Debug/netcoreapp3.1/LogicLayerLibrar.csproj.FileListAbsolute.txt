@@ -1,0 +1,5 @@
+C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\LogicLayerLibrar\bin\Debug\netcoreapp3.1\LogicLayerLibrar.deps.json
+C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\LogicLayerLibrar\bin\Debug\netcoreapp3.1\LogicLayerLibrar.dll
+C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\LogicLayerLibrar\obj\Debug\netcoreapp3.1\LogicLayerLibrar.AssemblyInfoInputs.cache
+C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\LogicLayerLibrar\obj\Debug\netcoreapp3.1\LogicLayerLibrar.AssemblyInfo.cs
+C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\LogicLayerLibrar\obj\Debug\netcoreapp3.1\LogicLayerLibrar.csprojAssemblyReference.cache
