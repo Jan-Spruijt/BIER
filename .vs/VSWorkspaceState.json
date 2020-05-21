@@ -1,8 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Corona_B.I.E.R_V1"
+    "\\Corona_B.I.E.R_V1",
+    "\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1",
+    "\\Corona_B.I.E.R_V1\\DataLayerLibrary",
+    "\\Corona_B.I.E.R_V1\\Logic",
+    "\\Corona_B.I.E.R_V1\\LogicLayerLibrar"
   ],
-  "SelectedNode": "\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1",
+  "SelectedNode": "\\Corona_B.I.E.R_V1\\Logic\\bin",
   "PreviewInSolutionExplorer": false
 }
