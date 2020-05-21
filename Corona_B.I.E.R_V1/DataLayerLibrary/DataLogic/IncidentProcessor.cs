@@ -27,14 +27,16 @@ namespace DataLayerLibrary.DataLogic
             SQLDataAccess.SaveData(sql, data);
         }
 
-        //closeincident moet nog aangepast worden met custom invul waardes 
         public static void CloseIncident(int id, int employee_ID_EndedBy)
         {
             IncidentDataModel data = LoadIncidentById(id);
             data.DateTimeEnd = DateTime.Now;
+            var datetimestring = data.DateTimeEnd.ToString("yyyy/MM/dd HH:mm:ss");
             data.Status = "closed";
             data.Employee_ID_EndedBy = employee_ID_EndedBy;
-            UpdateIncidentData(id, data.Employee_ID_EndedBy, data.DateTimeEnd, data.Status);
+
+            string sql = $"Update incident set employee_id_endedby = '{data.Employee_ID_EndedBy}', datetimeEnd = '{datetimestring}', status = '{data.Status}' WHERE id = '{id}';";
+            SQLDataAccess.SaveData(sql ,data);
         }
 
         public static List<IncidentDataModel> LoadIncidents()
@@ -45,19 +47,20 @@ namespace DataLayerLibrary.DataLogic
 
         public static List<IncidentDataModel> LoadOpenIncidents()
         {
-            string sql = $"Select * FROM incident WHERE status = open;";
+            string sql = $"Select * FROM incident WHERE status = 'open';";
             return SQLDataAccess.LoadData<IncidentDataModel>(sql);
         }
 
         public static IncidentDataModel LoadIncidentById(int id)
         {
-            string sql = $"Select * FROM incident WHERE id = '{id}'";
+            string sql = $"Select * FROM incident WHERE id = '{id}';";
             return SQLDataAccess.LoadFirstData<IncidentDataModel>(sql);
         }
 
-        public static void UpdateIncidentData(int id, int employeeEndedBy, DateTime timeEnded, string status)
+        public static void DeleteIncident(int id)
         {
-            string sql = $"Update incident set employee_id_ended_by = '{employeeEndedBy}', datetimeEnd = '{timeEnded}', status = '{status}' WHERE id = '{id}'";
+            string sql = $"DELETE FROM incident WHERE id = '{id}';";
+            SQLDataAccess.DeleteData(sql);
         }
     }
 }
