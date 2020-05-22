@@ -11,7 +11,7 @@ namespace Corona_B.I.E.R_V1.Controllers
 {
     public class AgendaController : Controller
     {
-        public IActionResult schedule()
+        public IActionResult Schedule()
         {
             return View();
         }
@@ -20,6 +20,11 @@ namespace Corona_B.I.E.R_V1.Controllers
         {
          List<EventsDataModel> events =  CalendarProcessor.LoadAllEvents();
             return new JsonResult (new{ Data = events });
+        }
+
+        public IActionResult CreateEvent()
+        {
+            return View();
         }
     }
 }

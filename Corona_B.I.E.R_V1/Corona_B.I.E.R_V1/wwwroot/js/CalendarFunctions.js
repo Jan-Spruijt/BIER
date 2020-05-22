@@ -67,4 +67,35 @@
         });
         calendar.render();
     }
+
+    $('#EmployeeDropdownToggle').first().on('click', function () {
+        $('#CustomEmployeeDropdown ul').slideToggle();
+        $('#EmployeeDropdownToggle .fc-icon').toggleClass("active-icon");
+    })
+    $('#SearchEmployee').first().on('click', function (e) {
+        if ($('#CustomEmployeeDropdown ul').is(':visible')){
+            e.stopPropagation();
+        }
+    })
+
+    $('#SearchEmployee').on('keyup', function () {
+        var filter = $('#SearchEmployee').val().toUpperCase();
+        console.log(filter);
+        var items = $('#CustomEmployeeDropdown li');
+        for (var i = 0; i < items.length; i++) {
+            var textValue = items[i].textContent || items[i].innerText;
+            if (textValue.toUpperCase().indexOf(filter) > -1) {
+                items[i].style.display = "block";
+            } else {
+                items[i].style.display = "none";
+            }
+        }
+    })
+
+    $('#CustomEmployeeDropdown li').on('click', function () {
+        var imgSrc = $(this).find('img').attr('src');
+        $('#SelectedImg').attr('src', imgSrc);
+        $('#SelectedImg').removeClass('SearchIcon');
+        
+    })
 });
