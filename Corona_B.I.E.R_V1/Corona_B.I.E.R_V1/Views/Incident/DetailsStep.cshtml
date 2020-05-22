@@ -1,0 +1,105 @@
+﻿@model Corona_B.I.E.R_V1.Models.IncidentStepDetailsViewModel
+
+@{
+    ViewData["Title"] = "DetailsStep";
+}
+
+<h1>DetailsStep</h1>
+
+<div>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.employee_id_createdby)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.employee_id_createdby)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.employee_id_endedby)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.employee_id_endedby)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.incident_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.incident_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.stepnumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.stepnumber)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.context)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.context)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.datetimeStart)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.datetimeStart)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.datetimeEnd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.datetimeEnd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.status)
+        </dd>
+    </dl>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Voornaam
+            </th>
+            <th>
+                Achternaam
+            </th>
+            <th>
+                Foto
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.employee)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Firstname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Lastname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProfilePicturePath)
+                </td>
+                <td>
+                    @Html.ActionLink("Remove", "Delete", new {/* id=item.PrimaryKey */})
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    @Html.ActionLink("Close", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Voeg medewerker toe", "AddEmployeeToStep", new {id = Model.id})
+    <a asp-action="Index">Back to List</a>
+</div>

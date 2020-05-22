@@ -15,14 +15,20 @@ namespace DataLayerLibrary.DataLogic
                 employee_id = employeeId,
                 incidentStep_id = stepId
             };
-            string sql = @"INSERT INTO incident-timeline_employee (incident-timeline_id, employee_id) VALUES (@incidentStep_id, @employee_id);";
+            string sql = @"INSERT INTO incidenttimeline_employee (incidentTimeline_id, employee_id) VALUES (@incidentStep_id, @employee_id);";
             SQLDataAccess.SaveData(sql, data);
         }
 
         public static void RemoveEmployeeFromStep(int stepId, int employeeId)
         {
-            string sql = $"DELETE FROM incident-timeline_employee WHERE incident-timeline_id = '{stepId}' AND employee_id = '{employeeId}';";
+            string sql = $"DELETE FROM incidenttimeline_employee WHERE incidentTimeline_id = '{stepId}' AND employee_id = '{employeeId}';";
             SQLDataAccess.DeleteData(sql);
+        }
+
+        public static List<IncidentStepEmployeeDataModel> LoadEmployeesFromStepId(int id)
+        {
+            string sql = $"SELECT * FROM incidenttimeline_employee WHERE incidentTimeline_id = '{id}';";
+            return SQLDataAccess.LoadData<IncidentStepEmployeeDataModel>(sql);
         }
     }
 }

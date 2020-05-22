@@ -36,7 +36,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                     incident.Context,
                     incident.Customer,
                     incident.CustomerEmail,
-                    10
+                    11
                 );
                 return RedirectToAction("Index", "Home");
             }
@@ -64,10 +64,8 @@ namespace Corona_B.I.E.R_V1.Controllers
                 }
                 );
             }
-
             return View(incidents);
         }
-            // veranderen nav viewmodel
         public IActionResult DetailsIncident(int id)
         {
             var incidentData = IncidentProcessor.LoadIncidentById(id);
@@ -75,21 +73,19 @@ namespace Corona_B.I.E.R_V1.Controllers
             List<IncidentStepModel> steps = new List<IncidentStepModel>();
             foreach (var step in incidentStepData)
             {
-               steps.Add(new IncidentStepModel
-                   {
-                       context = step.context,
-                       datetimeEnd = step.datetimeEnd,
-                       datetimeStart = step.datetimeStart,
-                       employee_id_createdby = step.employee_id_createdby,
-                       employee_id_endedby = step.employee_id_endedby,
-                       id = step.id,
-                       incident_id = step.incident_id,
-                       status = step.status,
-                       stepnumber = step.stepnumber
-                   }
-                   
-               ); 
-
+                steps.Add(new IncidentStepModel
+                {
+                    context = step.context,
+                    datetimeEnd = step.datetimeEnd,
+                    datetimeStart = step.datetimeStart,
+                    employee_id_createdby = step.employee_id_createdby,
+                    employee_id_endedby = step.employee_id_endedby,
+                    id = step.id,
+                    incident_id = step.incident_id,
+                    status = step.status,
+                    stepnumber = step.stepnumber
+                }
+                );
             }
             IncidentDetailsViewModel incidentDetails = new IncidentDetailsViewModel
             {
@@ -101,24 +97,13 @@ namespace Corona_B.I.E.R_V1.Controllers
                 Status = incidentData.Status,
                 steps = steps
             };
-
-            //var data = IncidentProcessor.LoadIncidentById(id);
-            //IncidentModel incident = new IncidentModel
-            //{
-            //    ID = data.ID,
-            //    Context = data.Context,
-            //    Customer = data.Customer,
-            //    CustomerEmail = data.CustomerEmail,
-            //    DateTimeEnded = data.DateTimeEnd,
-            //    DateTimeStart = data.DateTimeStart,
-            //    Employee_ID_EndedBy = data.Employee_ID_EndedBy,
-            //    Employee_ID_CreatedBy = data.Employee_ID_CreatedBy,
-            //    Status = data.Status,
-            //    Title = data.Title
-            //};
             return View(incidentDetails);
         }
 
+        //public IActionResult GoToDetails(int id)
+        //{
+        //    return RedirectToAction("CloseIncident", new { Id = id });
+        //}
 
         public IActionResult CloseIncident(int id)
         {
@@ -126,13 +111,8 @@ namespace Corona_B.I.E.R_V1.Controllers
                 id,
                 11
             );
-        
-            return RedirectToAction("ViewIncidents", "Incident");
-        }
 
-        public IActionResult GoToDetails(int id)
-        {
-            return RedirectToAction("CloseIncident", new { Id = id });
+            return RedirectToAction("ViewIncidents", "Incident");
         }
 
         public IActionResult CreateStep(int id)
@@ -153,10 +133,53 @@ namespace Corona_B.I.E.R_V1.Controllers
                     data.context,
                     data.title
                     );
-                RedirectToAction("ViewIncidents");
+                return RedirectToAction("ViewIncidents", "Incident");
             }
-
             return View();
+        }
+
+        public IActionResult DetailsStep(int id)
+        {
+            var stepData = IncidentStepProcessor.LoadStepById(id);
+            var StepEmployeeData = IncidentStepEmployeeprocessor.LoadEmployeesFromStepId(id);
+            List<EmployeeModel> employees = new List<EmployeeModel>();
+            foreach (var employee in StepEmployeeData)
+            {
+                var employeeData = EmployeeProcessor.GetUserById(employee.employee_id);
+                employees.Add(new EmployeeModel
+                {
+                    Address = employeeData.Address,
+                    City = employeeData.City,
+                    Firstname = employeeData.Firstname,
+                    ProfilePicturePath = employeeData.ProfilePicturePath,
+                    Profession = employeeData.Profession,
+                    Lastname = employeeData.Lastname,
+                    Email = employeeData.Email,
+                    Id = employeeData.ID,
+                    Phone = employeeData.Phone
+                }
+                );
+            }
+            IncidentStepDetailsViewModel stepDetails = new IncidentStepDetailsViewModel
+            { 
+                context = stepData.context,
+                datetimeStart = stepData.datetimeStart,
+                datetimeEnd = stepData.datetimeEnd,
+                employee = employees,
+                employee_id_createdby = stepData.employee_id_createdby,
+                employee_id_endedby = stepData.employee_id_endedby,
+                id = stepData.id,
+                incident_id = stepData.incident_id,
+                status = stepData.status,
+                stepnumber = stepData.stepnumber,
+            };
+            return View(stepDetails);
+        }
+
+        public IActionResult AddEmployeeToStep(int id)
+        {
+            IncidentStepEmployeeprocessor.AddEmployeeToStep(11,id);
+            return RedirectToAction("DetailsStep", new {id});
         }
     }
 }
