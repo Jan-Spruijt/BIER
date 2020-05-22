@@ -1,0 +1,74 @@
+﻿#CustomEmployeeDropdown{
+    width: 300px;
+    position: relative;
+}
+
+#CustomEmployeeDropdown li img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+#CustomEmployeeDropdown ul {
+    list-style-type: none;
+    padding: 0;
+    background: white;
+    border: 1px solid #ced4da;
+    max-height: 300px;
+    overflow: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    display: none;
+    position: absolute;
+    z-index: 10;
+}
+
+#CustomEmployeeDropdown li {
+    white-space: nowrap;
+    padding: 3px;
+    border-bottom: 1px solid #ced4da;
+    color: #495057;
+    cursor: pointer;
+}
+#SearchEmployee {
+    height: 45px;
+    width: 200px;
+    border-color: transparent;
+    outline: none;
+    color:#495057;
+}
+#CustomEmployeeDropdown section {
+    background: white;
+    border: 1px solid #ced4da;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+    #CustomEmployeeDropdown section img {
+        margin-left: 5px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 10px;
+    }
+.SearchIcon {
+    border-radius: unset !important;
+    width: 29px !important;
+    padding-left: 5px;
+    object-fit: contain !important;
+}
+
+#CustomEmployeeDropdown .fc-icon {
+    color: #495057;
+    transform: rotate(90deg) translateX(8px);
+    font-size: 25px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#CustomEmployeeDropdown .active-icon {
+    transform: rotate(90deg) translateX(6px) rotateY(180deg);
+}
