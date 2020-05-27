@@ -152,3 +152,32 @@
 .fc-employee{
     visibility: visible;
 }
+.fc-event {
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(156,156,156,1);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(156,156,156,1);
+    box-shadow: 1px 1px 5px 0px rgba(156,156,156,1);
+    border-radius: 5px;
+    padding: 5px;
+    background-color: white !important;
+    border-style: none !important;
+    border-width: 0px !important;
+}
+.fc-content {
+    color: #495057;
+    background-color: white !important;
+    border-color: white !important;
+    outline: none !important;
+}
+.fc-button-primary {
+    background-color: #E11937 !important;
+    border-color: #e11937 !important;
+}
+    .fc-button-primary:hover {
+        background-color: #991F3D !important;
+        border-color: #991F3D !important;
+    }
+
+    .fc-button-primary:not(:disabled).fc-button-active, .fc-button-primary:not(:disabled):active {
+        background-color: #991F3D !important;
+        border-color: #991F3D !important;
+    }
