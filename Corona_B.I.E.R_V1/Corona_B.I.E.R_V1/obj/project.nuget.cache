@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gRr07RqoQyJ80UeLfUnfa+THH3kXlDLUyupEYWoxKyXL77wQiXS22VovD3yNmkTfBwgSm9S0KSUoqNHQHLuoXg==",
+  "dgSpecHash": "If4Ts36QgEvMgayPJvBFJemgX2WoN33dnydryEQ/NTZfcOySHVNe/we0puEtsnpfG2X5aPxKiwlc3krz+ydCkg==",
   "success": true,
   "projectFilePath": "D:\\Git\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj",
   "expectedPackageFiles": [
@@ -84,6 +84,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\sendgrid\\9.15.1\\sendgrid.9.15.1.nupkg.sha512",
     "C:\\Users\\Gebruiker\\.nuget\\packages\\ssh.net\\2016.1.0\\ssh.net.2016.1.0.nupkg.sha512",
     "C:\\Users\\Gebruiker\\.nuget\\packages\\sshnet.security.cryptography\\1.2.0\\sshnet.security.cryptography.1.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vlLVriQ3M8al8VrNGi4W8biGGEg4MnEpHi/I7/GocyoaiQu5BMqCQT59PV+bhK80WkKh6BkhiDP7GqbeXyzJew==",
+  "dgSpecHash": "Jhsahx0drzwYmPT42XhhiFSdBpBbecGR+OmBPTJPWlNSvL+HCerfDvDEBIhe3dNg23rkg9Pvp6jLzfvG3qLnOg==",
   "success": true,
   "projectFilePath": "D:\\Git\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj",
   "expectedPackageFiles": [
@@ -36,8 +36,9 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.native.system\\4.0.0\\runtime.native.system.4.0.0.nupkg.sha512",
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\sendgrid\\9.15.1\\sendgrid.9.15.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.appcontext\\4.1.0\\system.appcontext.4.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.collections\\4.0.11\\system.collections.4.0.11.nupkg.sha512",
