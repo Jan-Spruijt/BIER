@@ -46,6 +46,16 @@
                         </li>
                         <div class="line"></div>
                         <li class="margin">
+                            <a href="../Request/ViewRequests">
+                                <i class="fa fa-sitemap nav-icon"></i>
+                                <span class="nav-text">
+                                    Aanvragen
+                                </span>
+                            </a>
+
+                        </li>
+                        <div class="line"></div>
+                        <li class="margin">
                             <a href="#">
                                 <i class="fa fa-user nav-icon"></i>
                                 <span class="nav-text">
@@ -55,49 +65,8 @@
 
                         </li>
                         <div class="line"></div>
-
                     </ul>
-                    
-                    <ul class="logout">
-                            <li class="margin">
-                                <a href="#">
-                                    <i class="fa fa-calendar nav-icon"></i>
-                                    <span class="nav-text">
-                                        Planning maken
-                                    </span>
-                                </a>
-                            </li>
-                            <div class="line"></div>
-                            <li class="margin">
-                                <a href="../Employee/ViewEmployees">
-                                    <i class="fa fa-users nav-icon"></i>
-                                    <span class="nav-text">
-                                        Gebruikers beheer
-                                    </span>
-                                </a>
-                            </li>
-                            <div class="line"></div>
-
-                            <div class="table paddingtop">
-                                <div class="size_width">
-                                    <img class="user_img" src="~/images/user-male-icon.png"/>
-                                </div>
-                                <p class="cell">Ingelogd als "Username"</p>
-                            </div>
-
-                            <div class="table">
-                                <div class="size_width cell"></div>
-                                <div class="cell">
-                                    <a class="link_style" href="../Employee/LoginEmployee">
-                                        Uitloggen
-                                    </a>
-                                    <p class="d-inline"> | </p>
-                                    <a class="link_style" href="#">
-                                        Contact
-                                    </a>
-                                </div>
-                            </div>
-                    </ul>
+                        @await Component.InvokeAsync("SideBar")
                 </nav>
 
 
