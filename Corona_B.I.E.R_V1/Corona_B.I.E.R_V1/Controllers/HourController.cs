@@ -17,6 +17,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using DataLayerLibrary.DataLogic;
+using Corona_B.I.E.R_V1.ExtensionMethods;
 
 namespace Corona_B.I.E.R_V1.Controllers
 {
@@ -39,7 +40,7 @@ namespace Corona_B.I.E.R_V1.Controllers
             if (ModelState.IsValid)
             {
                 HourProcessor.RegisterHour(
-                    Convert.ToInt32(Hour.Employee_Id),
+                    HttpContext.GetCurrentEmployeeModel().Id,
                     Hour.StandbyHours,
                     Hour.IncidentHours    
                 );

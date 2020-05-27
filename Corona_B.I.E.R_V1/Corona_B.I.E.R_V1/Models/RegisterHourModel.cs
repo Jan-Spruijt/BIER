@@ -10,10 +10,6 @@ namespace Corona_B.I.E.R_V1.Models
 {
     public class RegisterHourModel
     {
-        [Display(Name = "Employee ID")]
-        [Required(ErrorMessage = "Vul een ID in")]
-        public string Employee_Id { get; 
-            set; }
         [Display(Name = "Standy Uren")]
         [Required(ErrorMessage = "Vul standby uren in")]
         public string StandbyHours { get; 
