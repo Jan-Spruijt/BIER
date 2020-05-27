@@ -21,14 +21,6 @@ namespace Corona_B.I.E.R_V1.Controllers
         public IActionResult Index(EmployeeModel model)
         {
             EmployeeRole Role = model.Role;
-            if(Role.ToString() == "User")
-            {
-                Employee(model);
-            }
-            else
-            {
-                Admin(model);
-            }
             return View();
         }
 
@@ -72,6 +64,51 @@ namespace Corona_B.I.E.R_V1.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Change(EmployeeModel model)
+        {
+
+            ViewData["Data"] = model;
+            model.Firstname = model.Firstname;
+            string Firstname = model.Firstname;
+            string Prefix = model.Prefix;
+            string Lastname = model.Lastname;
+            string City = model.City;
+            string Postalcode = model.Postalcode;
+            string Address = model.Address;
+            string ProfilePicturePath = model.ProfilePicturePath;
+            string Email = model.Email;
+            string Phone = model.Phone;
+            string Password = model.Password;
+            string Profession = model.Profession;
+
+            return View();
+     
+        
+        }
+
+        public IActionResult Profile(EmployeeModel model)
+        {
+            string Firstname = model.Firstname;
+            string Prefix = model.Prefix;
+            string Lastname = model.Lastname;
+            string City = model.City;
+            string Postalcode = model.Postalcode;
+            string Address = model.Address;
+            string ProfilePicturePath = model.ProfilePicturePath;
+            string Email = model.Email;
+            string Phone = model.Phone;
+            string Password = model.Password;
+            string Profession = model.Profession;
+            if(model.Role == EmployeeRole.Admin)
+            {
+                Admin(model);
+            }else if(model.Role== EmployeeRole.User)
+            {
+                Employee(model);
+            }
+            return View();
+        }
 
     }
 }

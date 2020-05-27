@@ -1,7 +1,8 @@
-﻿@model Corona_B.I.E.R_V1.Models.EmployeeModel
+﻿@model Corona_B.I.E.R_V1.Models.EmployeeCreateModel
 
 @{
     ViewData["Title"] = "Employee";
+    Layout = "~/Views/Shared/_Layout.cshtml";
     var Data = ViewData["Data"] as EmployeeModel;
 }
 
@@ -13,6 +14,18 @@
     <div class="col-md-4">
         <form asp-action="Employee">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+                <label asp-for="ProfilePicturePath" class="control-label"></label>
+                <input asp-for="ProfilePicturePath" class="form-control" value="@Data.ProfilePicturePath" type="text" />
+                <span asp-validation-for="ProfilePicturePath" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="ProfilePicture" class="control-label"></label>
+                <div class="custom-file">
+                    <input asp-for="ProfilePicture" class="form-control custom-file-input" />
+                    <label class="custom-file-label">Choose file...</label>
+                </div>
+            </div>
             <div class="form-group">
                 <label asp-for="Firstname" class="control-label"></label>
                 <input asp-for="Firstname" class="form-control" value="@Data.Firstname" type="text" />
@@ -42,11 +55,6 @@
                 <label asp-for="Address" class="control-label"></label>
                 <input asp-for="Address" class="form-control" value="@Data.Address" type="text" />
                 <span asp-validation-for="Address" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ProfilePicturePath" class="control-label"></label>
-                <input asp-for="ProfilePicturePath" class="form-control" value="@Data.ProfilePicturePath" type="text" />
-                <span asp-validation-for="ProfilePicturePath" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Email" class="control-label"></label>
