@@ -19,5 +19,10 @@
         public string Availability { get; set; }
         public int TotalLogins { get; set; }
         public string LastLogin { get; set; }
+
+        public string GetSalt()
+        {
+            return Salt;
+        }
     }
 }

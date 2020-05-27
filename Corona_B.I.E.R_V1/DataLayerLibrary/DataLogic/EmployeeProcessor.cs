@@ -2,6 +2,7 @@
 using Corona_B.I.E.R_V1.DataModels;
 using Corona_B.I.E.R_V1;
 using System.Collections.Generic;
+using System;
 
 namespace Corona_B.I.E.R_V1.DataLogic
 {
@@ -34,6 +35,34 @@ namespace Corona_B.I.E.R_V1.DataLogic
                             VALUES(@Firstname, @Lastnameprefix, @Lastname, @City, @PostalCode, @Address, @ProfilePicturePath, @Email,
                                     @Phone ,@Salt ,@PasswordHash ,@Profession ,@Role);";
             SQLDataAccess.SaveData(sql, data);
+        }
+        public static void EditEmployee(string firstname, string prefix, string lastname, string city, string postalCode,
+                                        string address, string profilePicturePath, string email, string phone, 
+                                        //string salt,
+                                        string password, string profession, string role, int id)
+        {
+            EmployeeDataModel data = new EmployeeDataModel
+            {
+                ID = id,
+                Firstname = firstname,
+                Lastnameprefix = prefix,
+                Lastname = lastname,
+                City = city,
+                PostalCode = postalCode,
+                Address = address,
+                ProfilePicturePath = profilePicturePath,
+                Email = email,
+                Phone = phone,
+                //Salt = salt,
+                PasswordHash = password,
+                Profession = profession,
+                Role = role
+            };
+            string sql = @"UPDATE employee SET (firstname, lastnamePrefix, lastname, city, postalCode, address, profilePicturePath, email, phone,
+                                                  passwordHash, profession, role)
+                            VALUES(@Firstname, @Lastnameprefix, @Lastname, @City, @PostalCode, @Address, @ProfilePicturePath, @Email,
+                                    @Phone ,@PasswordHash ,@Profession ,@Role); WHERE id = id ";//add salt back
+            SQLDataAccess.DeleteData(sql);
         }
 
         public static List<EmployeeDataModel> LoadEmployees()

@@ -12,74 +12,108 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
+using Corona_B.I.E.R_V1.ExtensionMethods;
 
 namespace Corona_B.I.E.R_V1.Controllers
 {
     public class ProfileController : Controller
     {
-
+        private readonly IWebHostEnvironment _hostingEnvironment;
+        public ProfileController(IWebHostEnvironment hostingEnvironment)
+        {
+            _hostingEnvironment = hostingEnvironment;
+        }
         public IActionResult Index()
         {
+            EmployeeModel employee = HttpContext.GetCurrentEmployeeModel();
             return View();
         }
 
 
         public IActionResult Admin(EmployeeCreateModel model)
         {
-            ViewData["Data"] = model;
+                EmployeeModel employee = HttpContext.GetCurrentEmployeeModel();
+                ViewData["Data"] = employee;
+                string Role = " ";
+                if (employee.Role == EmployeeRole.Admin)
+                {
+                    Role = "Admin";
+                }
+                else { Role = "User"; }
 
-            string Firstname = model.Firstname;
-            string Prefix = model.Prefix;
-            string Lastname = model.Lastname;
-            string City = model.City;
-            string Postalcode = model.Postalcode;
-            string Address = model.Address;
-            //    string ProfilePicturePath = model.ProfilePicturePath;
-            string Email = model.Email;
-            string Phone = model.Phone;
-            string Password = model.Password;
-            string Profession = model.Profession;
-            EmployeeRole Role = model.Role;
+                string salt = PasswordHashingLogic.GenerateSalt();
+                string PasswordHash = PasswordHashingLogic.GeneratePasswordHash(employee.Password, salt);
+                string uniqueFileName = null;
+                if (employee.ProfilePicturePath != null)
+                {
+                    string uploadsFolder = Path.Combine(_hostingEnvironment.WebRootPath, "img", "ProfilePictures");
+                    uniqueFileName = Guid.NewGuid().ToString() + "_" + model.ProfilePicture.FileName;
+                    string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                    model.ProfilePicture.CopyTo(new FileStream(filePath, FileMode.Create));
+                    employee.ProfilePicturePath = filePath;
+                }
+
+
+                EmployeeProcessor.EditEmployee(
+                    employee.Firstname,
+                    employee.Prefix,
+                    employee.Lastname,
+                    employee.City,
+                    employee.Postalcode,
+                    employee.Address,
+                    employee.ProfilePicturePath,
+                    employee.Email,
+                    employee.Phone,
+                    //Salt,
+                    employee.Password,
+                    employee.Profession,
+                    Role,
+                    employee.Id);
             return View();
         }
 
-        public IActionResult Employee(EmployeeCreateModel model)
+        public IActionResult Employee()
         {
-
-            ViewData["Data"] = model;
-
-            string Firstname = model.Firstname;
-            string Prefix = model.Prefix;
-            string Lastname = model.Lastname;
-            string City = model.City;
-            string Postalcode = model.Postalcode;
-            string Address = model.Address;
-            // string ProfilePicturePath = model.ProfilePicturePath;
-            string Email = model.Email;
-            string Phone = model.Phone;
-            string Password = model.Password;
-            string Profession = model.Profession;
-
+            EmployeeModel employee = HttpContext.GetCurrentEmployeeModel();
+            employee = HttpContext.GetCurrentEmployeeModel();
+                TempData["Data"] = employee;
+            try
+            {
+                string Role = " ";
+                if (employee.Role == EmployeeRole.Admin)
+                {
+                    Role = "Admin";
+                }
+                else { Role = "User"; }
+                EmployeeProcessor.EditEmployee(
+                        employee.Firstname,
+                        employee.Prefix,
+                        employee.Lastname,
+                        employee.City,
+                        employee.Postalcode,
+                        employee.Address,
+                        employee.ProfilePicturePath,
+                        employee.Email,
+                        employee.Phone,
+                        //employee.Salt,
+                        employee.Password,
+                        employee.Profession,
+                        Role,
+                        employee.Id);
+            }
+            catch
+            {
+                return View()
+            }
+            
             return View();
         }
 
 
         public IActionResult Profile(EmployeeModel model)
         {
-            ViewData["Data"] = model;
-
-            string Firstname = model.Firstname;
-            string Prefix = model.Prefix;
-            string Lastname = model.Lastname;
-            string City = model.City;
-            string Postalcode = model.Postalcode;
-            string Address = model.Address;
-            // string ProfilePicturePath = model.ProfilePicturePath;
-            string Email = model.Email;
-            string Phone = model.Phone;
-            string Password = model.Password;
-            string Profession = model.Profession;
-
+            EmployeeModel employee = HttpContext.GetCurrentEmployeeModel();
+            ViewData["Data"] = employee;
             return View();
         }
 

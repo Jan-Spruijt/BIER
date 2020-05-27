@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Employee";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    var Data = ViewData["Data"] as EmployeeCreateModel;
+    var Data = TempData["Data"] as EmployeeModel;
 }
 
 <h1>Employee</h1>
@@ -14,19 +14,21 @@
     <div class="col-md-4">
         <form asp-action="Employee">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            @*<div class="form-group">
+
+                @*<div class="form-group">
                 <label asp-for="ProfilePicturePath" class="control-label"></label>
                 <input asp-for="ProfilePicturePath" class="form-control" value="@Data.ProfilePicturePath" type="text" />
                 <span asp-validation-for="ProfilePicturePath" class="text-danger"></span>
             </div>*@
-            <div class="form-group">
+                @*<div class="form-group">
                 <label asp-for="ProfilePicture" class="control-label"></label>
                 <div class="custom-file">
                     <input asp-for="ProfilePicture" class="form-control custom-file-input" />
                     <label class="custom-file-label">Choose file...</label>
                 </div>
-            </div>
-            <div class="form-group">
+            </div>*@
+
+                <div class="form-group">
                 <label asp-for="Firstname" class="control-label"></label>
                 <input asp-for="Firstname" class="form-control" value="@Data.Firstname" type="text" />
                 <span asp-validation-for="Firstname" class="text-danger"></span>
@@ -71,9 +73,9 @@
                 <input asp-for="Profession" class="form-control" value="@Data.Profession" type="text" />
                 <span asp-validation-for="Profession" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Change" class="btn btn-primary" />
-            </div>
+                <div class="form-group">
+                    <input type="submit" value="Change" class="btn btn-primary" />
+                </div>
         </form>
     </div>
 </div>

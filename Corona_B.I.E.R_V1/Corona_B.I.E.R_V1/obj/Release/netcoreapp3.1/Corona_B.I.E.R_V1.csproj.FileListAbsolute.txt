@@ -375,7 +375,6 @@ D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\
 D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
-D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Shared\_LayoutEmployeesView.cshtml.g.cs
 D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Shared\_LayoutLoginPage.cshtml.g.cs
 D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
@@ -393,3 +392,13 @@ D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\
 D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Profile\Employee.cshtml.g.cs
 D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Profile\Profile.cshtml.g.cs
 D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Profile\ChangeProfile.cshtml.g.cs
+D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Agenda\schedule.cshtml.g.cs
+D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Request\AbsenceRequest.cshtml.g.cs
+D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Request\Details.cshtml.g.cs
+D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Request\Edit.cshtml.g.cs
+D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Request\ExchangeRequest.cshtml.g.cs
+D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Request\SelectRequest.cshtml.g.cs
+D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Request\VacationRequest.cshtml.g.cs
+D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Request\ViewRequests.cshtml.g.cs
+D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Shared\Components\NewEvent\Default.cshtml.g.cs
+D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Shared\Components\SideBar\Default.cshtml.g.cs

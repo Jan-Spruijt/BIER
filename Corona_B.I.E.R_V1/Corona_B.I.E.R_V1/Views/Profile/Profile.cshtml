@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Profile";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    var Data = ViewData["Data"] as EmployeeModel;
+    var Data = TempData["Data"] as EmployeeModel;
 }
 
 <h1>Profile</h1>
@@ -18,13 +18,13 @@
             <input asp-for="ProfilePicturePath" class="form-control" value="@Data.ProfilePicturePath" type="text" />
             <span asp-validation-for="ProfilePicturePath" class="text-danger"></span>
         </div>
-            <div class="form-group">
-                @*<label asp-for="ProfilePicture" class="control-label"></label>
+            @*<div class="form-group">
+                <label asp-for="ProfilePicture" class="control-label"></label>
                 <div class="custom-file">
                     <input asp-for="ProfilePicture" class="form-control custom-file-input" />
                     <label class="custom-file-label">Choose file...</label>
-                </div>*@
-            </div>
+                </div>
+            </div>*@
             <div class="form-group">
                 <label asp-for="Firstname" class="control-label"></label>
                 <input asp-for="Firstname" class="form-control" value="@Data.Firstname" type="text" />
