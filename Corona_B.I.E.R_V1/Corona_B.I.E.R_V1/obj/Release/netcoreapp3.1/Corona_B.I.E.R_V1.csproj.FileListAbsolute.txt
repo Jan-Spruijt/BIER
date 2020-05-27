@@ -392,3 +392,4 @@ D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\
 D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Profile\Admin.cshtml.g.cs
 D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Profile\Employee.cshtml.g.cs
 D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Profile\Profile.cshtml.g.cs
+D:\school\S2\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Profile\ChangeProfile.cshtml.g.cs

@@ -13,12 +13,12 @@ namespace Corona_B.I.E.R_V1.Models
         public string Firstname { get; set; }
         public string Prefix { get; set; }
         public string Lastname { get; set; }
-        public string City { get; set; }
+        public string City = "hdsaf";
         public string Postalcode { get; set; }
         public string Address { get; set; }
         public string ProfilePicturePath { get; set; }
         public string Email { get; set; }
-        public string Phone { get; set; }
+        public string Phone = "sdafdsfa";
         public string Password { get; set; }
         public string Profession { get; set; }
         public EmployeeRole Role { get; set; }
