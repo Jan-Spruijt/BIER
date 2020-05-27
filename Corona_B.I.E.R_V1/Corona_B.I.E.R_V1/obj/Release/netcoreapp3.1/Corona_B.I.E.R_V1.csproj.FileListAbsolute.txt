@@ -252,9 +252,13 @@ C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Rele
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Corona_B.I.E.R_V1.dll
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Corona_B.I.E.R_V1.pdb
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Corona_B.I.E.R_V1.genruntimeconfig.cache
-C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Shared\_LayoutEmployeesView.cshtml.g.cs
-C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Request\ViewRequests.cshtml.g.cs
-C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Request\NewRequest.cshtml.g.cs
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Release\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Agenda\schedule.cshtml.g.cs
+C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Request\SelectRequest.cshtml.g.cs
+C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Request\AbsenceRequest.cshtml.g.cs
+C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Request\ExchangeRequest.cshtml.g.cs
+C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Request\VacationRequest.cshtml.g.cs
+C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Request\ViewRequests.cshtml.g.cs
+C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Request\Edit.cshtml.g.cs
+C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Request\Details.cshtml.g.cs

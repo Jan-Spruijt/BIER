@@ -95,6 +95,10 @@ namespace Corona_B.I.E.R_V1.Controllers
 
         public IActionResult LoginEmployee()
         {
+            if (@User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Dashboard", "Home");
+            }
             return View();
         }
 
