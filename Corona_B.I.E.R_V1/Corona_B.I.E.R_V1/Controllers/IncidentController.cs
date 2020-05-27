@@ -6,6 +6,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Corona_B.I.E.R_V1.DataLogic;
 using Corona_B.I.E.R_V1.DataModels;
+using Corona_B.I.E.R_V1.ExtensionMethods;
 using Corona_B.I.E.R_V1.Models;
 using DataLayerLibrary.DataLogic;
 using Microsoft.AspNetCore.Mvc;
@@ -36,9 +37,9 @@ namespace Corona_B.I.E.R_V1.Controllers
                     incident.Context,
                     incident.Customer,
                     incident.CustomerEmail,
-                    11
+                    HttpContext.GetCurrentEmployeeModel().Id
                 );
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("ViewIncidents");
             }
             return View();
         }
@@ -64,15 +65,21 @@ namespace Corona_B.I.E.R_V1.Controllers
                 }
                 );
             }
-            return View(incidents);
+
+            var sortedIncidents = incidents.OrderBy(q => q.Status.ToString().Length).ThenByDescending(q => q.DateTimeStart);
+            return View(sortedIncidents);
         }
         public IActionResult DetailsIncident(int id)
         {
+            int count = 0;
             var incidentData = IncidentProcessor.LoadIncidentById(id);
+            var incidentEmployeeData = IncidentEmployeeProcessor.LoadEmployeesByIncidentId(id);
             var incidentStepData = IncidentStepProcessor.LoadStepsByIncidentId(id);
             List<IncidentStepModel> steps = new List<IncidentStepModel>();
+            List<EmployeeModel> employees = new List<EmployeeModel>();
             foreach (var step in incidentStepData)
             {
+                count++;
                 steps.Add(new IncidentStepModel
                 {
                     context = step.context,
@@ -83,8 +90,21 @@ namespace Corona_B.I.E.R_V1.Controllers
                     id = step.id,
                     incident_id = step.incident_id,
                     status = step.status,
-                    stepnumber = step.stepnumber
+                    stepnumber = count
                 }
+                );
+            }
+
+            foreach (var employee in incidentEmployeeData)
+            {
+                var data = EmployeeProcessor.GetUserById(employee.Employee_Id);
+                employees.Add( new EmployeeModel
+                    {
+                        Firstname = data.Firstname,
+                        Lastname = data.Lastname,
+                        ProfilePicturePath = data.ProfilePicturePath,
+                        Id = data.ID
+                    }
                 );
             }
             IncidentDetailsViewModel incidentDetails = new IncidentDetailsViewModel
@@ -95,91 +115,44 @@ namespace Corona_B.I.E.R_V1.Controllers
                 CustomerEmail = incidentData.CustomerEmail,
                 Title = incidentData.Title,
                 Status = incidentData.Status,
-                steps = steps
+                steps = steps,
+                employees = employees
             };
             return View(incidentDetails);
         }
-
-        //public IActionResult GoToDetails(int id)
-        //{
-        //    return RedirectToAction("CloseIncident", new { Id = id });
-        //}
 
         public IActionResult CloseIncident(int id)
         {
             IncidentProcessor.CloseIncident(
                 id,
-                11
+                HttpContext.GetCurrentEmployeeModel().Id
             );
 
             return RedirectToAction("ViewIncidents", "Incident");
         }
 
-        public IActionResult CreateStep(int id)
+        public IActionResult AddEmployeeToIncident(int id)
         {
-            return View();
+            IncidentEmployeeProcessor.AddEmployeeToIncident(id, HttpContext.GetCurrentEmployeeModel().Id);
+            return RedirectToAction("DetailsIncident", new { id });
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult CreateStep(IncidentStepModel data, int id)
+        public IActionResult RemoveEmployeeFromIncident(int id)
         {
-            if (ModelState.IsValid)
+            var stepData = IncidentStepProcessor.LoadStepsByIncidentId(id);
+            foreach (var step in stepData)
             {
-                IncidentStepProcessor.CreateStep(
-                    11,
-                    data.id,
-                    data.stepnumber,
-                    data.context,
-                    data.title
-                    );
-                return RedirectToAction("ViewIncidents", "Incident");
-            }
-            return View();
-        }
-
-        public IActionResult DetailsStep(int id)
-        {
-            var stepData = IncidentStepProcessor.LoadStepById(id);
-            var StepEmployeeData = IncidentStepEmployeeprocessor.LoadEmployeesFromStepId(id);
-            List<EmployeeModel> employees = new List<EmployeeModel>();
-            foreach (var employee in StepEmployeeData)
-            {
-                var employeeData = EmployeeProcessor.GetUserById(employee.employee_id);
-                employees.Add(new EmployeeModel
+                var stepEmployeeData = IncidentStepEmployeeprocessor.LoadEmployeesFromStepId(step.id);
+                foreach (var employee in stepEmployeeData)
                 {
-                    Address = employeeData.Address,
-                    City = employeeData.City,
-                    Firstname = employeeData.Firstname,
-                    ProfilePicturePath = employeeData.ProfilePicturePath,
-                    Profession = employeeData.Profession,
-                    Lastname = employeeData.Lastname,
-                    Email = employeeData.Email,
-                    Id = employeeData.ID,
-                    Phone = employeeData.Phone
+                    if (employee.id == HttpContext.GetCurrentEmployeeModel().Id)
+                    {
+                        IncidentStepEmployeeprocessor.RemoveEmployeeFromStep(step.id, HttpContext.GetCurrentEmployeeModel().Id);
+                    }
                 }
-                );
             }
-            IncidentStepDetailsViewModel stepDetails = new IncidentStepDetailsViewModel
-            { 
-                context = stepData.context,
-                datetimeStart = stepData.datetimeStart,
-                datetimeEnd = stepData.datetimeEnd,
-                employee = employees,
-                employee_id_createdby = stepData.employee_id_createdby,
-                employee_id_endedby = stepData.employee_id_endedby,
-                id = stepData.id,
-                incident_id = stepData.incident_id,
-                status = stepData.status,
-                stepnumber = stepData.stepnumber,
-            };
-            return View(stepDetails);
-        }
-
-        public IActionResult AddEmployeeToStep(int id)
-        {
-            IncidentStepEmployeeprocessor.AddEmployeeToStep(11,id);
-            return RedirectToAction("DetailsStep", new {id});
+            IncidentEmployeeProcessor.RemoveEmployeeFromIncident(id, HttpContext.GetCurrentEmployeeModel().Id);
+            return RedirectToAction("DetailsIncident", new { id=id });
         }
     }
 }

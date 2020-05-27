@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "1eAhVW8EkAbAwG6EetbfTqb+XIKqdFQeYhU9pM4va84DEkzSHNKl3NdeBw0e0/csX0ac0ND8jc5FK2Hf3k0MNQ==",
+  "dgSpecHash": "So97NZFWHGDgxQtlCb8rHLBsxwwek8Q9VLgqBT7hhtGTurssv0mBNc5snfLGNMdU/kRsuiZ5GzaP7cVzDFl/ww==",
   "success": true,
   "projectFilePath": "D:\\github\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marco\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\marco\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\marco\\.nuget\\packages\\google.protobuf\\3.6.1\\google.protobuf.3.6.1.nupkg.sha512",
+    "C:\\Users\\marco\\.nuget\\packages\\jquery\\3.2.1\\jquery.3.2.1.nupkg.sha512",
+    "C:\\Users\\marco\\.nuget\\packages\\jquery.fullcalendar\\3.9.0\\jquery.fullcalendar.3.9.0.nupkg.sha512",
     "C:\\Users\\marco\\.nuget\\packages\\microsoft.aspnet.mvc\\5.2.7\\microsoft.aspnet.mvc.5.2.7.nupkg.sha512",
     "C:\\Users\\marco\\.nuget\\packages\\microsoft.aspnet.razor\\3.2.7\\microsoft.aspnet.razor.3.2.7.nupkg.sha512",
     "C:\\Users\\marco\\.nuget\\packages\\microsoft.aspnet.webpages\\3.2.7\\microsoft.aspnet.webpages.3.2.7.nupkg.sha512",
@@ -62,6 +64,7 @@
     "C:\\Users\\marco\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\marco\\.nuget\\packages\\microsoft.win32.systemevents\\4.6.0\\microsoft.win32.systemevents.4.6.0.nupkg.sha512",
+    "C:\\Users\\marco\\.nuget\\packages\\moment.js\\2.18.2\\moment.js.2.18.2.nupkg.sha512",
     "C:\\Users\\marco\\.nuget\\packages\\mysql.data\\8.0.19\\mysql.data.8.0.19.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",

@@ -1,65 +1,74 @@
-﻿@model Corona_B.I.E.R_V1.Models.IncidentStepDetailsViewModel
+﻿@using Corona_B.I.E.R_V1.ExtensionMethods
+@model Corona_B.I.E.R_V1.Models.IncidentStepDetailsViewModel
 
 @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "DetailsStep";
+    bool isWorkingOn = false;
 }
-
+@foreach (var employee in Model.employee)
+{
+    if (Context.GetCurrentEmployeeModel().Id == employee.Id)
+    {
+        isWorkingOn = true;
+    }
+}
 <h1>DetailsStep</h1>
 
 <div>
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.employee_id_createdby)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.employee_id_createdby)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.employee_id_endedby)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.employee_id_endedby)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.incident_id)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.incident_id)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.stepnumber)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.stepnumber)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.context)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.context)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.title)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.title)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.datetimeStart)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.datetimeStart)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.datetimeEnd)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.datetimeEnd)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.status)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.status)
         </dd>
     </dl>
@@ -91,15 +100,40 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.ProfilePicturePath)
                 </td>
-                <td>
-                    @Html.ActionLink("Remove", "Delete", new {/* id=item.PrimaryKey */})
-                </td>
             </tr>
         }
     </tbody>
 </table>
-<div>
-    @Html.ActionLink("Close", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Voeg medewerker toe", "AddEmployeeToStep", new {id = Model.id})
-    <a asp-action="Index">Back to List</a>
-</div>
+@if (Model.status == "pending")
+{
+    <div>
+        @Html.ActionLink("begin", "StartStep", new { id = Model.id }) |
+        @Html.ActionLink("Terug naar incident", "DetailsIncident", "Incident", new { id = Model.incident_id })
+    </div>
+}
+@if (Model.status == "busy")
+{
+    if (isWorkingOn)
+    {
+        <div>
+            @Html.ActionLink("Close", "CloseStep", new { id = Model.id }) |
+            @Html.ActionLink("Stop meewerken", "RemoveEmployeeFromStep", new { id = Model.id }) |
+            @Html.ActionLink("Terug naar incident", "DetailsIncident", "incident", new { id = Model.incident_id })
+        </div>
+    }
+    else
+    {
+        <div>
+            @Html.ActionLink("Close", "CloseStep", new { id = Model.id }) |
+            @Html.ActionLink("Werk mee", "AddEmployeeToStep", new { id = Model.id }) |
+            @Html.ActionLink("Terug naar incident", "DetailsIncident", "incident", new { id = Model.incident_id })
+        </div>
+    }
+}
+@if (Model.status == "done")
+{
+    <div>
+        @Html.ActionLink("Terug naar incident", "DetailsIncident", "Incident", new { id = Model.incident_id })
+    </div>
+}
+

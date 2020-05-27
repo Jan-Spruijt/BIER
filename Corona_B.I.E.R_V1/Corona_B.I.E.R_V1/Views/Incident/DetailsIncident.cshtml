@@ -1,9 +1,28 @@
-﻿@model Corona_B.I.E.R_V1.Models.IncidentDetailsViewModel
+﻿@using System.Transactions
+@using Corona_B.I.E.R_V1.ExtensionMethods
+@model Corona_B.I.E.R_V1.Models.IncidentDetailsViewModel
 
 @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "DetailsIncident";
+    bool status = true;
+    bool isworkingon = false;
+}
+@foreach (var step in Model.steps)
+{
+    if (step.status != "done")
+    {
+        status = false;
+    }
 }
 
+@foreach (var employee in Model.employees)
+{
+    if (Context.GetCurrentEmployeeModel().Id == employee.Id)
+    {
+        isworkingon = true;
+    }
+}
 <h1>DetailsIncident</h1>
 
 
@@ -44,41 +63,87 @@
 </div>
 <table class="table">
     <thead>
-    <tr>
-        <th>
-            Titel
-        </th>
-        <th>
-            Stapnummer
-        </th>
-        <th>
-            Status
-        </th>
-    </tr>
+        <tr>
+            <th>
+                Titel
+            </th>
+            <th>
+                Stapnummer
+            </th>
+            <th>
+                Status
+            </th>
+        </tr>
     </thead>
     <tbody>
-    @foreach (var item in Model.steps)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.context)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.stepnumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.status)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new {/* id=item.PrimaryKey */}) |
-                @Html.ActionLink("Details", "DetailsStep", new {id = item.id}) |
-                @Html.ActionLink("Delete", "Delete", new {/* id=item.PrimaryKey */})
-            </td>
-        </tr>
-    }
+        @foreach (var item in Model.steps)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.context)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.stepnumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.status)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new {/* id=item.PrimaryKey */}) |
+                    @Html.ActionLink("Details", "DetailsStep","IncidentStep", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new {/* id=item.PrimaryKey */})
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
 <div>
-    @Html.ActionLink("Voeg stap toe", "CreateStep", new { id = Model.id }) |
-    <a asp-action="Index">Back to List</a>
+    @if (Model.Status == "open")
+    {
+        if (status == false)
+        {
+            <div>
+                @Html.ActionLink("Voeg stap toe", "CreateStep","IncidentStep", new { id = Model.id }) |
+                <a asp-action="ViewIncidents">Back to List</a>
+            </div>
+        }
+        else
+        {
+            <div>
+                @Html.ActionLink("Close", "CloseIncident", new { id = Model.id }) |
+                @Html.ActionLink("Voeg stap toe", "CreateStep","IncidentStep", new { id = Model.id }) |
+                <a asp-action="ViewIncidents">Back to List</a>
+            </div>
+        }
+    }
+    @if (Model.Status == "closed")
+    {
+        <div>
+            <a asp-action="ViewIncidents">Back to List</a>
+        </div>
+    }
+
 </div>
+<h5>Werknemers</h5>
+<div>
+    @foreach (var item in Model.employees)
+    {
+        var photoPath = "../img/ProfilePictures/" + (item.ProfilePicturePath ?? "DefaultUserPicture.png");
+        <div>
+            <span>@item.Firstname @item.Prefix @item.Lastname</span>
+            <img src="@photoPath" />
+        </div>
+    }
+</div>
+@if (isworkingon == false)
+{
+    <div>
+        @Html.ActionLink("Begin werken aan incident", "AddEmployeeToIncident", new {id = Model.id})
+    </div>
+}
+else
+{
+    <div>
+        @Html.ActionLink("Stop werken aan incident", "RemoveEmployeeFromIncident", new {id = Model.id})
+    </div>
+}

@@ -1,6 +1,7 @@
 ﻿@model Corona_B.I.E.R_V1.Models.IncidentModel
 
 @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "CreateIncident";
 }
 
@@ -40,7 +41,7 @@
 </div>
 
 <div>
-    <a asp-controller="Home" asp-action="Index">Back to List</a>
+    <a asp-controller="Home" asp-action="Dashboard">Back to List</a>
 </div>
 
 @section Scripts {

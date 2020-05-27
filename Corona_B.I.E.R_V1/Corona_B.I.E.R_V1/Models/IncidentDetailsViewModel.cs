@@ -19,5 +19,6 @@ namespace Corona_B.I.E.R_V1.Models
         public string Status { get; set; }
         public int id { get; set; }
         public List<IncidentStepModel> steps { get; set; }
+        public List<EmployeeModel> employees { get; set; }
     }
 }

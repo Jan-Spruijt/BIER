@@ -10,7 +10,6 @@ namespace DataLayerLibrary.DataModels
         public int employee_id_createdby { get; set; }
         public int employee_id_endedby { get; set; }
         public int incident_id { get; set; }
-        public int stepnumber { get; set; }
         public string context { get; set; }
         public string title { get; set; }
         public DateTime datetimeStart { get; set; }

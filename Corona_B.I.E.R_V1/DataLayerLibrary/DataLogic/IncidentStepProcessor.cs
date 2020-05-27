@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using Corona_B.I.E.R_V1.DataAccess;
 using DataLayerLibrary.DataModels;
 
@@ -16,18 +17,31 @@ namespace DataLayerLibrary.DataLogic
                 title = title,
                 employee_id_createdby = employeeCreatedBy,
                 incident_id = incidentId,
-                stepnumber = stepNumber,
                 status = "pending"
             };
-            string sql = @"INSERT INTO incident_timeline (employee_id_createdby, incident_id, stepnumber, context, title, status)
-                            VALUES (@employee_id_createdby, @incident_id, @stepnumber, @context, @title, @status)";
+            string sql = @"INSERT INTO incident_timeline (employee_id_createdby, incident_id, context, title, status)
+                            VALUES (@employee_id_createdby, @incident_id, @context, @title, @status)";
             SQLDataAccess.SaveData(sql,data);
         }
 
-        //toevoegen xtra tabellen
         public static void StartStep(int id, int employee_id)
         {
+            bool isWorkingOn = false;
             var data = LoadStepById(id);
+            var incidentEmployeeData = IncidentEmployeeProcessor.LoadEmployeesByIncidentId(data.incident_id);
+            foreach (var employee in incidentEmployeeData)
+            {
+                if (employee_id == employee.Id)
+                {
+                    isWorkingOn = true;
+                } 
+            }
+
+            if (isWorkingOn == false)
+            {
+                IncidentEmployeeProcessor.AddEmployeeToIncident(data.incident_id, employee_id);
+            }
+
             data.datetimeStart = DateTime.Now;
             var datetimestring = data.datetimeStart.ToString("yyyy/MM/dd HH:mm:ss");
             data.status = "busy";

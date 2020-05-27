@@ -1,7 +1,9 @@
 ﻿@model Corona_B.I.E.R_V1.Models.IncidentStepModel
 
 @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "CreateStep";
+    var data = ViewData["id"];
 }
 
 <h1>CreateStep</h1>
@@ -18,13 +20,8 @@
                 <span asp-validation-for="title" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="stepnumber" class="control-label"></label>
-                <input asp-for="stepnumber" class="form-control" />
-                <span asp-validation-for="stepnumber" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="context" class="control-label"></label>
-                <input asp-for="context" class="form-control" />
+                <textarea asp-for="context" class="form-control" rows="3"></textarea>
                 <span asp-validation-for="context" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -35,6 +32,6 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    @Html.ActionLink("Terug naar Incident", "DetailsIncident","Incident", new {id = data})
 </div>
 

@@ -284,7 +284,13 @@ D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor
 D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Incident\ViewIncidents.cshtml.g.cs
 D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
 D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
-D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Incident\DetailsIncidentold.cshtml.g.cs
 D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Incident\DetailsIncident.cshtml.g.cs
-D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Incident\CreateStep.cshtml.g.cs
-D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Incident\DetailsStep.cshtml.g.cs
+D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Agenda\CreateEvent.cshtml.g.cs
+D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Agenda\schedule.cshtml.g.cs
+D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Home\Dashboard.cshtml.g.cs
+D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
+D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\NewEvent\Default.cshtml.g.cs
+D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutEmployeesView.cshtml.g.cs
+D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutLoginPage.cshtml.g.cs
+D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\IncidentStep\CreateStep.cshtml.g.cs
+D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\IncidentStep\DetailsStep.cshtml.g.cs
