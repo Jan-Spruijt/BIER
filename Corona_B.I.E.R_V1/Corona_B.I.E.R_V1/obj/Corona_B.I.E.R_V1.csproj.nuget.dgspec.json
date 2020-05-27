@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj": {}
+    "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj": {
+    "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj",
+        "projectUniqueName": "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj",
         "projectName": "Corona_B.I.E.R_V1",
-        "projectPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj",
-        "packagesPath": "C:\\Users\\gijs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\obj\\",
+        "projectPath": "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj",
+        "packagesPath": "C:\\Users\\Maik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\gijs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Maik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,11 +30,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj": {
-                "projectPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj"
+              "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj": {
+                "projectPath": "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj"
               },
-              "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj": {
-                "projectPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj"
+              "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj": {
+                "projectPath": "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj"
               }
             }
           }
@@ -50,11 +50,7 @@
           "dependencies": {
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[3.1.2, )"
-            },
-            "jQuery.Fullcalendar": {
-              "target": "Package",
-              "version": "[3.9.0, )"
+              "version": "[3.1.3, )"
             }
           },
           "imports": [
@@ -79,20 +75,20 @@
         }
       }
     },
-    "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj": {
+    "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj",
         "projectName": "DataLayerLibrary",
-        "projectPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj",
-        "packagesPath": "C:\\Users\\gijs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\obj\\",
+        "projectPath": "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj",
+        "packagesPath": "C:\\Users\\Maik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\gijs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Maik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -144,20 +140,20 @@
         }
       }
     },
-    "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj": {
+    "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj",
         "projectName": "LogicLayerLibrary",
-        "projectPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj",
-        "packagesPath": "C:\\Users\\gijs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\obj\\",
+        "projectPath": "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj",
+        "packagesPath": "C:\\Users\\Maik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Maik\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\gijs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Maik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
