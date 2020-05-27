@@ -53,7 +53,7 @@ namespace Corona_B.I.E.R_V1.ViewComponents
                 );
             }
 
-            var sortedIncidents = incidents.Where(q => q.Status == "open");
+            var sortedIncidents = incidents.Where(q => q.Status == "open").Take(3);
             return View(sortedIncidents);
         }
     }

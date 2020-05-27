@@ -154,5 +154,21 @@ namespace Corona_B.I.E.R_V1.Controllers
             IncidentEmployeeProcessor.RemoveEmployeeFromIncident(id, HttpContext.GetCurrentEmployeeModel().Id);
             return RedirectToAction("DetailsIncident", new { id=id });
         }
+
+        public IActionResult DeleteIncident(int id)
+        {
+            var steps = IncidentStepProcessor.LoadStepsByIncidentId(id);
+            var incidentEmployees = IncidentEmployeeProcessor.LoadEmployeesByIncidentId(id);
+            foreach (var employee in incidentEmployees)
+            {
+                IncidentEmployeeProcessor.RemoveEmployeeFromIncident(id, employee.Employee_Id);
+            }
+            foreach (var step in steps)
+            {
+                IncidentStepProcessor.DeleteStep(step.id);
+            }
+            IncidentProcessor.DeleteIncident(id);
+            return RedirectToAction("ViewIncidents");
+        }
     }
 }

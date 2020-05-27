@@ -78,6 +78,11 @@ namespace DataLayerLibrary.DataLogic
 
         public static void DeleteStep(int id)
         {
+            var employees = IncidentStepEmployeeprocessor.LoadEmployeesFromStepId(id);
+            foreach (var employee in employees)
+            {
+                IncidentStepEmployeeprocessor.RemoveEmployeeFromStep(id,employee.employee_id);
+            }
             string sql = $"DELETE FROM incident_timeline WHERE id = '{id}';";
             SQLDataAccess.DeleteData(sql);
         }
