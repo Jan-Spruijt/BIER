@@ -1,5 +1,4 @@
 ﻿#CustomEmployeeDropdown{
-    width: 300px;
     position: relative;
 }
 
@@ -35,10 +34,11 @@
 }
 #SearchEmployee {
     height: 45px;
-    width: 200px;
+    width: 79%;
     border-color: transparent;
     outline: none;
-    color:#495057;
+    color: #495057;
+    background: white;
 }
 #CustomEmployeeDropdown section {
     background: white;
@@ -53,6 +53,7 @@
         border-radius: 50%;
         object-fit: cover;
         margin-right: 10px;
+        padding: 2px;
     }
 .SearchIcon {
     border-radius: unset !important;
@@ -61,7 +62,7 @@
     object-fit: contain !important;
 }
 
-#CustomEmployeeDropdown .fc-icon {
+#CustomEmployeeDropdown span {
     color: #495057;
     transform: rotate(90deg) translateX(8px);
     font-size: 25px;
@@ -71,4 +72,83 @@
 
 #CustomEmployeeDropdown .active-icon {
     transform: rotate(90deg) translateX(6px) rotateY(180deg);
+}
+
+#CustomEmployeeDropdown .fa-times {
+    font-size: 20px;
+    transform: translateX(-1px) translateY(3px);
+    transition: none;
+}
+#Overlay {
+    position: fixed;
+    background: #00000061;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+#PopUpForm {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    justify-content: center;
+    display: none;
+}
+    #PopUpForm .row {
+        display: flex;
+        flex-direction: column;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        height: fit-content;
+        background: white;
+        margin-top: 5%;
+        border-radius: 3px;
+        transform: scale(0);
+        transition: all 0.3s;
+        z-index: 101;
+        padding: 15px;
+        box-shadow: 0px 0px 25px 4px #0000005e;
+    }
+
+    #PopUpForm .rowvisible {
+        transform: scale(1);
+        
+    }
+    #PopUpForm .input-group label{
+        width:calc(50% - 15px);
+    }
+    #HeaderForm h2{
+        font-size: 18px;
+        display: inline;
+    }
+    #HeaderForm span {
+         float:right;
+    }
+    #HeaderForm span i {
+            margin-right: 5px;
+            cursor: pointer;
+    }
+    #BottomForm .form-group{
+        float:right;
+    }
+#BottomForm .btn-cancel {
+    background: #b3b3b3 !important;
+    border-color: #b3b3b3 !important;
+}
+    #BottomForm .btn-cancel:hover {
+        background: #737373 !important;
+        border-color: #737373 !important;
+    }
+#PopUpForm .empty-column {
+    width: 30px;
+}
+.fc-title{
+    visibility: hidden;
+}
+.fc-employee{
+    visibility: visible;
 }

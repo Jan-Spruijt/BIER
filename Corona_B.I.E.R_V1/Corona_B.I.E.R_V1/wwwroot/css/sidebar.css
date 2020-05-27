@@ -54,7 +54,7 @@
 }
 
 .user_img {
-    margin: 0 auto;
+    margin-left: 9px;
     width: 40px;
     border-radius: 50%;
     border-style: solid;
@@ -65,6 +65,9 @@
     text-align: center;
     vertical-align: middle;
     font-size: 25px;
+}
+.user_img_container{
+    width: auto;
 }
 
 .link_style {
