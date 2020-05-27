@@ -3,10 +3,15 @@
     "",
     "\\Corona_B.I.E.R_V1",
     "\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1",
+    "\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Models",
     "\\Corona_B.I.E.R_V1\\DataLayerLibrary",
+    "\\Corona_B.I.E.R_V1\\DataLayerLibrary\\bin",
+    "\\Corona_B.I.E.R_V1\\DataLayerLibrary\\bin\\Release",
+    "\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataAcces",
+    "\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLogic",
     "\\Corona_B.I.E.R_V1\\Logic",
     "\\Corona_B.I.E.R_V1\\LogicLayerLibrar"
   ],
-  "SelectedNode": "\\Corona_B.I.E.R_V1\\Logic\\bin",
+  "SelectedNode": "\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLogic\\EmployeeProcessor.cs",
   "PreviewInSolutionExplorer": false
 }

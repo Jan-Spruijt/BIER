@@ -14,6 +14,44 @@ namespace Corona_B.I.E.R_V1.Controllers
 
     public class HourController : ControllerBase
     {
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult RegisterEmployee(EmployeeCreateModel employee)
+        {
+            if (ModelState.IsValid)
+            {
+                string salt = PasswordHashingLogic.GenerateSalt();
+                string PasswordHash = PasswordHashingLogic.GeneratePasswordHash(employee.Password, salt);
+                string uniqueFileName = null;
+                if (employee.ProfilePicture != null)
+                {
+                    string uploadsFolder = Path.Combine(_hostingEnvironment.WebRootPath, "img", "ProfilePictures");
+                    uniqueFileName = Guid.NewGuid().ToString() + "_" + employee.ProfilePicture.FileName;
+                    string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                    employee.ProfilePicture.CopyTo(new FileStream(filePath, FileMode.Create));
+
+                }
+                EmployeeProcessor.CreateEmployee(
+                    employee.Firstname,
+                    employee.Prefix,
+                    employee.Lastname,
+                    employee.City,
+                    employee.Postalcode,
+                    employee.Address,
+                    uniqueFileName,
+                    employee.Email,
+                    employee.Phone,
+                    salt,
+                    PasswordHash,
+                    employee.Profession,
+                    employee.Role.ToString()
+                );
+                return RedirectToAction("Index", "Home");
+            }
+
+            return View();
+        }
+
 
         // GET: api/Hour
         [HttpGet]
