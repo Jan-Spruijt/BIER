@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using Corona_B.I.E.R_V1.DataAccess;
@@ -73,6 +74,12 @@ namespace DataLayerLibrary.DataLogic
         {
             string sql = $"SELECT * FROM incident_timeline WHERE incident_id = '{id}';";
             return SQLDataAccess.LoadData<IncidentStepDataModel>(sql);
+        }
+
+        public static void DeleteStep(int id)
+        {
+            string sql = $"DELETE FROM incident_timeline WHERE id = '{id}';";
+            SQLDataAccess.DeleteData(sql);
         }
     }
 }

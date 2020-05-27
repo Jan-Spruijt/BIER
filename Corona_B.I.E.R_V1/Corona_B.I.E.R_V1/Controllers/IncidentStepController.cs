@@ -97,5 +97,16 @@ namespace Corona_B.I.E.R_V1.Controllers
             IncidentStepProcessor.CloseStep(id, HttpContext.GetCurrentEmployeeModel().Id);
             return RedirectToAction("DetailsStep", new { id });
         }
+
+        public IActionResult DeleteStep(int id, int incident_Id)
+        {
+            var employees = IncidentStepEmployeeprocessor.LoadEmployeesFromStepId(id);
+            foreach (var employee in employees)
+            {
+                RemoveEmployeeFromStep(id);
+            }
+            IncidentStepProcessor.DeleteStep(id);
+            return RedirectToAction("DetailsIncident", "Incident", new {incident_Id});
+        }
     }
 }
