@@ -1,0 +1,46 @@
+﻿@model Corona_B.I.E.R_V1.Models.EmployeeModel
+
+<ul class="logout">
+    <li class="margin">
+        <a asp-action="schedule" asp-controller="Agenda">
+            <i class="fa fa-calendar nav-icon"></i>
+            <span class="nav-text">
+                Planning maken
+            </span>
+        </a>
+    </li>
+    <div class="line"></div>
+    <li class="margin">
+        <a href="../Employee/ViewEmployees">
+            <i class="fa fa-users nav-icon"></i>
+            <span class="nav-text">
+                Gebruikers beheer
+            </span>
+        </a>
+    </li>
+    <div class="line"></div>
+
+    <div class="table paddingtop">
+        <div class="size_width user_img_container">
+            
+                @{
+                    var photoPath = "../img/ProfilePictures/" + (Model.ProfilePicturePath ?? "DefaultUserPicture.png");
+                    }
+            <img class="user_img" src="@photoPath" />
+        </div>
+        <p class="cell">@Model.Firstname @Model.Prefix @Model.Lastname</p>
+    </div>
+
+    <div class="table">
+        <div class="size_width cell"></div>
+        <div class="cell">
+            <a class="link_style" asp-action="LogOut" asp-controller="Employee">
+                Uitloggen
+            </a>
+            <p class="d-inline"> | </p>
+            <a class="link_style" href="#">
+                Contact
+            </a>
+        </div>
+    </div>
+</ul>

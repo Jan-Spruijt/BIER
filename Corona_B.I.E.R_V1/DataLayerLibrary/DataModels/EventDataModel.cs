@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataLayerLibrary.DataModels
 {
-    public class EventsDataModel
+    public class EventDataModel
     {
         public int ID { get; set; }
         public int Employee_ID { get; set; }
