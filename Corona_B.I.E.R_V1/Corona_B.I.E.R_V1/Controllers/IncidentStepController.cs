@@ -106,7 +106,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                 RemoveEmployeeFromStep(id);
             }
             IncidentStepProcessor.DeleteStep(id);
-            return RedirectToAction("DetailsIncident", "Incident", new {incident_Id});
+            return RedirectToAction("DetailsIncident", "Incident", new {id = incident_Id});
         }
     }
 }

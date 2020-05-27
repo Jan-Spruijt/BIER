@@ -89,7 +89,6 @@
                     @Html.DisplayFor(modelItem => item.status)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new {/* id=item.PrimaryKey */}) |
                     @Html.ActionLink("Details", "DetailsStep","IncidentStep", new { id = item.id }) |
                     @Html.ActionLink("Delete", "DeleteStep", "IncidentStep" ,new {id = item.id, incident_Id = Model.id}, null)
                 </td>
