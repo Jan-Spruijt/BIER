@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Corona_B.I.E.R_V1.Models.RequestModel>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Employeename)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeAcceptedbyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.stringDateStart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.stringDateEnd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.stringTimeStart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.stringTimeEnd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Employeename)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmployeeAcceptedbyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.stringDateStart)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.stringDateEnd)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.stringTimeStart)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.stringTimeEnd)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+
+                    @Html.ActionLink("Accept", "Accept", new { id = item.RequestId })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.RequestId })
+                    @Html.ActionLink("Details", "Details", new { id = item.RequestId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
