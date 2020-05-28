@@ -8457,6 +8457,7 @@
       "Dapper >= 2.0.35",
       "DataLayerLibrary >= 1.0.0",
       "LogicLayerLibrary >= 1.0.0",
+      "Microsoft.AspNet.Mvc >= 5.2.7",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.3",
       "jQuery.Fullcalendar >= 3.9.0"
     ]

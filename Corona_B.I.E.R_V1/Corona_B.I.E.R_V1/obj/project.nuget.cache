@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wgUPf6Xdc2HTAnuO6BjyRg4dosiD2y/y5aegZaACSzOhZ4Ll6yJ51pEkE0jDyI6dNBJGZaykJ3CCsanxR7m4cA==",
+  "dgSpecHash": "4fPv8MCTydHXtN9uuKu/gTRdFxXajIIZxYLJM9AFLzjPyAjFJ1LvMt/6Z1gUclN94nLgDApjdG5L4AA1uk+0vw==",
   "success": true,
   "projectFilePath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,9 @@
     "C:\\Users\\gijs\\.nuget\\packages\\google.protobuf\\3.6.1\\google.protobuf.3.6.1.nupkg.sha512",
     "C:\\Users\\gijs\\.nuget\\packages\\jquery\\3.2.1\\jquery.3.2.1.nupkg.sha512",
     "C:\\Users\\gijs\\.nuget\\packages\\jquery.fullcalendar\\3.9.0\\jquery.fullcalendar.3.9.0.nupkg.sha512",
+    "C:\\Users\\gijs\\.nuget\\packages\\microsoft.aspnet.mvc\\5.2.7\\microsoft.aspnet.mvc.5.2.7.nupkg.sha512",
+    "C:\\Users\\gijs\\.nuget\\packages\\microsoft.aspnet.razor\\3.2.7\\microsoft.aspnet.razor.3.2.7.nupkg.sha512",
+    "C:\\Users\\gijs\\.nuget\\packages\\microsoft.aspnet.webpages\\3.2.7\\microsoft.aspnet.webpages.3.2.7.nupkg.sha512",
     "C:\\Users\\gijs\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\gijs\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\gijs\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
@@ -58,6 +61,7 @@
     "C:\\Users\\gijs\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.templating\\3.1.3\\microsoft.visualstudio.web.codegeneration.templating.3.1.3.nupkg.sha512",
     "C:\\Users\\gijs\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.utils\\3.1.3\\microsoft.visualstudio.web.codegeneration.utils.3.1.3.nupkg.sha512",
     "C:\\Users\\gijs\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\3.1.3\\microsoft.visualstudio.web.codegenerators.mvc.3.1.3.nupkg.sha512",
+    "C:\\Users\\gijs\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\gijs\\.nuget\\packages\\microsoft.win32.systemevents\\4.6.0\\microsoft.win32.systemevents.4.6.0.nupkg.sha512",
     "C:\\Users\\gijs\\.nuget\\packages\\moment.js\\2.18.2\\moment.js.2.18.2.nupkg.sha512",
