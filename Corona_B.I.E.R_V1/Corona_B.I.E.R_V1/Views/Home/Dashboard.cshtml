@@ -22,8 +22,9 @@
             <div id="Calendar"></div>
 
         </div>
-        <div class="col-md-5 offset-1 bg_white">
+        <div class="col-md-5 offset-1 bg_white components">
             <h3>Incidenten></h3>
+            @await Component.InvokeAsync("DashboardIncidents")
         </div>
     </div>
 

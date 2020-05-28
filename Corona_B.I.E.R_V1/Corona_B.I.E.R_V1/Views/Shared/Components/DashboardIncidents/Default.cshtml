@@ -1,0 +1,45 @@
+﻿
+@model IEnumerable<Corona_B.I.E.R_V1.Models.IncidentModel>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "ViewIncidents";
+}
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "DetailsIncident", "Incident", new {id = item.ID})
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+<div>
+    @Html.ActionLink("Bekijk incidenten", "ViewIncidents", "Incident")
+</div>
