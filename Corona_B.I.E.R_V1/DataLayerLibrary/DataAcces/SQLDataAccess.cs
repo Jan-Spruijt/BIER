@@ -13,9 +13,10 @@ namespace Corona_B.I.E.R_V1.DataAccess
     public class SQLDataAccess
     {
         public static string GetConnectionString() {
-
-            return "Server=84.86.167.197;port=3306;user=temp;password=K?5zrU2~GmsV;database=bier_db;";
-        //testserver   //return "Server=5.39.113.7;port=3306;user=CORONA;password=K?5zrU2~GmsV;database=bier_db;";
+            //realdatabase
+        return "Server=84.86.167.197;port=3306;user=temp;password=K?5zrU2~GmsV;database=bier_db;";
+            //testdatabase
+       // return "Server=5.39.113.7;port=3306;user=CORONA;password=K?5zrU2~GmsV;database=bier_db;";
         }
 
         public static List<T> LoadData<T>(string sql)

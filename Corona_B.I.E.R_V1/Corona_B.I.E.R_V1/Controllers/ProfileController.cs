@@ -29,6 +29,33 @@ namespace Corona_B.I.E.R_V1.Controllers
             return View();
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ADMIN(EmployeeCreateModel employee)
+        {
+
+            if (ModelState.IsValid)
+            {               
+                EmployeeProcessor.EditEmployee(
+                        employee.Firstname,
+                        employee.Prefix,
+                        employee.Lastname,
+                        employee.City,
+                        employee.Postalcode,
+                        employee.Address,
+                        //employee.ProfilePicturePath,
+                        employee.Email,
+                        employee.Phone,
+                        //employee.Salt,
+                        employee.Password,
+                        employee.Profession,
+                        "Admin",
+                        HttpContext.GetCurrentEmployeeModel().Id);
+                return RedirectToAction("Profile", "Profile");
+            }
+            return View();
+        }
+
         public IActionResult Admin(EmployeeCreateModel model)
         {
                 EmployeeModel employee = HttpContext.GetCurrentEmployeeModel();
@@ -75,7 +102,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                         employee.City,
                         employee.Postalcode,
                         employee.Address,
-                        employee.ProfilePicturePath,
+                      //  employee.ProfilePicturePath,
                         employee.Email,
                         employee.Phone,
                         //employee.Salt,
@@ -137,7 +164,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                         employee.City,
                         employee.Postalcode,
                         employee.Address,
-                        employee.ProfilePicturePath,
+                       // employee.ProfilePicturePath,
                         employee.Email,
                         employee.Phone,
                         //employee.Salt,

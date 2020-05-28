@@ -37,7 +37,9 @@ namespace Corona_B.I.E.R_V1.DataLogic
             SQLDataAccess.SaveData(sql, data);
         }
         public static void EditEmployee(string firstname, string prefix, string lastname, string city, string postalCode,
-                                        string address, string profilePicturePath, string email, string phone, 
+                                        string address, 
+                                        //string profilePicturePath, 
+                                        string email, string phone, 
                                         //string salt,
                                         string password, string profession, string role, int id)
         {
@@ -50,7 +52,7 @@ namespace Corona_B.I.E.R_V1.DataLogic
                 City = city,
                 PostalCode = postalCode,
                 Address = address,
-                ProfilePicturePath = profilePicturePath,
+               // ProfilePicturePath = profilePicturePath,
                 Email = email,
                 Phone = phone,
                 //Salt = salt,
@@ -65,12 +67,12 @@ namespace Corona_B.I.E.R_V1.DataLogic
                 $" city = '{data.City}', " +
                 $" postalCode = '{data.PostalCode}'," +
                 $" address = '{data.Address}'," +
-                $" profilePicturePath = '{data.ProfilePicturePath}'," +
+               // $" profilePicturePath = '{data.ProfilePicturePath}'," +
                 $" email = '{data.Email}'," +
                 $" phone = '{data.Phone}'," +
                 $" passwordHash = '{data.PasswordHash}'," +
                 $" profession = '{data.Profession}'," +
-                $" role = '{data.Role} WHERE id = '{id}';";
+                $" role = '{data.Role} WHERE id = '{data.ID}';";
 
             SQLDataAccess.SaveData(sql, data);
         }
@@ -98,12 +100,6 @@ namespace Corona_B.I.E.R_V1.DataLogic
         {
             string sql = $"DELETE FROM employee WHERE id = '{id}';"; 
             SQLDataAccess.DeleteData(sql);
-        }
-
-        public static EmployeeDataModel GetUserById(int id)
-        {
-            string sql = $"SELECT * FROM employee WHERE id = '{id}';";
-            return SQLDataAccess.LoadFirstData<EmployeeDataModel>(sql);
         }
     }
 }
