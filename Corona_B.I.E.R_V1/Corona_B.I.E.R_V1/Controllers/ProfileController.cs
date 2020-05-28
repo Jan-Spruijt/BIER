@@ -29,21 +29,17 @@ namespace Corona_B.I.E.R_V1.Controllers
             return View();
         }
 
-
         public IActionResult Admin(EmployeeCreateModel model)
         {
                 EmployeeModel employee = HttpContext.GetCurrentEmployeeModel();
-                ViewData["Data"] = employee;
-                string Role = " ";
-                if (employee.Role == EmployeeRole.Admin)
-                {
-                    Role = "Admin";
-                }
-                else { Role = "User"; }
+                TempData["Data"] = employee;
 
-                string salt = PasswordHashingLogic.GenerateSalt();
-                string PasswordHash = PasswordHashingLogic.GeneratePasswordHash(employee.Password, salt);
+            try
+            {
+                // string salt = PasswordHashingLogic.GenerateSalt();
+                // string PasswordHash = PasswordHashingLogic.GeneratePasswordHash(employee.Password, salt);
                 string uniqueFileName = null;
+
                 if (employee.ProfilePicturePath != null)
                 {
                     string uploadsFolder = Path.Combine(_hostingEnvironment.WebRootPath, "img", "ProfilePictures");
@@ -52,23 +48,12 @@ namespace Corona_B.I.E.R_V1.Controllers
                     model.ProfilePicture.CopyTo(new FileStream(filePath, FileMode.Create));
                     employee.ProfilePicturePath = filePath;
                 }
-
-
-                EmployeeProcessor.EditEmployee(
-                    employee.Firstname,
-                    employee.Prefix,
-                    employee.Lastname,
-                    employee.City,
-                    employee.Postalcode,
-                    employee.Address,
-                    employee.ProfilePicturePath,
-                    employee.Email,
-                    employee.Phone,
-                    //Salt,
-                    employee.Password,
-                    employee.Profession,
-                    Role,
-                    employee.Id);
+            }
+            catch
+            {
+                return View();
+            }
+            
             return View();
         }
 
@@ -103,7 +88,7 @@ namespace Corona_B.I.E.R_V1.Controllers
             }
             catch
             {
-                return View()
+                return View();
             }
             
             return View();
@@ -133,6 +118,42 @@ namespace Corona_B.I.E.R_V1.Controllers
             }
 
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult EditData(EmployeeModel employee)
+        {
+            //try
+            //{
+                string Role = " ";
+                if (employee.Role == EmployeeRole.Admin)
+                {
+                    Role = "Admin";
+                }
+                else { Role = "User"; }
+                EmployeeProcessor.EditEmployee(
+                        employee.Firstname,
+                        employee.Prefix,
+                        employee.Lastname,
+                        employee.City,
+                        employee.Postalcode,
+                        employee.Address,
+                        employee.ProfilePicturePath,
+                        employee.Email,
+                        employee.Phone,
+                        //employee.Salt,
+                        employee.Password,
+                        employee.Profession,
+                        Role,
+                        employee.Id);
+            //}
+            //catch
+            //{
+            //    return RedirectToAction("Profile", "Profile");
+            //}
+
+
+            return RedirectToAction("Profile", "Profile");
         }
     }
 }

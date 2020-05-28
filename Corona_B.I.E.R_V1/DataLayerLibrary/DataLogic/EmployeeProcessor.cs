@@ -58,11 +58,21 @@ namespace Corona_B.I.E.R_V1.DataLogic
                 Profession = profession,
                 Role = role
             };
-            string sql = @"UPDATE employee SET (firstname, lastnamePrefix, lastname, city, postalCode, address, profilePicturePath, email, phone,
-                                                  passwordHash, profession, role)
-                            VALUES(@Firstname, @Lastnameprefix, @Lastname, @City, @PostalCode, @Address, @ProfilePicturePath, @Email,
-                                    @Phone ,@PasswordHash ,@Profession ,@Role); WHERE id = id ";//add salt back
-            SQLDataAccess.DeleteData(sql);
+            string sql = $"Update employee set " +
+                $"firstname = '{data.Firstname}'," +
+                $" lastnamePrefix = '{data.Lastnameprefix}'," +
+                $" lastname = '{data.Lastname}'," +
+                $" city = '{data.City}', " +
+                $" postalCode = '{data.PostalCode}'," +
+                $" address = '{data.Address}'," +
+                $" profilePicturePath = '{data.ProfilePicturePath}'," +
+                $" email = '{data.Email}'," +
+                $" phone = '{data.Phone}'," +
+                $" passwordHash = '{data.PasswordHash}'," +
+                $" profession = '{data.Profession}'," +
+                $" role = '{data.Role} WHERE id = '{id}';";
+
+            SQLDataAccess.SaveData(sql, data);
         }
 
         public static List<EmployeeDataModel> LoadEmployees()
