@@ -33,7 +33,6 @@ namespace Corona_B.I.E.R_V1.Controllers
         {
                 EmployeeModel employee = HttpContext.GetCurrentEmployeeModel();
                 TempData["Data"] = employee;
-
             try
             {
                 // string salt = PasswordHashingLogic.GenerateSalt();
@@ -51,9 +50,8 @@ namespace Corona_B.I.E.R_V1.Controllers
             }
             catch
             {
-                return View();
+                
             }
-            
             return View();
         }
 
@@ -123,6 +121,7 @@ namespace Corona_B.I.E.R_V1.Controllers
         [HttpPost]
         public IActionResult EditData(EmployeeModel employee)
         {
+            
             //try
             //{
                 string Role = " ";
