@@ -24,6 +24,10 @@ namespace Corona_B.I.E.R_V1.Controllers
             }
             return View();
         }
+        public IActionResult MySchedule()
+        {
+            return View();
+        }
 
         public JsonResult GetEvents()
         {

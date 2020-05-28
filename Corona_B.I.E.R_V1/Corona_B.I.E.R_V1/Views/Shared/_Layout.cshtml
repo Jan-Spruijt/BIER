@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="~/css/sidebar.css" />
     <link rel="stylesheet" href="~/css/dashboard.css" />
     <link rel="stylesheet" href="~/css/employee.css" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -55,6 +55,14 @@
 
                         </li>
                         <div class="line"></div>
+                        <li class="margin">
+                            <a asp-action="myschedule" asp-controller="Agenda">
+                                <i class="fa fa-calendar nav-icon"></i>
+                                <span class="nav-text">
+                                    Mijn agenda
+                                </span>
+                            </a>
+                        </li>
                     </ul>
                         @await Component.InvokeAsync("SideBar")
                 </nav>
