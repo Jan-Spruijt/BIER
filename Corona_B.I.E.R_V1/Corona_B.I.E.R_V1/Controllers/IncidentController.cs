@@ -170,5 +170,27 @@ namespace Corona_B.I.E.R_V1.Controllers
             IncidentProcessor.DeleteIncident(id);
             return RedirectToAction("ViewIncidents");
         }
+
+        public IActionResult EditIncident(int id)
+        {
+            var incidentData = IncidentProcessor.LoadIncidentById(id);
+            IncidentModel data = new IncidentModel
+            {
+                Context = incidentData.Context,
+                Customer = incidentData.Customer,
+                CustomerEmail = incidentData.CustomerEmail,
+                Title = incidentData.Title,
+                ID = id
+            };
+            return View(data);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult EditIncident(IncidentModel model)
+        {
+            IncidentProcessor.EditIncident(model.ID, model.Title, model.Context, model.Customer, model.CustomerEmail);
+            return RedirectToAction("DetailsIncident", new {model.ID});
+        }
     }
 }

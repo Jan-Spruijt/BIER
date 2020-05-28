@@ -62,5 +62,19 @@ namespace DataLayerLibrary.DataLogic
             string sql = $"DELETE FROM incident WHERE id = '{id}';";
             SQLDataAccess.DeleteData(sql);
         }
+
+        public static void EditIncident(int id, string title, string context, string customer, string customerEmail)
+        {
+            IncidentDataModel data = new IncidentDataModel
+            {
+                Context = context,
+                Customer = customer,
+                CustomerEmail = customerEmail,
+                Title = title,
+            };
+
+            string sql = $"Update incident set title = '{title}', context = '{context}', customer = '{customer}', customerEmail = '{customerEmail}' WHERE id = '{id}'";
+            SQLDataAccess.SaveData(sql, data);
+        }
     }
 }

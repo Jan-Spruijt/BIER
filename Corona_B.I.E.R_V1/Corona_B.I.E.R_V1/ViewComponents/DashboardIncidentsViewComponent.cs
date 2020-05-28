@@ -12,24 +12,6 @@ namespace Corona_B.I.E.R_V1.ViewComponents
 {
     public class DashboardIncidentsViewComponent : ViewComponent
     {
-        //public IViewComponentResult Invoke()
-        //{
-        //    CalendarCreateEventModel createEventModel = new CalendarCreateEventModel();
-        //    createEventModel.Employees = new List<EmployeeCalendarModel>();
-        //    var data = EmployeeProcessor.LoadEmployees();
-        //    foreach (var row in data)
-        //    {
-        //        createEventModel.Employees.Add(new EmployeeCalendarModel
-        //        {
-        //            id = row.ID,
-        //            Firstname = row.Firstname,
-        //            Prefix = row.Lastnameprefix,
-        //            Lastname = row.Lastname,
-        //            ProfilePicturePath = row.ProfilePicturePath,
-        //        });
-        //    }
-        //    return View(createEventModel);
-        //}
 
         public IViewComponentResult Invoke()
         {
