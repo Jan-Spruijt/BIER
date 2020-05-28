@@ -10,6 +10,7 @@
     <div class="row">
         <div class="col-md-5 bg_white">
             <h3>Aanvragen></h3>
+            @await Component.InvokeAsync("RequestDashboard")
         </div>
         <div class="col-md-5 offset-1 bg_white">
             <h3>Uren></h3>
@@ -19,9 +20,26 @@
     <br>
     <div class="row">
         <div class="col-md-5 bg_white">
-            <h3>Planning></h3>
+            <h3>Agenda></h3>
+            <div id="Calendar"></div>
+
         </div>
-        <div class="col-md-5 offset-1 bg_white">
+        <div class="col-md-5 offset-1 bg_white components">
             <h3>Incidenten></h3>
+            @await Component.InvokeAsync("DashboardIncidents")
         </div>
     </div>
+<link href="~/lib/FullCalendar/core/main.css" rel="stylesheet" />
+<link href="~/lib/FullCalendar/core/main.css" rel="stylesheet" />
+
+@section Scripts{
+    <script src='https://fullcalendar.io/js/fullcalendar-3.1.0/lib/moment.min.js'></script>
+    <script src="~/lib/FullCalendar/core/main.min.js"></script>
+    <script src="~/lib/FullCalendar/moment/main.min.js"></script>
+    <script src="~/lib/FullCalendar/list/main.min.js"></script>
+    <script src="~/lib/FullCalendar/interaction/main.min.js"></script>
+
+    <script src="~/lib/FullCalendar/core/locales/nl.js"></script>
+    <script src="~/js/DashboardFunctions.js"></script>
+
+}

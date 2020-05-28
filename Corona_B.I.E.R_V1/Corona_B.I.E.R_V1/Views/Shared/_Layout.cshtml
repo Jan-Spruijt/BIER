@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="~/css/sidebar.css" />
     <link rel="stylesheet" href="~/css/dashboard.css" />
     <link rel="stylesheet" href="~/css/employee.css" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -26,7 +26,7 @@
                             </div>
                         </li>
                         <li class="margin">
-                            <a href="../Home/Dashboard">
+                            <a asp-controller="Home" asp-action="Dashboard">
                                 <i class="fa fa-home nav-icon"></i>
                                 <span class="nav-text">
                                     Dashboard
@@ -36,10 +36,20 @@
                         </li>
                         <div class="line"></div>
                         <li class="margin">
-                            <a href="#">
+                            <a asp-controller="Incident" asp-action="ViewIncidents">
                                 <i class="fa fa-times nav-icon"></i>
                                 <span class="nav-text">
                                     Incidenten
+                                </span>
+                            </a>
+
+                        </li>
+                        <div class="line"></div>
+                        <li class="margin">
+                            <a href="../Request/ViewRequests">
+                                <i class="fa fa-sitemap nav-icon"></i>
+                                <span class="nav-text">
+                                    Aanvragen
                                 </span>
                             </a>
 
@@ -55,49 +65,16 @@
 
                         </li>
                         <div class="line"></div>
-
+                        <li class="margin">
+                            <a asp-action="myschedule" asp-controller="Agenda">
+                                <i class="fa fa-calendar nav-icon"></i>
+                                <span class="nav-text">
+                                    Mijn agenda
+                                </span>
+                            </a>
+                        </li>
                     </ul>
-                    
-                    <ul class="logout">
-                            <li class="margin">
-                                <a href="#">
-                                    <i class="fa fa-calendar nav-icon"></i>
-                                    <span class="nav-text">
-                                        Planning maken
-                                    </span>
-                                </a>
-                            </li>
-                            <div class="line"></div>
-                            <li class="margin">
-                                <a href="../Employee/ViewEmployees">
-                                    <i class="fa fa-users nav-icon"></i>
-                                    <span class="nav-text">
-                                        Gebruikers beheer
-                                    </span>
-                                </a>
-                            </li>
-                            <div class="line"></div>
-
-                            <div class="table paddingtop">
-                                <div class="size_width">
-                                    <img class="user_img" src="~/images/user-male-icon.png"/>
-                                </div>
-                                <p class="cell">Ingelogd als "Username"</p>
-                            </div>
-
-                            <div class="table">
-                                <div class="size_width cell"></div>
-                                <div class="cell">
-                                    <a class="link_style" href="../Employee/LoginEmployee">
-                                        Uitloggen
-                                    </a>
-                                    <p class="d-inline"> | </p>
-                                    <a class="link_style" href="#">
-                                        Contact
-                                    </a>
-                                </div>
-                            </div>
-                    </ul>
+                        @await Component.InvokeAsync("SideBar")
                 </nav>
 
 
