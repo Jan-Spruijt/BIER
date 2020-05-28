@@ -52,11 +52,17 @@
 .size_width {
     width: 60px;
 }
+.MarginUserTop {
+    margin-top: 200px !important;
+}
 
 .user_img {
-    margin-left: 9px;
     width: 40px;
+    height: 40px;
     border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-left: 9px;
     border-style: solid;
     border-width: 1px;
     border-color: #919191;
@@ -142,7 +148,7 @@
     }
 
     .main-menu > ul.logout {
-        margin-top: 200px;
+        margin-top: 120px;
     }
 
 .no-touch .scrollable.hover {

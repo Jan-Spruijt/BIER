@@ -62,7 +62,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                     employee.Profession,
                     employee.Role.ToString()
                 );
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("ViewEmployees", "Employee");
             }
 
             return View();
