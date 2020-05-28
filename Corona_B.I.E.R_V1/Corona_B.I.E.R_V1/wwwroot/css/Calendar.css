@@ -152,3 +152,6 @@
 .fc-employee{
     visibility: visible;
 }
+html, #PopUpForm{
+    visibility: hidden;
+}

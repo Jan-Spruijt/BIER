@@ -1,5 +1,8 @@
-﻿$(document).ready(function () {
+﻿
 
+$(document).ready(function () {
+    document.getElementsByTagName("html")[0].style.visibility = "visible";
+    document.getElementById('PopUpForm').style.visibility = "visible";
     var events = [];
     console.log("start");
     $.ajax({
