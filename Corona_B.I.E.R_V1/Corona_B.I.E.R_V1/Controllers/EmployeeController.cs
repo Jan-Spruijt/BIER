@@ -108,7 +108,7 @@ namespace Corona_B.I.E.R_V1.Controllers
             {
                 HttpContext.SignOutAsync();
             }
-            return RedirectToAction("Login", "Employee");
+            return RedirectToAction("LoginEmployee", "Employee");
         }
 
         [HttpPost]

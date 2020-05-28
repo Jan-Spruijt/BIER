@@ -181,3 +181,6 @@
         background-color: #991F3D !important;
         border-color: #991F3D !important;
     }
+html, #PopUpForm{
+    visibility: hidden;
+}

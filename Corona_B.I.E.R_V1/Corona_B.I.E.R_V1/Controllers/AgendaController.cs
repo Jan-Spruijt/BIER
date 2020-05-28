@@ -24,6 +24,10 @@ namespace Corona_B.I.E.R_V1.Controllers
             }
             return View();
         }
+        public IActionResult MySchedule()
+        {
+            return View();
+        }
 
         public JsonResult GetEvents()
         {
@@ -38,6 +42,29 @@ namespace Corona_B.I.E.R_V1.Controllers
                     ID = dataModel.ID,
                     Employee_id = dataModel.Employee_ID,
                     EmployeeName = employee.Firstname+" "+employee.Prefix+" "+employee.Lastname,
+                    Title = dataModel.Title,
+                    Description = dataModel.Description,
+                    DatetimeStart = dataModel.DatetimeStart,
+                    DatetimeEnd = dataModel.DatetimeEnd,
+                    Type = dataModel.Type
+
+                });
+            }
+            return new JsonResult(new { Data = events });
+        }
+        public JsonResult GetEmployeeEvents()
+        {
+            List<EventDataModel> dataEvents = CalendarProcessor.LoadEmployeeEvents(HttpContext.GetCurrentEmployeeModel().Id);
+            List<CalendarEventModel> events = new List<CalendarEventModel>();
+            foreach (EventDataModel dataModel in dataEvents)
+            {
+                EmployeeModel employee = new EmployeeModel();
+                employee.MapDataModel(EmployeeProcessor.GetUserById(dataModel.Employee_ID));
+                events.Add(new CalendarEventModel
+                {
+                    ID = dataModel.ID,
+                    Employee_id = dataModel.Employee_ID,
+                    EmployeeName = employee.Firstname + " " + employee.Prefix + " " + employee.Lastname,
                     Title = dataModel.Title,
                     Description = dataModel.Description,
                     DatetimeStart = dataModel.DatetimeStart,
