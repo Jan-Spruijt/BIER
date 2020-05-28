@@ -17,20 +17,19 @@ namespace Corona_B.I.E.R_V1.ViewComponents
     {
         public IViewComponentResult Invoke()
         {
-            var data = RequestProcessor.LoadRequests();
+            int id = HttpContext.GetCurrentEmployeeModel().Id;
+            var data = RequestProcessor.LoadMyRequests(id);
             List<RequestModel> requests = new List<RequestModel>();
             foreach (var row in data)
             {
-                EmployeeDataModel employee = EmployeeProcessor.GetUserById(row.employee_id);
 
                 EmployeeDataModel? AcceptedByEmployee = EmployeeProcessor.GetUserById(row.employee_id_acceptedby);
-                string nameAccept = "Nog niet geaccepteerd";
+                string nameAccept = " ";
                 if (AcceptedByEmployee != null)
                 {
                     nameAccept = AcceptedByEmployee.Firstname + " " + AcceptedByEmployee.Lastname;
                 }
 
-                string name = employee.Firstname + " " + employee.Lastname;
                 string dateStart = row.datetimestart.ToShortDateString();
                 string dateEnd = row.datetimeend.ToShortDateString();
                 string TimeStart = row.datetimestart.ToShortTimeString();
@@ -39,12 +38,8 @@ namespace Corona_B.I.E.R_V1.ViewComponents
                 requests.Add(new RequestModel
                 {
                     RequestId = row.id,
-                    Employeename = name,
                     EmployeeAcceptedbyName = nameAccept,
                     stringDateStart = dateStart,
-                    stringDateEnd = dateEnd,
-                    stringTimeStart = TimeStart,
-                    stringTimeEnd = TimeEnd,
                     Status = row.status.ToEnum<RequestStatus>(),
                     Type = row.request_type.ToEnum<RequestType>()
                 });

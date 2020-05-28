@@ -10,6 +10,7 @@ using DataLayerLibrary.DataModels;
 using Microsoft.AspNetCore.Mvc;
 using LogicLayerLibrary;
 using LogicLayerLibrary.ExtensionMethods;
+using Org.BouncyCastle.Asn1.Ocsp;
 
 namespace Corona_B.I.E.R_V1.Controllers
 {
@@ -149,6 +150,13 @@ namespace Corona_B.I.E.R_V1.Controllers
 
             EmployeeDataModel employee = EmployeeProcessor.GetUserById(request.employee_id);
 
+            EmployeeDataModel? AcceptedByEmployee = EmployeeProcessor.GetUserById(request.employee_id_acceptedby);
+            string nameAccept = "Nog niet geaccepteerd";
+            if (AcceptedByEmployee != null)
+            {
+                nameAccept = AcceptedByEmployee.Firstname + " " + AcceptedByEmployee.Lastname;
+            }
+
             string name = employee.Firstname + " " + employee.Lastname;
 
             DateTime dts = request.datetimestart;
@@ -163,6 +171,7 @@ namespace Corona_B.I.E.R_V1.Controllers
             RequestModel DetailsRequest = new RequestModel
             {
                 Employeename = name,
+                EmployeeAcceptedbyName = nameAccept,
                 DateStart = datestart,
                 DateEnd = dateend,
                 TimeStart = timestart,
@@ -230,14 +239,15 @@ namespace Corona_B.I.E.R_V1.Controllers
             return View();
         }
 
-        public IActionResult Accept(int id)
+        public IActionResult Accept(int id, RequestModel request)
         {
             if (ModelState.IsValid)
             {
                 RequestProcessor.AcceptRequest(
                     id,
-                    HttpContext.GetCurrentEmployeeModel().Id
-                    
+                    HttpContext.GetCurrentEmployeeModel().Id,
+                    RequestStatus.accepted.ToString()
+
                 );
                 return RedirectToAction("ViewRequests", "Request");
 

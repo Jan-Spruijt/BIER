@@ -64,13 +64,15 @@ namespace DataLayerLibrary.DataLogic
             SQLDataAccess.SaveData(sql, request);
         }
 
-        public static void AcceptRequest(int id, int AcceptedBy)
+        public static void AcceptRequest(int id, int AcceptedBy, string Status)
         {
             RequestDataModel acceptrequest = new RequestDataModel
             {
-                employee_id_acceptedby = AcceptedBy
+                employee_id_acceptedby = AcceptedBy,
+                status = Status
+                 
             };
-            string sql = $"Update requests set employee_id_acceptedby = '{acceptrequest.employee_id_acceptedby}' WHERE id = '{id}';";
+            string sql = $"Update requests set employee_id_acceptedby = '{acceptrequest.employee_id_acceptedby}', status = '{acceptrequest.status}' WHERE id = '{id}';";
             SQLDataAccess.SaveData(sql, acceptrequest);
         }
 
@@ -80,6 +82,12 @@ namespace DataLayerLibrary.DataLogic
             string sql = "SELECT * FROM requests;";
             return SQLDataAccess.LoadData<RequestDataModel>(sql);
 
+        }
+
+        public static List<RequestDataModel> LoadMyRequests(int id)
+        {
+            string sql = $"SELECT * FROM requests WHERE employee_id = '{id}'  ORDER BY datetimestart DESC LIMIT 3;";
+            return SQLDataAccess.LoadData<RequestDataModel>(sql);
         }
 
         public static RequestDataModel GetRequestById(int id)

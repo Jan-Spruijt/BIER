@@ -9,6 +9,7 @@ namespace Corona_B.I.E.R_V1.Models
     public class RequestModel
     {
         public string Employeename { get; set; }
+        [Display(Name = "Geaccepteerd door")]
         public string EmployeeAcceptedbyName { get; set; }
         public int RequestId { get; set; }
         public int EmployeeId { get; set; }
@@ -32,6 +33,7 @@ namespace Corona_B.I.E.R_V1.Models
         [DisplayFormat(DataFormatString = "{0:d}", ApplyFormatInEditMode = true)]
         public DateTime ReleaseDate { get; set; }
 
+        [Display(Name = "Starttijd")]
         public string stringDateStart { get; set; }
         public string stringDateEnd { get; set; }
 
