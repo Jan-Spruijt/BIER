@@ -1,12 +1,12 @@
 ﻿@model Corona_B.I.E.R_V1.Models.EmployeeCreateModel
 
 @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "Regeristreermeedewerker";
 }
 
-    <h1>Registreer een meedewerker</h1>
+<h1>Registreer een medewerker</h1>
 
-<h4>EmployeeModel</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -83,7 +83,7 @@
                 <label asp-for="Role" class="control-label"></label>
                 <select asp-for="Role" asp-items="Html.GetEnumSelectList<EmployeeRole>()">
                 </select>
-                    <span asp-validation-for="Role" class="text-danger"></span>
+                <span asp-validation-for="Role" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -93,7 +93,7 @@
 </div>
 
 <div>
-    <a asp-controller="Home" asp-action="Index">Back to List</a>
+    <a asp-controller="Employee" asp-action="ViewEmployees">Back to List</a>
 </div>
 
 @section Scripts {

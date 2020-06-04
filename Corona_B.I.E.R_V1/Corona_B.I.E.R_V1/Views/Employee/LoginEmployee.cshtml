@@ -1,33 +1,40 @@
 ﻿@model Corona_B.I.E.R_V1.Models.LoginEmployeeModel
 
+
 @{
+    Layout = "~/Views/Shared/_LayoutLoginPage.cshtml";
     ViewData["Title"] = "LoginEmployee";
 }
 
-<h1>LoginEmployee</h1>
 
-<h4>LoginEmployeeModel</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="LoginEmployee">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+<div class="signInStyle">
+    <div>
+        <form asp-action="LoginEmployee" class="form-signin">
+            <div class="text-center mb-4">
+                <h1 class="h3 mb-3 font-weight-normal">B.I.E.R</h1>
             </div>
-            <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-label-group">
+                <input asp-for="Email"  type="email" class="form-control" id="inputEmail" placeholder="Email address" required autofocus/>
+                <label asp-for="Email" class="control-label" for="inputEmail">Email address</label>
+                @*<span asp-validation-for="Email" class="text-danger"></span>*@
+            </div>
+
+            
+            <div class="form-label-group">
+                <input asp-for="Password" type="password" class="form-control" id="inputPassword" placeholder="Password" required/>
+                <label asp-for="Password" class="control-label" for="inputPassword"></label>
+                @*<span asp-validation-for="Password" class="text-danger"></span>*@
             </div>
             @Html.ValidationMessage("unsuccessful")
             <div class="form-group">
                 <input type="submit" value="Login" class="btn btn-primary" />
             </div>
+
         </form>
     </div>
+
 </div>
 
 @section Scripts {

@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "Corona_B.I.E.R_V1/1.0.0": {
         "dependencies": {
+          "Dapper": "2.0.35",
           "DataLayerLibrary": "1.0.0",
           "LogicLayerLibrary": "1.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.2",
@@ -1029,6 +1030,17 @@
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {}
+        }
+      },
+      "Microsoft.Web.Infrastructure/1.0.0": {
+        "runtime": {
+          "lib/net40/Microsoft.Web.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.20105.407"
+          }
+        },
+        "compile": {
+          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
         }
       },
       "Microsoft.Win32.Primitives/4.3.0": {

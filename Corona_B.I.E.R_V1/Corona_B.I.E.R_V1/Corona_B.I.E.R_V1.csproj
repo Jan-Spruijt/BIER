@@ -4,6 +4,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>false</Optimize>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="jQuery.Fullcalendar" Version="3.9.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
@@ -11,12 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\images\" />
     <ProjectReference Include="..\DataLayerLibrary\DataLayerLibrary.csproj" />
     <ProjectReference Include="..\Logic\LogicLayerLibrary.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\img\ProfilePictures\" />
   </ItemGroup>
 
 </Project>

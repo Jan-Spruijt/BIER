@@ -48,11 +48,17 @@ namespace Corona_B.I.E.R_V1.DataLogic
             string sql = $"SELECT * FROM employee WHERE email = '{email}';";
             return SQLDataAccess.LoadFirstData<EmployeeDataModel>(sql);
         }
+        public static EmployeeDataModel GetUserById(int id)
+        {
+            string sql = $"SELECT * FROM employee WHERE id = '{id}';";
+            return SQLDataAccess.LoadFirstData<EmployeeDataModel>(sql);
+        }
 
         public static void DeleteEmployee(int id)
         {
             string sql = $"DELETE FROM employee WHERE id = '{id}';"; 
             SQLDataAccess.DeleteData(sql);
         }
+
     }
 }
