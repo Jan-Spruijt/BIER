@@ -1,15 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace Corona_B.I.E.R_V1.DataModels
+namespace DataLayerLibrary.DataModels
 {
-    class HourDataModel
+    public class HourDataModel
     {
         public int ID { get; set; }
         public int Employee_Id { get; set; }
-        public string StandbyHours { get; set; }
-        public string IncidentHours { get; set; }
+        public int StandbyHours { get; set; }
+        public int IncidentHours { get; set; }
         public DateTime TimeStamp { get; set; }
-
 
 
     }

@@ -12,7 +12,7 @@
             </div>
             <div class="col-md-3 offset-3">
                 <p>
-                    <a asp-action="RegisterHours" class="btn btn-lg btn-primary btn-block">Create New</a>
+                    <a asp-action="RegisterHour" class="btn btn-lg btn-primary btn-block">Create New</a>
                 </p>
             </div>
 
@@ -25,35 +25,21 @@
                 <thead class="thead-ligh">
                     <tr>
                         <th>
-                            @Html.DisplayNameFor(model => model.Firstname)
+                            @Html.DisplayNameFor(model => model.Id)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.Prefix)
+                            @Html.DisplayNameFor(model => model.Employee_ID)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.Lastname)
+                            @Html.DisplayNameFor(model => model.StandbyHours)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.City)
+                            @Html.DisplayNameFor(model => model.IncidentHours)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.Postalcode)
+                            @Html.DisplayNameFor(model => model.TimeStamp)
                         </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Address)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Email)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Phone)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Profession)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Role)
-                        </th>
+                        
                         <th scope="col">Beheer</th>
                     </tr>
                 </thead>
@@ -62,44 +48,29 @@
                 {
                     <tr>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Firstname)
+                            @Html.DisplayFor(modelItem => item.Id)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Prefix)
+                            @Html.DisplayFor(modelItem => item.Employee_ID)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Lastname)
+                            @Html.DisplayFor(modelItem => item.StandbyHours)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.City)
+                            @Html.DisplayFor(modelItem => item.IncidentHours)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Postalcode)
+                            @Html.DisplayFor(modelItem => item.TimeStamp)
                         </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Address)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Email)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Phone)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Profession)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Role)
-                        </td>
-                        <td>
+                         <td>@*
                             @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) <br>
-                            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) <br>
-                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                             @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) <br>>*@
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                         </td>
                     </tr>
                 }
                 </tbody>
-            </table>
+            </table> 
 
         </div>
     </div>

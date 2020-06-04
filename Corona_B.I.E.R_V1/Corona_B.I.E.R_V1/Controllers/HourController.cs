@@ -53,7 +53,15 @@ namespace Corona_B.I.E.R_V1.Controllers
         }
 
 
-
+       /*public IActionResult Delete()
+        {
+            if (ModelState.IsValid)
+            {
+                HourProcessor.DeleteHours(id);
+                return RedirectToAction("RegisterHour", "Hour");
+            }
+            return View();
+        }*/
 
         public IActionResult ViewHours()
         {
@@ -64,7 +72,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                 hours.Add(new ViewHourModel
                 {
                     Id = row.ID,
-                    Employee_ID = row.Employee_ID,
+                    Employee_ID = row.Employee_Id,
                     StandbyHours = row.StandbyHours,
                     IncidentHours = row.IncidentHours,
                     TimeStamp = row.TimeStamp

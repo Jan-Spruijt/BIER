@@ -12,11 +12,11 @@ namespace Corona_B.I.E.R_V1.Models
     {
         [Display(Name = "Standy Uren")]
         [Required(ErrorMessage = "Vul standby uren in")]
-        public string StandbyHours { get; 
+        public int StandbyHours { get; 
             set; }
         [Display(Name = "Incident Uren")]
         [Required(ErrorMessage = "Vul incident uren in")]
-        public string IncidentHours { get; 
+        public int IncidentHours { get; 
             set; }
     }
 }

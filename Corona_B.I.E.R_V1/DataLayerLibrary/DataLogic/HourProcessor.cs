@@ -2,14 +2,14 @@
 using Corona_B.I.E.R_V1.DataModels;
 using Corona_B.I.E.R_V1;
 using System.Collections.Generic;
-
+using DataLayerLibrary.DataModels;
 
 namespace DataLayerLibrary.DataLogic
 {
     public class HourProcessor
     {
 
-        public static void RegisterHour(int employee_id, string standbyHours, string incidentHours)
+        public static void RegisterHour(int employee_id, int standbyHours, int incidentHours)
         {
             HourDataModel data = new HourDataModel
             {
@@ -33,6 +33,12 @@ namespace DataLayerLibrary.DataLogic
             string sql = "SELECT * FROM registeredhours;";
             return SQLDataAccess.LoadData<HourDataModel>(sql);
 
+        }
+
+        public static void DeleteHours(int id)
+        {
+            string sql = $"DELETE FROM registeredhours WHERE id = '{id}';";
+            SQLDataAccess.DeleteData(sql);
         }
     }
 }
