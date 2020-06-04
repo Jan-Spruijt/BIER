@@ -19,6 +19,8 @@ using Microsoft.AspNetCore.Hosting;
 using DataLayerLibrary.DataLogic;
 using Corona_B.I.E.R_V1.ExtensionMethods;
 
+
+
 namespace Corona_B.I.E.R_V1.Controllers
 {
     public class HourController : Controller
@@ -49,6 +51,32 @@ namespace Corona_B.I.E.R_V1.Controllers
 
             return View();
         }
+
+
+
+
+        public IActionResult ViewHours()
+        {
+            var data = HourProcessor.LoadHours();
+            List<ViewHourModel> hours = new List<ViewHourModel>();
+            foreach (var row in data)
+            {
+                hours.Add(new ViewHourModel
+                {
+                    Id = row.ID,
+                    Employee_ID = row.Employee_ID,
+                    StandbyHours = row.StandbyHours,
+                    IncidentHours = row.IncidentHours,
+                    TimeStamp = row.TimeStamp
+                    
+
+                });
+            }
+            
+
+            return View(hours);
+        }
+
 
         /*
         // GET: api/Hour

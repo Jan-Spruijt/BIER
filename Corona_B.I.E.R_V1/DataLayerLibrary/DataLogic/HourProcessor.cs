@@ -25,5 +25,14 @@ namespace DataLayerLibrary.DataLogic
                             VALUES(@Employee_Id, @StandbyHours, @IncidentHours);";
             SQLDataAccess.SaveData(sql, data);
         }
+
+
+
+        public static List<HourDataModel> LoadHours()
+        {
+            string sql = "SELECT * FROM registeredhours;";
+            return SQLDataAccess.LoadData<HourDataModel>(sql);
+
+        }
     }
 }

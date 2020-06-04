@@ -3,15 +3,14 @@
     "",
     "\\Corona_B.I.E.R_V1",
     "\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1",
-    "\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Models",
+    "\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Views",
+    "\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Views\\Employee",
+    "\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Views\\Hour",
     "\\Corona_B.I.E.R_V1\\DataLayerLibrary",
-    "\\Corona_B.I.E.R_V1\\DataLayerLibrary\\bin",
-    "\\Corona_B.I.E.R_V1\\DataLayerLibrary\\bin\\Release",
     "\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataAcces",
     "\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLogic",
-    "\\Corona_B.I.E.R_V1\\Logic",
-    "\\Corona_B.I.E.R_V1\\LogicLayerLibrar"
+    "\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataModels"
   ],
-  "SelectedNode": "\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLogic\\EmployeeProcessor.cs",
+  "SelectedNode": "\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Controllers\\HourController.cs",
   "PreviewInSolutionExplorer": false
 }
