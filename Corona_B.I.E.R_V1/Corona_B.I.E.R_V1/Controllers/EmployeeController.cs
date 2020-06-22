@@ -13,6 +13,7 @@ using LogicLayerLibrary.ExtensionMethods;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
+using Corona_B.I.E.R_V1.ExtensionMethods;
 
 namespace Corona_B.I.E.R_V1.Controllers
 {
@@ -61,7 +62,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                     employee.Profession,
                     employee.Role.ToString()
                 );
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("ViewEmployees", "Employee");
             }
 
             return View();
@@ -95,7 +96,19 @@ namespace Corona_B.I.E.R_V1.Controllers
 
         public IActionResult LoginEmployee()
         {
+            if (@User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Dashboard", "Home");
+            }
             return View();
+        }
+        public IActionResult LogOutEmployee()
+        {
+            if (@User.Identity.IsAuthenticated)
+            {
+                HttpContext.SignOutAsync();
+            }
+            return RedirectToAction("LoginEmployee", "Employee");
         }
 
         [HttpPost]

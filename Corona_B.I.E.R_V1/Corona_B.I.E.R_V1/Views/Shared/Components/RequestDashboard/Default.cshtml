@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Corona_B.I.E.R_V1.Models.RequestModel>
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.stringDateStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeAcceptedbyName)
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.stringDateStart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeAcceptedbyName)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", "Request", new { id = item.RequestId })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

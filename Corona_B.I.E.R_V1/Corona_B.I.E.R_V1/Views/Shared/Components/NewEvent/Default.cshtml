@@ -1,0 +1,79 @@
+﻿@model  Corona_B.I.E.R_V1.Models.CalendarModels.CalendarCreateEventModel
+
+
+@{
+    ViewData["Title"] = "CreateEvent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div id="PopUpForm" style="visibility: hidden;">
+    <div id="Overlay"></div>
+    <div class="row">
+        <div id="HeaderForm">
+            <h2>Nieuw calender item</h2>
+            <hr />
+        </div>
+        
+        <form asp-action="CreateEvent">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="input-group">
+
+                <label asp-for="DateStart" class="control-label"></label>
+                <span class="empty-column"></span>
+                <label asp-for="TimeStart" class="control-label"></label>
+            </div>
+            <div class="input-group">
+                <input asp-for="DateStart" class="form-control" />
+                <span asp-validation-for="DateStart" class="text-danger"></span>
+                <span class="empty-column"></span>
+                <input asp-for="TimeStart" class="form-control" />
+                <span asp-validation-for="TimeStart" class="text-danger"></span>
+            </div>
+
+            <div class="input-group">
+                <label asp-for="DateEnd" class="control-label"></label>
+                <span class="empty-column"></span>
+                <label asp-for="TimeEnd" class="control-label"></label>
+            </div>
+            <div class="input-group">
+                <input asp-for="DateEnd" class="form-control" />
+                <span asp-validation-for="DateEnd" class="text-danger"></span>
+                <span class="empty-column"></span>
+                <input asp-for="TimeEnd" class="form-control" />
+                <span asp-validation-for="TimeEnd" class="text-danger"></span>
+            </div>
+
+            <div id="CustomEmployeeDropdown">
+                <label asp-for="Employee_ID" class="control-label"></label>
+                <section id="EmployeeDropdownToggle">
+                    <img id="SelectedImg" src="../img/Icons/search.png" class="SearchIcon"><input id="SearchEmployee" type="text" placeholder="Zoek.." autocomplete="off"/><span class="fc-icon fc-icon-chevron-right"></span>
+                </section>
+                <ul>
+                    @foreach (var item in Model.Employees)
+                    {
+                        var photoPath = "../img/ProfilePictures/" + (item.ProfilePicturePath ?? "DefaultUserPicture.png");
+                        <li value="@item.id"><img src="@photoPath" />@item.Firstname @item.Prefix @item.Lastname</li>
+                    }
+                </ul>
+            </div>
+            <input type="hidden" asp-for="Employee_ID" class="form-control" />
+            <input type="hidden" asp-for="Event_ID" class="form-control" />
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control" /></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div id="BottomForm">
+                <hr />
+                <div class="form-group">
+                    <input type="button" value="Annuleer" class="btn btn-primary btn-cancel" />
+                    <input type="submit" value="Opslaan" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+     </div>
+</div>
+
+

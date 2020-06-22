@@ -6,6 +6,15 @@ C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Logic\obj\Debu
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.AssemblyInfo.cs
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.dll
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.pdb
+D:\github\BIER\Corona_B.I.E.R_V1\Logic\bin\Debug\netstandard2.0\LogicLayerLibrary.deps.json
+D:\github\BIER\Corona_B.I.E.R_V1\Logic\bin\Debug\netstandard2.0\LogicLayerLibrary.dll
+D:\github\BIER\Corona_B.I.E.R_V1\Logic\bin\Debug\netstandard2.0\LogicLayerLibrary.pdb
+D:\github\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.csprojAssemblyReference.cache
+D:\github\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.csproj.CoreCompileInputs.cache
+D:\github\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.AssemblyInfoInputs.cache
+D:\github\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.AssemblyInfo.cs
+D:\github\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.dll
+D:\github\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.pdb
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\bin\Debug\netstandard2.0\LogicLayerLibrary.deps.json
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\bin\Debug\netstandard2.0\LogicLayerLibrary.dll
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\bin\Debug\netstandard2.0\LogicLayerLibrary.pdb
@@ -15,4 +24,3 @@ C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandar
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.AssemblyInfo.cs
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.dll
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.pdb
-C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.csproj.CoreCompileInputs.cache

@@ -1,14 +1,14 @@
 ﻿@model IEnumerable<Corona_B.I.E.R_V1.Models.RequestModel>
 
 @{
-    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "ViewRequests";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h1>ViewRequests</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a href="../request/Selectrequest">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -17,10 +17,19 @@
                 @Html.DisplayNameFor(model => model.Employeename)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EmployeeIdAcceptedby)
+                @Html.DisplayNameFor(model => model.EmployeeAcceptedbyName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Date)
+                @Html.DisplayNameFor(model => model.stringDateStart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.stringDateEnd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.stringTimeStart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.stringTimeEnd)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Status)
@@ -28,7 +37,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.Type)
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -38,10 +46,19 @@
                 @Html.DisplayFor(modelItem => item.Employeename)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EmployeeIdAcceptedby)
+                @Html.DisplayFor(modelItem => item.EmployeeAcceptedbyName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Date)
+                @Html.DisplayFor(modelItem => item.stringDateStart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.stringDateEnd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.stringTimeStart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.stringTimeEnd)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Status)
@@ -50,9 +67,10 @@
                 @Html.DisplayFor(modelItem => item.Type)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+
+                @Html.ActionLink("Accept", "Accept", new { id = item.RequestId }) 
+                @Html.ActionLink("Edit", "Edit", new { id = item.RequestId }) 
+                @Html.ActionLink("Details", "Details", new { id = item.RequestId }) 
             </td>
         </tr>
 }

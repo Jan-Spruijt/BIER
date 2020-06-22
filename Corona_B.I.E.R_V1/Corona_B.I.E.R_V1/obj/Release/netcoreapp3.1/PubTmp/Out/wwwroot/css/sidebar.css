@@ -54,9 +54,12 @@
 }
 
 .user_img {
-    margin: 0 auto;
     width: 40px;
+    height: 40px;
     border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-left: 9px;
     border-style: solid;
     border-width: 1px;
     border-color: #919191;
@@ -65,6 +68,9 @@
     text-align: center;
     vertical-align: middle;
     font-size: 25px;
+}
+.user_img_container{
+    width: auto;
 }
 
 .link_style {
@@ -139,7 +145,7 @@
     }
 
     .main-menu > ul.logout {
-        margin-top: 200px;
+        margin-top: 120px;
     }
 
 .no-touch .scrollable.hover {
