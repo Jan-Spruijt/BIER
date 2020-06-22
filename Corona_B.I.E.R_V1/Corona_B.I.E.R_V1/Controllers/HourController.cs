@@ -46,78 +46,69 @@ namespace Corona_B.I.E.R_V1.Controllers
                     Hour.StandbyHours,
                     Hour.IncidentHours    
                 );
-                return RedirectToAction("RegisterHour", "Hour");
+                return RedirectToAction("ViewHours");
             }
 
             return View();
         }
 
 
-       /*public IActionResult Delete()
-        {
-            if (ModelState.IsValid)
-            {
-                HourProcessor.DeleteHours(id);
-                return RedirectToAction("RegisterHour", "Hour");
-            }
-            return View();
-        }*/
+
 
         public IActionResult ViewHours()
         {
-            var data = HourProcessor.LoadHours();
-            List<ViewHourModel> hours = new List<ViewHourModel>();
-            foreach (var row in data)
+            if (HttpContext.GetCurrentEmployeeModel().Role.ToString() == "Admin")
             {
-                hours.Add(new ViewHourModel
+                var data = HourProcessor.LoadHours();
+                List<ViewHourModel> hours = new List<ViewHourModel>();
+                foreach (var row in data)
                 {
-                    Id = row.ID,
-                    Employee_ID = row.Employee_Id,
-                    StandbyHours = row.StandbyHours,
-                    IncidentHours = row.IncidentHours,
-                    TimeStamp = row.TimeStamp
-                    
+                    var employeedata = EmployeeProcessor.GetUserById(row.Employee_Id);
+                    hours.Add(new ViewHourModel
+                    {
+                        Id = row.ID,
+                        Employee_ID = row.Employee_Id,
+                        FirstName = employeedata.Firstname,
+                        LastName = employeedata.Lastname,
+                        StandbyHours = row.StandbyHours,
+                        IncidentHours = row.IncidentHours,
+                        TimeStamp = row.TimeStamp
 
-                });
+
+                    }) ;
+                }
+                return View(hours);
             }
-            
+            else
+            {
+                var data = HourProcessor.LoadHours(HttpContext.GetCurrentEmployeeModel().Id);
+                List<ViewHourModel> hours = new List<ViewHourModel>();
+                foreach (var row in data)
+                {
+                    var employeedata = EmployeeProcessor.GetUserById(row.Employee_Id);
+                    hours.Add(new ViewHourModel
+                    {
+                        Id = row.ID,
+                        Employee_ID = row.Employee_Id,
+                        FirstName = employeedata.Firstname,
+                        LastName = employeedata.Lastname,
+                        StandbyHours = row.StandbyHours,
+                        IncidentHours = row.IncidentHours,
+                        TimeStamp = row.TimeStamp
 
-            return View(hours);
+
+                    });
+                }
+                return View(hours);
+            }
+                  
         }
 
-
-        /*
-        // GET: api/Hour
-        [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Delete(int id)
         {
-            return new string[] { "value1", "value2" };
+            HourProcessor.DeleteHours(id);
+            return RedirectToAction("ViewHours");
         }
 
-        // GET: api/Hour/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST: api/Hour
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT: api/Hour/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
-        */
     }
 }

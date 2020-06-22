@@ -35,6 +35,13 @@ namespace DataLayerLibrary.DataLogic
 
         }
 
+        public static List<HourDataModel> LoadHours(int id)
+        {
+            string sql = $"SELECT * FROM registeredhours WHERE employee_id = '{id}';";
+            return SQLDataAccess.LoadData<HourDataModel>(sql);
+
+        }
+
         public static void DeleteHours(int id)
         {
             string sql = $"DELETE FROM registeredhours WHERE id = '{id}';";

@@ -10,12 +10,12 @@ namespace Corona_B.I.E.R_V1.Models
 {
     public class RegisterHourModel
     {
-        [Display(Name = "Standy Uren")]
-        [Required(ErrorMessage = "Vul standby uren in")]
+        [Display(Name = "Uren die standby gestaan zijn.")]
+        [Required(ErrorMessage = "Vul standby uren in.")]
         public int StandbyHours { get; 
             set; }
-        [Display(Name = "Incident Uren")]
-        [Required(ErrorMessage = "Vul incident uren in")]
+        [Display(Name = "Uren dat aan incident is gewerkt.")]
+        [Required(ErrorMessage = "Vul incident uren in.")]
         public int IncidentHours { get; 
             set; }
     }
