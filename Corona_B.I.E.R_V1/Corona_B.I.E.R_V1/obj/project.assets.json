@@ -2655,6 +2655,7 @@
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "Dapper": "2.0.35",
+          "LogicLayerLibrary": "1.0.0",
           "MySql.Data": "8.0.19"
         },
         "compile": {

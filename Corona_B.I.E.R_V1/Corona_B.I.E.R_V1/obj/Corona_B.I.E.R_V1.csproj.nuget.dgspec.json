@@ -112,7 +112,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\github\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj": {
+                "projectPath": "D:\\github\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

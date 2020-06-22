@@ -23,6 +23,7 @@ namespace Corona_B.I.E.R_V1.Models
 
         public DateTime datetimeStart { get; set; }
         public DateTime datetimeEnd { get; set; }
+        [Display(Name = "Status")]
         public string status { get; set; }
     }
 }

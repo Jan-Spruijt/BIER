@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading;
-using Corona_B.I.E.R_V1.DataAccess;
+﻿using Corona_B.I.E.R_V1.DataAccess;
 using DataLayerLibrary.DataModels;
+using System;
+using System.Collections.Generic;
 
 namespace DataLayerLibrary.DataLogic
 {
     public class IncidentStepProcessor
     {
-        public static void CreateStep(int employeeCreatedBy, int incidentId, int stepNumber, string Context, string title)
+        public static void CreateStep(int employeeCreatedBy, int incidentId, string Context, string title)
         {
             var data = new IncidentStepDataModel
             {
@@ -32,7 +29,7 @@ namespace DataLayerLibrary.DataLogic
             var incidentEmployeeData = IncidentEmployeeProcessor.LoadEmployeesByIncidentId(data.incident_id);
             foreach (var employee in incidentEmployeeData)
             {
-                if (employee_id == employee.Id)
+                if (employee_id == employee.Employee_Id)
                 {
                     isWorkingOn = true;
                 } 
@@ -60,7 +57,7 @@ namespace DataLayerLibrary.DataLogic
             var datetimestring = data.datetimeEnd.ToString("yyyy/MM/dd HH:mm:ss");
             data.status = "done";
             data.employee_id_endedby = employee_id_endedby;
-            string sql = $"Update incident_timeline Set datetimeEnd = '{datetimestring}', status = '{data.status}', employee_id_endedby = '{data.employee_id_endedby}';";
+            string sql = $"Update incident_timeline Set datetimeEnd = '{datetimestring}', status = '{data.status}', employee_id_endedby = '{data.employee_id_endedby}' WHERE id = '{id}';";
             SQLDataAccess.SaveData(sql, data);
         }
 

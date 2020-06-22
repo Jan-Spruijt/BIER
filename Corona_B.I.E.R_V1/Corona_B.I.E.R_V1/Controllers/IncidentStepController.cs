@@ -27,7 +27,6 @@ namespace Corona_B.I.E.R_V1.Controllers
                 IncidentStepProcessor.CreateStep(
                     HttpContext.GetCurrentEmployeeModel().Id,
                     data.id,
-                    data.stepnumber,
                     data.context,
                     data.title
                 );
