@@ -30,14 +30,21 @@ namespace DataLayerLibrary.DataLogic
 
         public static List<HourDataModel> LoadHours()
         {
-            string sql = "SELECT * FROM registeredhours;";
+            string sql = "SELECT * FROM registeredhours Order By timestamp DESC;";
+            return SQLDataAccess.LoadData<HourDataModel>(sql);
+
+        }
+
+        public static List<HourDataModel> LoadHoursDashboard(int id)
+        {
+            string sql = $"SELECT * FROM registeredhours WHERE employee_id = '{id}' Order By timestamp DESC Limit 3;";
             return SQLDataAccess.LoadData<HourDataModel>(sql);
 
         }
 
         public static List<HourDataModel> LoadHours(int id)
         {
-            string sql = $"SELECT * FROM registeredhours WHERE employee_id = '{id}';";
+            string sql = $"SELECT * FROM registeredhours WHERE employee_id = '{id}' Order By timestamp DESC;";
             return SQLDataAccess.LoadData<HourDataModel>(sql);
 
         }
