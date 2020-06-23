@@ -84,6 +84,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                     request.Reason
 
                 );
+                MailSender.CreateAndSendRequest();
                 return RedirectToAction("ViewRequests", "Request");
             }
 
@@ -115,6 +116,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                     request.Reason
 
                 );
+                MailSender.CreateAndSendRequest();
                 return RedirectToAction("ViewRequests", "Request");
             }
 
@@ -137,6 +139,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                     RequestType.Vacation.ToString()
 
                 );
+                MailSender.CreateAndSendRequest();
                 return RedirectToAction("ViewRequests", "Request");
             }
 

@@ -18,28 +18,10 @@
 <div>
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.employee_id_createdby)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.employee_id_createdby)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.employee_id_endedby)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.employee_id_endedby)
-        </dd>
-        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.incident_id)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.incident_id)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.stepnumber)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.stepnumber)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.context)
@@ -52,18 +34,6 @@
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.title)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.datetimeStart)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.datetimeStart)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.datetimeEnd)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.datetimeEnd)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.status)
@@ -90,6 +60,7 @@
     <tbody>
         @foreach (var item in Model.employee)
         {
+            var photoPath = "wwwroot/img/ProfilePictures/" + (item.ProfilePicturePath ?? "DefaultUserPicture.png");
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.Firstname)
@@ -98,7 +69,7 @@
                     @Html.DisplayFor(modelItem => item.Lastname)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.ProfilePicturePath)
+                    <img src="@photoPath" />
                 </td>
             </tr>
         }
@@ -107,7 +78,7 @@
 @if (Model.status == "pending")
 {
     <div>
-        @Html.ActionLink("begin", "StartStep", new { id = Model.id }) |
+        @Html.ActionLink("Begin stap", "StartStep", new { id = Model.id }) |
         @Html.ActionLink("Terug naar incident", "DetailsIncident", "Incident", new { id = Model.incident_id })
     </div>
 }
@@ -116,8 +87,8 @@
     if (isWorkingOn)
     {
         <div>
-            @Html.ActionLink("Close", "CloseStep", new { id = Model.id }) |
-            @Html.ActionLink("Stop meewerken", "RemoveEmployeeFromStep", new { id = Model.id }) |
+            @Html.ActionLink("Sluit stap", "CloseStep", new { id = Model.id }) |
+            @Html.ActionLink("Stop werken", "RemoveEmployeeFromStep", new { id = Model.id }) |
             @Html.ActionLink("Terug naar incident", "DetailsIncident", "incident", new { id = Model.incident_id })
         </div>
     }

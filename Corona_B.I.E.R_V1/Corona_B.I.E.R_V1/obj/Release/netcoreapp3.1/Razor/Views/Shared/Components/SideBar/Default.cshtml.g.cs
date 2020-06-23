@@ -13,14 +13,14 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\_ViewImports.cshtml"
+#line 1 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\_ViewImports.cshtml"
 using Corona_B.I.E.R_V1;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\_ViewImports.cshtml"
+#line 2 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\_ViewImports.cshtml"
 using Corona_B.I.E.R_V1.Models;
 
 #line default
@@ -65,7 +65,7 @@ using Corona_B.I.E.R_V1.Models;
             BeginWriteAttribute("class", " class=\"", 58, "\"", 135, 2);
             WriteAttributeValue("", 66, "logout", 66, 6, true);
 #nullable restore
-#line 4 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Shared\Components\SideBar\Default.cshtml"
+#line 4 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Shared\Components\SideBar\Default.cshtml"
 WriteAttributeValue(" ", 72, @Model.Role.ToString() == "User" ? "MarginUserTop" : "hide", 73, 62, false);
 
 #line default
@@ -74,7 +74,7 @@ WriteAttributeValue(" ", 72, @Model.Role.ToString() == "User" ? "MarginUserTop" 
             EndWriteAttribute();
             WriteLiteral(">\r\n");
 #nullable restore
-#line 5 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Shared\Components\SideBar\Default.cshtml"
+#line 5 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Shared\Components\SideBar\Default.cshtml"
          if (Model.Role.ToString() == "Admin")
         {
 

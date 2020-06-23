@@ -92,9 +92,7 @@
                             @Html.DisplayFor(modelItem => item.Role)
                         </td>
                         <td>
-                            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) <br>
-                            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) <br>
-                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                            @Html.ActionLink("Edit", "UpdateEmployee", new { id = item.Id }) <br>
                         </td>
                     </tr>
                 }

@@ -13,28 +13,28 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\_ViewImports.cshtml"
+#line 1 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\_ViewImports.cshtml"
 using Corona_B.I.E.R_V1;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\_ViewImports.cshtml"
+#line 2 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\_ViewImports.cshtml"
 using Corona_B.I.E.R_V1.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 1 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
 using System.Transactions;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 2 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
 using Corona_B.I.E.R_V1.ExtensionMethods;
 
 #line default
@@ -72,7 +72,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
         {
             WriteLiteral("\r\n");
 #nullable restore
-#line 5 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 5 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
   
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "DetailsIncident";
@@ -83,7 +83,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 11 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
  foreach (var step in Model.steps)
 {
     if (step.status != "done")
@@ -97,7 +97,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("\r\n");
 #nullable restore
-#line 19 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 19 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
  foreach (var employee in Model.employees)
 {
     if (Context.GetCurrentEmployeeModel().Id == employee.Id)
@@ -111,7 +111,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("<h1>DetailsIncident</h1>\r\n\r\n\r\n\r\n<div>\r\n    <dl class=\"row\">\r\n        <dt class=\"col-sm-2\">\r\n            ");
 #nullable restore
-#line 33 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 33 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
        Write(Html.DisplayNameFor(model => model.Customer));
 
 #line default
@@ -119,7 +119,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("\r\n        </dt>\r\n        <dd class=\"col-sm-10\">\r\n            ");
 #nullable restore
-#line 36 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 36 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
        Write(Html.DisplayFor(model => model.Customer));
 
 #line default
@@ -127,7 +127,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("\r\n        </dd>\r\n        <dt class=\"col-sm-2\">\r\n            ");
 #nullable restore
-#line 39 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 39 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
        Write(Html.DisplayNameFor(model => model.CustomerEmail));
 
 #line default
@@ -135,7 +135,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("\r\n        </dt>\r\n        <dd class=\"col-sm-10\">\r\n            ");
 #nullable restore
-#line 42 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 42 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
        Write(Html.DisplayFor(model => model.CustomerEmail));
 
 #line default
@@ -143,7 +143,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("\r\n        </dd>\r\n        <dt class=\"col-sm-2\">\r\n            ");
 #nullable restore
-#line 45 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 45 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
        Write(Html.DisplayNameFor(model => model.Title));
 
 #line default
@@ -151,7 +151,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("\r\n        </dt>\r\n        <dd class=\"col-sm-10\">\r\n            ");
 #nullable restore
-#line 48 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 48 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
        Write(Html.DisplayFor(model => model.Title));
 
 #line default
@@ -159,7 +159,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("\r\n        </dd>\r\n        <dt class=\"col-sm-2\">\r\n            ");
 #nullable restore
-#line 51 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 51 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
        Write(Html.DisplayNameFor(model => model.Context));
 
 #line default
@@ -167,7 +167,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("\r\n        </dt>\r\n        <dd class=\"col-sm-10\">\r\n            ");
 #nullable restore
-#line 54 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 54 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
        Write(Html.DisplayFor(model => model.Context));
 
 #line default
@@ -175,7 +175,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("\r\n        </dd>\r\n        <dt class=\"col-sm-2\">\r\n            ");
 #nullable restore
-#line 57 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 57 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
        Write(Html.DisplayNameFor(model => model.Status));
 
 #line default
@@ -183,7 +183,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("\r\n        </dt>\r\n        <dd class=\"col-sm-10\">\r\n            ");
 #nullable restore
-#line 60 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 60 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
        Write(Html.DisplayFor(model => model.Status));
 
 #line default
@@ -210,7 +210,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
     <tbody>
 ");
 #nullable restore
-#line 79 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 79 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
          foreach (var item in Model.steps)
         {
 
@@ -219,7 +219,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("            <tr>\r\n                <td>\r\n                    ");
 #nullable restore
-#line 83 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 83 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
                Write(Html.DisplayFor(modelItem => item.context));
 
 #line default
@@ -227,7 +227,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
 #nullable restore
-#line 86 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 86 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
                Write(Html.DisplayFor(modelItem => item.stepnumber));
 
 #line default
@@ -235,7 +235,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
 #nullable restore
-#line 89 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 89 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
                Write(Html.DisplayFor(modelItem => item.status));
 
 #line default
@@ -243,7 +243,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
 #nullable restore
-#line 92 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 92 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
                Write(Html.ActionLink("Details", "DetailsStep","IncidentStep", new { id = item.id }));
 
 #line default
@@ -251,7 +251,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral(" |\r\n                    ");
 #nullable restore
-#line 93 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 93 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
                Write(Html.ActionLink("Delete", "DeleteStep", "IncidentStep" ,new {id = item.id, incident_Id = Model.id}, null));
 
 #line default
@@ -259,7 +259,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("\r\n                </td>\r\n            </tr>\r\n");
 #nullable restore
-#line 96 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 96 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
         }
 
 #line default
@@ -267,7 +267,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("    </tbody>\r\n</table>\r\n<div>\r\n");
 #nullable restore
-#line 100 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 100 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
      if (Model.Status == "open")
     {
         if (status == false)
@@ -278,7 +278,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("            <div>\r\n                ");
 #nullable restore
-#line 105 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 105 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
            Write(Html.ActionLink("Voeg stap toe", "CreateStep","IncidentStep", new { id = Model.id }));
 
 #line default
@@ -302,7 +302,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n            </div>\r\n");
 #nullable restore
-#line 108 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 108 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
         }
         else
         {
@@ -312,7 +312,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("            <div>\r\n                ");
 #nullable restore
-#line 112 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 112 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
            Write(Html.ActionLink("Close", "CloseIncident", new { id = Model.id }));
 
 #line default
@@ -320,7 +320,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral(" |\r\n                ");
 #nullable restore
-#line 113 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 113 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
            Write(Html.ActionLink("Voeg stap toe", "CreateStep","IncidentStep", new { id = Model.id }));
 
 #line default
@@ -344,7 +344,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n            </div>\r\n");
 #nullable restore
-#line 116 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 116 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
         }
     }
 
@@ -352,7 +352,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #line hidden
 #nullable disable
 #nullable restore
-#line 118 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 118 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
      if (Model.Status == "closed")
     {
 
@@ -377,7 +377,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n        </div>\r\n");
 #nullable restore
-#line 123 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 123 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
     }
 
 #line default
@@ -385,7 +385,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("\r\n</div>\r\n<h5>Werknemers</h5>\r\n<div>\r\n");
 #nullable restore
-#line 128 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 128 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
      foreach (var item in Model.employees)
     {
         var photoPath = "img/ProfilePictures/" + (item.ProfilePicturePath ?? "DefaultUserPicture.png");
@@ -395,7 +395,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral("        <div>\r\n            <span>");
 #nullable restore
-#line 132 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 132 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
              Write(item.Firstname);
 
 #line default
@@ -403,7 +403,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral(" ");
 #nullable restore
-#line 132 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 132 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
                              Write(item.Prefix);
 
 #line default
@@ -411,7 +411,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #nullable disable
             WriteLiteral(" ");
 #nullable restore
-#line 132 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 132 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
                                           Write(item.Lastname);
 
 #line default
@@ -442,7 +442,7 @@ AddHtmlAttributeValue("", 3769, photoPath, 3769, 10, false);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n        </div>\r\n");
 #nullable restore
-#line 135 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 135 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
     }
 
 #line default
@@ -450,7 +450,7 @@ AddHtmlAttributeValue("", 3769, photoPath, 3769, 10, false);
 #nullable disable
             WriteLiteral("</div>\r\n");
 #nullable restore
-#line 137 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 137 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
  if (isworkingon == false)
 {
 
@@ -459,7 +459,7 @@ AddHtmlAttributeValue("", 3769, photoPath, 3769, 10, false);
 #nullable disable
             WriteLiteral("    <div>\r\n        ");
 #nullable restore
-#line 140 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 140 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
    Write(Html.ActionLink("Begin werken aan incident", "AddEmployeeToIncident", new {id = Model.id}));
 
 #line default
@@ -467,7 +467,7 @@ AddHtmlAttributeValue("", 3769, photoPath, 3769, 10, false);
 #nullable disable
             WriteLiteral("\r\n    </div>\r\n");
 #nullable restore
-#line 142 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 142 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
 }
 else
 {
@@ -477,7 +477,7 @@ else
 #nullable disable
             WriteLiteral("    <div>\r\n        ");
 #nullable restore
-#line 146 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 146 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
    Write(Html.ActionLink("Stop werken aan incident", "RemoveEmployeeFromIncident", new {id = Model.id}));
 
 #line default
@@ -485,7 +485,7 @@ else
 #nullable disable
             WriteLiteral("\r\n    </div>\r\n");
 #nullable restore
-#line 148 "C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
+#line 148 "D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Incident\DetailsIncident.cshtml"
 }
 
 #line default
