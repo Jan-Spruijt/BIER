@@ -14,7 +14,6 @@ using LogicLayerLibrary.ExtensionMethods;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
-using Corona_B.I.E.R_V1.ExtensionMethods;
 
 namespace Corona_B.I.E.R_V1.Controllers
 {

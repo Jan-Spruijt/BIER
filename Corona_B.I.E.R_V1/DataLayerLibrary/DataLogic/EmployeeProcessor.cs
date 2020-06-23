@@ -62,11 +62,6 @@ namespace Corona_B.I.E.R_V1.DataLogic
             SQLDataAccess.DeleteData(sql);
         }
 
-        public static EmployeeDataModel GetUserById(int id)
-        {
-            string sql = $"SELECT * FROM employee WHERE id = '{id}';";
-            return SQLDataAccess.LoadFirstData<EmployeeDataModel>(sql);
-        }
 
         public static void UpdateEmployee(string city, string postalcode, string address, string email, string phone, string profession, string password, int user_Id)
         {
