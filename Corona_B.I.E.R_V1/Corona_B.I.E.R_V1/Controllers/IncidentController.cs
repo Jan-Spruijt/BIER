@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Hosting;
+using LogicLayerLibrary;
 
 namespace Corona_B.I.E.R_V1.Controllers
 {
@@ -39,6 +40,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                     incident.CustomerEmail,
                     HttpContext.GetCurrentEmployeeModel().Id
                 );
+                MailSender.CreateAndSendIncidentStart();
                 return RedirectToAction("ViewIncidents");
             }
             return View();
@@ -128,7 +130,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                 id,
                 HttpContext.GetCurrentEmployeeModel().Id
             );
-
+            MailSender.CreateAndSendIncidentComplete();
             return RedirectToAction("ViewIncidents", "Incident");
         }
 

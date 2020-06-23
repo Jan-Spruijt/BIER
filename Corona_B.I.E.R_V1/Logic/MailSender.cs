@@ -8,16 +8,16 @@ using System.Linq;
 
 namespace LogicLayerLibrary
 {
-    class MailSender
+    public static class MailSender
     {
         private const string ApiKey = "0df6bb2bb91134eb558a8babca621beb-us10";
         private const string RequestListId = "8ed78fbd5c";
         private const int RequestTemplateId = 370309; // Request substitution template ID
         private const int IncidentBeginTemplateId = 373733; // Incident begin template ID
         private const int IncidentEndTemplateId = 373741; // Incident end template ID
-        private MailChimpManager _mailChimpManager = new MailChimpManager(ApiKey);
+        private static MailChimpManager _mailChimpManager = new MailChimpManager(ApiKey);
         
-        private Setting _campaignSettingsExchange = new Setting
+        private static Setting _campaignSettingsExchange = new Setting
         {
             ReplyTo = "BierCgi@outlook.com",
             FromName = "Proftaak groep 3",
@@ -25,7 +25,7 @@ namespace LogicLayerLibrary
             SubjectLine = "A Co-Worker wants to make a request for substitution",
         };
 
-        private Setting _campaignSettingsStartIncident = new Setting
+        private static Setting _campaignSettingsStartIncident = new Setting
         {
             ReplyTo = "BierCgi@outlook.com",
             FromName = "Proftaak groep 3",
@@ -33,7 +33,7 @@ namespace LogicLayerLibrary
             SubjectLine = "We have started working on your incident.",
         };
 
-        private Setting _campaignSettingsEndIncident = new Setting
+        private static Setting _campaignSettingsEndIncident = new Setting
         {
             ReplyTo = "BierCgi@outlook.com",
             FromName = "Proftaak groep 3",
@@ -41,7 +41,7 @@ namespace LogicLayerLibrary
             SubjectLine = "We have successfully solved your incident.",
         };
 
-        public void CreateAndSendRequest()
+        public static void CreateAndSendRequest()
         {
             string html = "";
             var campaign = _mailChimpManager.Campaigns.AddAsync(new Campaign
@@ -68,7 +68,7 @@ namespace LogicLayerLibrary
             _mailChimpManager.Campaigns.SendAsync(campaign.Id).Wait();
         }
 
-        public void CreateAndSendIncidentStart()
+        public static void CreateAndSendIncidentStart()
         {
             string html = "";
             var campaign = _mailChimpManager.Campaigns.AddAsync(new Campaign
@@ -95,7 +95,7 @@ namespace LogicLayerLibrary
             _mailChimpManager.Campaigns.SendAsync(campaign.Id).Wait();
         }
 
-        public void CreateAndSendIncidentComplete()
+        public static void CreateAndSendIncidentComplete()
         {
             string html = "";
             var campaign = _mailChimpManager.Campaigns.AddAsync(new Campaign
@@ -122,11 +122,11 @@ namespace LogicLayerLibrary
             _mailChimpManager.Campaigns.SendAsync(campaign.Id).Wait();
         }
 
-        public List<Template> GetAllTemplates()
+        public static List<Template> GetAllTemplates()
           => _mailChimpManager.Templates.GetAllAsync().Result.ToList();
-        public List<List> GetAllMailingLists()
+        public static List<List> GetAllMailingLists()
           => _mailChimpManager.Lists.GetAllAsync().Result.ToList();
-        public Content GetTemplateDefaultContent(string templateId)
+        public static Content GetTemplateDefaultContent(string templateId)
           => (Content)_mailChimpManager.Templates.GetDefaultContentAsync(templateId).Result;
     }
 }
