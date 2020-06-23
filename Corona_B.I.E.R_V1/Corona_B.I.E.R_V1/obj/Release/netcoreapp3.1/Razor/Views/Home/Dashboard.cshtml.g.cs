@@ -26,7 +26,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8d7ac8f405bbddb916b5ea31c7e086d8a7866815", @"/Views/Home/Dashboard.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7f3ee5f1052df0ddd08473f232dc7b8ae1ceeb79", @"/Views/Home/Dashboard.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6b1d5b3fe91d0c9aedbf4c4df65d917f00b093a1", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Dashboard : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
@@ -80,10 +80,15 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
+            WriteLiteral("\r\n        </div>\r\n        <div class=\"col-md-5 offset-1 bg_white\">\r\n            <h3>Uren></h3>\r\n            ");
+#nullable restore
+#line 17 "C:\Users\Maik\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Home\Dashboard.cshtml"
+       Write(await Component.InvokeAsync("DashboardHours"));
+
+#line default
+#line hidden
+#nullable disable
             WriteLiteral(@"
-        </div>
-        <div class=""col-md-5 offset-1 bg_white"">
-            <h3>Uren></h3>
         </div>
     </div>
     <br>
