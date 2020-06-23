@@ -16,3 +16,12 @@ C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\DataLayerLibra
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Release\netcoreapp3.1\DataLayerLibrary.AssemblyInfo.cs
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Release\netcoreapp3.1\DataLayerLibrary.dll
 C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Release\netcoreapp3.1\DataLayerLibrary.pdb
+D:\Git\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\bin\Release\netcoreapp3.1\DataLayerLibrary.deps.json
+D:\Git\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\bin\Release\netcoreapp3.1\DataLayerLibrary.dll
+D:\Git\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\bin\Release\netcoreapp3.1\DataLayerLibrary.pdb
+D:\Git\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Release\netcoreapp3.1\DataLayerLibrary.csprojAssemblyReference.cache
+D:\Git\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Release\netcoreapp3.1\DataLayerLibrary.csproj.CoreCompileInputs.cache
+D:\Git\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Release\netcoreapp3.1\DataLayerLibrary.AssemblyInfoInputs.cache
+D:\Git\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Release\netcoreapp3.1\DataLayerLibrary.AssemblyInfo.cs
+D:\Git\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Release\netcoreapp3.1\DataLayerLibrary.dll
+D:\Git\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Release\netcoreapp3.1\DataLayerLibrary.pdb
