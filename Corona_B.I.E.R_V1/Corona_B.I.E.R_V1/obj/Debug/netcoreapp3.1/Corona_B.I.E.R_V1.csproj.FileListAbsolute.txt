@@ -306,3 +306,6 @@ D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Debug\netcoreapp3.1\runti
 D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.csproj.CoreCompileInputs.cache
 D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Corona_B.I.E.R_V1.MvcApplicationPartsAssemblyInfo.cache
 D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Debug\netcoreapp3.1\MailChimp.Net.dll
+D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Hour\RegisterHour.cshtml.g.cs
+D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Hour\ViewHours.cshtml.g.cs
+D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\DashboardHours\Default.cshtml.g.cs
