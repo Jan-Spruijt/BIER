@@ -438,3 +438,9 @@ D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Corona
 D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Corona_B.I.E.R_V1.pdb
 D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Corona_B.I.E.R_V1.genruntimeconfig.cache
 D:\Git\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Release\netcoreapp3.1\MailChimp.Net.dll
+C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\bin\Release\netcoreapp3.1\MailChimp.Net.dll
+C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Employee\UpdateEmployee.cshtml.g.cs
+C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Hour\RegisterHour.cshtml.g.cs
+C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Hour\ViewHours.cshtml.g.cs
+C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Incident\EditIncident.cshtml.g.cs
+C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\obj\Release\netcoreapp3.1\Razor\Views\Shared\Components\DashboardHours\Default.cshtml.g.cs

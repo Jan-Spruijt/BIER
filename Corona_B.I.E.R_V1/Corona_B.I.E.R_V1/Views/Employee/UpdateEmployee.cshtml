@@ -21,7 +21,7 @@
             </div>
             <div>
                 @{ var photoPath = "../img/ProfilePictures/" + (Model.ProfilePicturePath ?? "DefaultUserPicture.png"); }
-                <img src="@photoPath"/>
+                <img class="user_img" src="@photoPath"/>
             </div>
             <div class="form-group">
                 <label asp-for="Firstname" class="control-label"></label>

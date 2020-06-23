@@ -1,9 +1,11 @@
 ﻿@model Corona_B.I.E.R_V1.Models.EmployeeModel
 
 
+<div class="fixed">
     <ul class="logout @(@Model.Role.ToString() == "User" ? "MarginUserTop" : "hide")">
         @if (Model.Role.ToString() == "Admin")
         {
+
             <li class="margin">
                 <a asp-action="schedule" asp-controller="Agenda">
                     <i class="fa fa-calendar-plus-o nav-icon"></i>
@@ -24,32 +26,33 @@
 
         }
         
-        <div class="fixed">
-            <div class="table paddingtop">
-                <div class="size_width user_img_container">
+        <div class="line"></div>
 
-                    @{
-                        
-                        var photoPath = "img/ProfilePictures/" + (Model.ProfilePicturePath ?? "DefaultUserPicture.png");
-                    }
-                    <img class="user_img" src="~/@photoPath" />
-                </div>
-                <p class="cell">@Model.Firstname @Model.Prefix @Model.Lastname</p>
-            </div>
+        <div class="table paddingtop tablefix">
+            <div class="size_width user_img_container">
 
-            <div class="table">
-                <div class="size_width cell"></div>
-                <div class="cell">
-                    <a class="link_style" asp-action="LogOutEmployee" asp-controller="Employee">
-                        Uitloggen
-                    </a>
-                    <p class="d-inline"> | </p>
-                    <a class="link_style" href="#">
-                        Contact
-                    </a>
-                </div>
+                @{
+
+                    var photoPath = "img/ProfilePictures/" + (Model.ProfilePicturePath ?? "DefaultUserPicture.png");
+                }
+                <img class="user_img" src="~/@photoPath" />
             </div>
+            <p class="cell">@Model.Firstname @Model.Prefix @Model.Lastname</p>
         </div>
 
-        
+        <div class="table tablefix">
+            <div class="size_width cell"></div>
+            <div class="cell">
+                <a class="link_style" asp-action="LogOutEmployee" asp-controller="Employee">
+                    Uitloggen
+                </a>
+                <p class="d-inline"> | </p>
+                <a class="link_style" href="#">
+                    Contact
+                </a>
+            </div>
+        </div>
     </ul>
+</div>
+
+

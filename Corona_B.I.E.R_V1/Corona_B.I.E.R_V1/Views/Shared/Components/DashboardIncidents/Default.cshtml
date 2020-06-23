@@ -1,10 +1,6 @@
 ﻿
 @model IEnumerable<Corona_B.I.E.R_V1.Models.IncidentModel>
 
-@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewData["Title"] = "ViewIncidents";
-}
 @if (Model != null)
 {
     <table class="table">
@@ -43,7 +39,8 @@
         </tbody>
     </table>
     <div>
-        @Html.ActionLink("Bekijk incidenten", "ViewIncidents", "Incident")
+        
+        @Html.ActionLink("Bekijk incidenten", "ViewIncidents", "Incident", "Hour", new {@class = "dashboardbutton"})
     </div>
 }
 else

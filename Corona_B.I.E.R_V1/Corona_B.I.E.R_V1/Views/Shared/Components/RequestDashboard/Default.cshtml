@@ -19,8 +19,8 @@
     </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
-        {
+    @foreach (var item in Model)
+    {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.stringDateStart)
@@ -38,6 +38,9 @@
                 @Html.ActionLink("Details", "Details", "Request", new { id = item.RequestId })
             </td>
         </tr>
-        }
+    }
     </tbody>
 </table>
+<div>
+    <a class="dashboardbutton" asp-controller="Request" asp-action="ViewRequests">Bekijk aanvragen</a>
+</div>

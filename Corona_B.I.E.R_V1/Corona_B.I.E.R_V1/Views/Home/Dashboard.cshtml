@@ -4,32 +4,36 @@
     ViewData["Title"] = "Dashboard";
 }
 
-    <div class="row">
-        <h1>Dashboard</h1>
+<div class="row">
+    <h1>Dashboard</h1>
+</div>
+<div class="row">
+    <div class="col-md-5 bg_white">
+        <h3>Aanvragen></h3>
+        @await Component.InvokeAsync("RequestDashboard")
     </div>
-    <div class="row">
-        <div class="col-md-5 bg_white">
-            <h3>Aanvragen></h3>
-            @await Component.InvokeAsync("RequestDashboard")
-        </div>
-        <div class="col-md-5 offset-1 bg_white">
-            <h3>Uren></h3>
-            @await Component.InvokeAsync("DashboardHours")
-        </div>
+    <div class="col-md-5 offset-1 bg_white">
+        <h3>Uren></h3>
+        @await Component.InvokeAsync("DashboardHours")
     </div>
-    <br>
-    <br>
-    <div class="row">
-        <div class="col-md-5 bg_white">
-            <h3>Agenda></h3>
-            <div id="Calendar"></div>
+</div>
+<br>
+<br>
+<div class="row">
+    <div class="col-md-5 bg_white">
+        <h3>Agenda></h3>
+        <div id="Calendar"></div>
+        <div>
 
+            <a class="dashboardbutton" asp-controller="Agenda" asp-action="MySchedule">Bekijk agenda</a>
         </div>
-        <div class="col-md-5 offset-1 bg_white components">
-            <h3>Incidenten></h3>
-            @await Component.InvokeAsync("DashboardIncidents")
-        </div>
+
     </div>
+    <div class="col-md-5 offset-1 bg_white">
+        <h3>Incidenten></h3>
+        @await Component.InvokeAsync("DashboardIncidents")
+    </div>
+</div>
 <link href="~/lib/FullCalendar/core/main.css" rel="stylesheet" />
 <link href="~/lib/FullCalendar/core/main.css" rel="stylesheet" />
 
