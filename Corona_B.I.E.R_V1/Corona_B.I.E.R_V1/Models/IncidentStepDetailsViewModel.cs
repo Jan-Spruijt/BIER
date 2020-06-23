@@ -12,6 +12,7 @@ namespace Corona_B.I.E.R_V1.Models
         public int employee_id_createdby { get; set; }
         public int employee_id_endedby { get; set; }
         public int incident_id { get; set; }
+        [Display(Name = "Stapnummer")]
         public int stepnumber { get; set; }
         [Required(ErrorMessage = "vul context in")]
         [Display(Name = "Context")]

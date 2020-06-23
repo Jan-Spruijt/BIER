@@ -5,6 +5,7 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "DetailsIncident";
+    var Webroot = ViewData["webroot"];
     bool status = true;
     bool isworkingon = false;
 }
@@ -24,7 +25,7 @@
     }
 }
 <h1>DetailsIncident</h1>
-
+@Html.ActionLink("Edit", "EditIncident", new { id= Model.id})
 
 
 <div>
@@ -80,7 +81,7 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.context)
+                    @Html.DisplayFor(modelItem => item.title)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.stepnumber)
@@ -127,10 +128,10 @@
 <div>
     @foreach (var item in Model.employees)
     {
-        var photoPath = "../img/ProfilePictures/" + (item.ProfilePicturePath ?? "DefaultUserPicture.png");
+        var photoPath = Webroot + @"\img\ProfilePictures\" + (item.ProfilePicturePath ?? "DefaultUserPicture.png");
         <div>
             <span>@item.Firstname @item.Prefix @item.Lastname</span>
-            <img src="@photoPath" />
+            <img src="@photoPath" class="center" />
         </div>
     }
 </div>
@@ -140,9 +141,9 @@
         @Html.ActionLink("Begin werken aan incident", "AddEmployeeToIncident", new {id = Model.id})
     </div>
 }
-else
+@*else
 {
     <div>
         @Html.ActionLink("Stop werken aan incident", "RemoveEmployeeFromIncident", new {id = Model.id})
-    </div>
+    </div>*@
 }

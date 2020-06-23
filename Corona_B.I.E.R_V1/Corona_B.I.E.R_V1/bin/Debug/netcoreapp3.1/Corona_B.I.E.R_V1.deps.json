@@ -2099,6 +2099,7 @@
       "DataLayerLibrary/1.0.0": {
         "dependencies": {
           "Dapper": "2.0.35",
+          "LogicLayerLibrary": "1.0.0",
           "MySql.Data": "8.0.19"
         },
         "runtime": {

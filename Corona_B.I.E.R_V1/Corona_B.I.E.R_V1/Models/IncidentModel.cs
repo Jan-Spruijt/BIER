@@ -8,6 +8,7 @@ namespace Corona_B.I.E.R_V1.Models
 {
     public class IncidentModel
     {
+        [Display(Name = "Id")]
         public int ID { get; set; }
         public int Employee_ID_CreatedBy { get; set; }
         public int Employee_ID_EndedBy { get; set; }

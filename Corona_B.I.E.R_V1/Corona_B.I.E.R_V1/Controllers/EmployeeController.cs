@@ -6,6 +6,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Corona_B.I.E.R_V1.DataLogic;
 using Corona_B.I.E.R_V1.DataModels;
+using Corona_B.I.E.R_V1.ExtensionMethods;
 using Corona_B.I.E.R_V1.Models;
 using Microsoft.AspNetCore.Mvc;
 using LogicLayerLibrary;
@@ -143,6 +144,56 @@ namespace Corona_B.I.E.R_V1.Controllers
             }
 
             return View();
+        }
+
+        public IActionResult UpdateEmployee(int user_Id)
+        {
+            bool hasAccess = false;
+            if (HttpContext.GetCurrentEmployeeModel().Role == EmployeeRole.Admin)
+            {
+                hasAccess = true;
+            }
+            else if (user_Id == HttpContext.GetCurrentEmployeeModel().Id)
+            {
+                hasAccess = true;
+            }
+
+            if (hasAccess == true)
+            {
+                var data = EmployeeProcessor.GetUserById(user_Id);
+                EmployeeModel model = new EmployeeModel
+                {
+                    Address = data.Address,
+                    City = data.City,
+                    Email = data.Email,
+                    Firstname = data.Firstname,
+                    Id = data.ID,
+                    Lastname = data.Lastname,
+                    Phone = data.Phone,
+                    Postalcode = data.PostalCode,
+                    Prefix = data.Lastnameprefix,
+                    Profession = data.Profession,
+                    Role = data.Role.ToEnum<EmployeeRole>(),
+                    ProfilePicturePath = data.ProfilePicturePath
+                };
+                return View(model);
+            }
+            else
+            {
+                return RedirectToAction("Dashboard", "Home");
+            }
+            
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult UpdateEmployee(EmployeeModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                EmployeeProcessor.UpdateEmployee(model.City, model.Postalcode, model.Address, model.Email, model.Phone, model.Profession, model.Password, model.Id);
+            }
+            return RedirectToAction("Dashboard", "Home");
         }
     }
 }
