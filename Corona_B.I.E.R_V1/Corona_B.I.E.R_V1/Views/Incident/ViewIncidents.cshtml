@@ -5,86 +5,98 @@
     ViewData["Title"] = "ViewIncidents";
 }
 
-<h1>ViewIncidents</h1>
 
-<p>
-    <a asp-action="CreateIncident">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Employee_ID_CreatedBy)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Employee_ID_EndedBy)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DateTimeStart)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DateTimeEnded)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Context)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CustomerEmail)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Employee_ID_CreatedBy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Employee_ID_EndedBy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateTimeStart)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateTimeEnded)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Context)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Customer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CustomerEmail)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "DetailsIncident", new { id = item.ID }) |
-                @Html.ActionLink("Delete", "DeleteIncident", new { id = item.ID })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="content bg_white_block">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>ViewIncidents</h1>
+            </div>
+            <div class="col-md-3 offset-3">
+                <p>
+                    <a class="btn btn-lg btn-primary btn-block"  asp-action="CreateIncident">Create New</a>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <table class="table table-striped">
+                <thead class="thead-ligh">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ID)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Employee_ID_CreatedBy)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Employee_ID_EndedBy)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DateTimeStart)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DateTimeEnded)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Title)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Context)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Customer)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CustomerEmail)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Status)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ID)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Employee_ID_CreatedBy)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Employee_ID_EndedBy)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DateTimeStart)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DateTimeEnded)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Title)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Context)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Customer)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CustomerEmail)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Status)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                                @Html.ActionLink("Details", "DetailsIncident", new { id = item.ID }) |
+                                @Html.ActionLink("Delete", "DeleteIncident", new { id = item.ID })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>

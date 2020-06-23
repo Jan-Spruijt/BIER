@@ -1,78 +1,100 @@
-﻿@model IEnumerable<Corona_B.I.E.R_V1.Models.RequestModel>
+﻿@using Corona_B.I.E.R_V1.ExtensionMethods
+@model IEnumerable<Corona_B.I.E.R_V1.Models.RequestModel>
+
 
 @{
     ViewData["Title"] = "ViewRequests";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>ViewRequests</h1>
 
-<p>
-    <a href="../request/Selectrequest">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Employeename)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EmployeeAcceptedbyName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.stringDateStart)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.stringDateEnd)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.stringTimeStart)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.stringTimeEnd)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Type)
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Employeename)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EmployeeAcceptedbyName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.stringDateStart)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.stringDateEnd)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.stringTimeStart)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.stringTimeEnd)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Type)
-            </td>
-            <td>
 
-                @Html.ActionLink("Accept", "Accept", new { id = item.RequestId }) 
-                @Html.ActionLink("Edit", "Edit", new { id = item.RequestId }) 
-                @Html.ActionLink("Details", "Details", new { id = item.RequestId }) 
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+<div class="content bg_white_block">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>ViewRequests</h1>
+        </div>
+        <div class="col-md-3 offset-3">
+            <p>
+                <a class="btn btn-lg btn-primary btn-block" href="../request/Selectrequest">Create New</a>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table table-striped">
+            <thead class="thead-ligh">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Employeename)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.EmployeeAcceptedbyName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.stringDateStart)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.stringDateEnd)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.stringTimeStart)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.stringTimeEnd)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Status)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Type)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Employeename)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EmployeeAcceptedbyName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.stringDateStart)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.stringDateEnd)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.stringTimeStart)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.stringTimeEnd)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Status)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Type)
+                        </td>
+                        <td>
+
+                            @if (Context.GetCurrentEmployeeModel().Role.ToString() == "Admin" || Context.GetCurrentEmployeeModel().Id == item.EmployeeId)
+                            {
+                                @Html.ActionLink("Edit", "Edit", new { id = item.RequestId })
+                            }
+
+
+                            @Html.ActionLink("Accept", "Accept", new { id = item.RequestId })
+                            @Html.ActionLink("Details", "Details", new { id = item.RequestId })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

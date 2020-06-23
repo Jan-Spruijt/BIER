@@ -281,6 +281,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                 requests.Add(new RequestModel
                     {
                         RequestId = row.id,
+                        EmployeeId = row.employee_id,
                         Employeename = name,
                         EmployeeAcceptedbyName = nameAccept,
                         stringDateStart = dateStart,

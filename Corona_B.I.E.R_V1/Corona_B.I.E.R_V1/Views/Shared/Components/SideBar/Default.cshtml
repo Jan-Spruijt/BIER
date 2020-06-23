@@ -21,32 +21,35 @@
                     </span>
                 </a>
             </li>
-            <div class="line"></div>
 
         }
+        
+        <div class="fixed">
+            <div class="table paddingtop">
+                <div class="size_width user_img_container">
 
-
-        <div class="table paddingtop">
-            <div class="size_width user_img_container">
-
-                @{
-                    var photoPath = "../img/ProfilePictures/" + (Model.ProfilePicturePath ?? "DefaultUserPicture.png");
-                }
-                <img class="user_img" src="@photoPath" />
+                    @{
+                        
+                        var photoPath = "img/ProfilePictures/" + (Model.ProfilePicturePath ?? "DefaultUserPicture.png");
+                    }
+                    <img class="user_img" src="~/@photoPath" />
+                </div>
+                <p class="cell">@Model.Firstname @Model.Prefix @Model.Lastname</p>
             </div>
-            <p class="cell">@Model.Firstname @Model.Prefix @Model.Lastname</p>
+
+            <div class="table">
+                <div class="size_width cell"></div>
+                <div class="cell">
+                    <a class="link_style" asp-action="LogOutEmployee" asp-controller="Employee">
+                        Uitloggen
+                    </a>
+                    <p class="d-inline"> | </p>
+                    <a class="link_style" href="#">
+                        Contact
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <div class="table">
-            <div class="size_width cell"></div>
-            <div class="cell">
-                <a class="link_style" asp-action="LogOutEmployee" asp-controller="Employee">
-                    Uitloggen
-                </a>
-                <p class="d-inline"> | </p>
-                <a class="link_style" href="#">
-                    Contact
-                </a>
-            </div>
-        </div>
+        
     </ul>

@@ -94,14 +94,6 @@ namespace Corona_B.I.E.R_V1.Controllers
             return View(employees);
         }
 
-        public IActionResult LoginEmployee()
-        {
-            if (@User.Identity.IsAuthenticated)
-            {
-                return RedirectToAction("Dashboard", "Home");
-            }
-            return View();
-        }
         public IActionResult LogOutEmployee()
         {
             if (@User.Identity.IsAuthenticated)
@@ -109,6 +101,14 @@ namespace Corona_B.I.E.R_V1.Controllers
                 HttpContext.SignOutAsync();
             }
             return RedirectToAction("LoginEmployee", "Employee");
+        }
+        public IActionResult LoginEmployee()
+        {
+            if (@User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Dashboard", "Home");
+            }
+            return View();
         }
 
         [HttpPost]

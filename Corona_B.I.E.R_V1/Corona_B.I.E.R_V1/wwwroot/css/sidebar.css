@@ -6,6 +6,11 @@
     margin: 15px 0px 15px 0px ;
 }
 
+.fixed {
+    bottom: 0;
+    position: fixed;
+}
+
 /*.fa {
     position: relative;
     display: table-cell !important;
