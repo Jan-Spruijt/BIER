@@ -24,8 +24,8 @@
         isworkingon = true;
     }
 }
-<h1>DetailsIncident</h1>
-@Html.ActionLink("Edit", "EditIncident", new { id= Model.id})
+<h1>Details Incident</h1>
+@Html.ActionLink("Aanpassen", "EditIncident", new { id= Model.id})
 
 
 <div>
@@ -91,7 +91,7 @@
                 </td>
                 <td>
                     @Html.ActionLink("Details", "DetailsStep","IncidentStep", new { id = item.id }) |
-                    @Html.ActionLink("Delete", "DeleteStep", "IncidentStep" ,new {id = item.id, incident_Id = Model.id}, null)
+                    @Html.ActionLink("Verwijderen", "DeleteStep", "IncidentStep" ,new {id = item.id, incident_Id = Model.id}, null)
                 </td>
             </tr>
         }
@@ -112,7 +112,7 @@
             <div>
                 @Html.ActionLink("Close", "CloseIncident", new { id = Model.id }) |
                 @Html.ActionLink("Voeg stap toe", "CreateStep","IncidentStep", new { id = Model.id }) |
-                <a asp-action="ViewIncidents">Back to List</a>
+                <a asp-action="ViewIncidents">Terug naar lijst</a>
             </div>
         }
     }

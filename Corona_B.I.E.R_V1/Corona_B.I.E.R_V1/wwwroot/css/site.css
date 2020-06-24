@@ -16,3 +16,7 @@
 body {
     background-color: #EDEDED;
 }
+
+.custom-file-label::after {
+    content: "Kiezen" !important;
+}
