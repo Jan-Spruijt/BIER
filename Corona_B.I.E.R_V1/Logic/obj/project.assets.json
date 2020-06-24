@@ -3503,23 +3503,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gijs\\.nuget\\packages\\": {},
+    "C:\\Users\\marco\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj",
+      "projectUniqueName": "D:\\github\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj",
       "projectName": "LogicLayerLibrary",
-      "projectPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj",
-      "packagesPath": "C:\\Users\\gijs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\obj\\",
+      "projectPath": "D:\\github\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj",
+      "packagesPath": "C:\\Users\\marco\\.nuget\\packages\\",
+      "outputPath": "D:\\github\\BIER\\Corona_B.I.E.R_V1\\Logic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\gijs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\marco\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
