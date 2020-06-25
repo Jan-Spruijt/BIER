@@ -8552,27 +8552,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gebruiker\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\gijs\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Git\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj",
+      "projectUniqueName": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj",
       "projectName": "Corona_B.I.E.R_V1",
-      "projectPath": "D:\\Git\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj",
-      "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-      "outputPath": "D:\\Git\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\obj\\",
+      "projectPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1.csproj",
+      "packagesPath": "C:\\Users\\gijs\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Corona_B.I.E.R_V1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\gijs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -8584,11 +8581,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Git\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj": {
-              "projectPath": "D:\\Git\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj"
+            "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj": {
+              "projectPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\DataLayerLibrary\\DataLayerLibrary.csproj"
             },
-            "D:\\Git\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj": {
-              "projectPath": "D:\\Git\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj"
+            "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj": {
+              "projectPath": "C:\\Users\\gijs\\Documents\\GitHub\\BIER\\Corona_B.I.E.R_V1\\Logic\\LogicLayerLibrary.csproj"
             }
           }
         }
