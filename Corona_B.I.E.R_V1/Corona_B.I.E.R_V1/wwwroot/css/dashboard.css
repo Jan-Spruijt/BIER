@@ -10,7 +10,12 @@ main {
     padding-top: 50px;
 }
 
+.fc-scroller {
+    z-index: 0;
+}
+
 .dashboardbutton {
+    z-index: 1;
     position: absolute;
     bottom: 15px;
     text-align: center;

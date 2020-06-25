@@ -12,7 +12,7 @@
         </div>
         <div class="col-md-3 offset-3">
             <p>
-                <a asp-action="RegisterEmployee" class="btn btn-lg btn-primary btn-block">Create New</a>
+                <a asp-action="RegisterEmployee" class="btn btn-lg btn-primary btn-block">Nieuwe aanmaken</a>
             </p>
         </div>
         
@@ -92,7 +92,7 @@
                             @Html.DisplayFor(modelItem => item.Role)
                         </td>
                         <td>
-                            @Html.ActionLink("Edit", "UpdateEmployee", new { user_Id = item.Id }) <br>
+                            @Html.ActionLink("Aanpassen", "UpdateEmployee", new { id = item.Id }) <br>
                         </td>
                     </tr>
                 }

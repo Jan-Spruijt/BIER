@@ -8,10 +8,11 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Hosting;
 using LogicLayerLibrary;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Corona_B.I.E.R_V1.Controllers
 {
-
+    [Authorize]
     public class IncidentController : Controller
     {
 
@@ -84,6 +85,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                 count++;
                 steps.Add(new IncidentStepModel
                 {
+                    title = step.title,
                     context = step.context,
                     datetimeEnd = step.datetimeEnd,
                     datetimeStart = step.datetimeStart,

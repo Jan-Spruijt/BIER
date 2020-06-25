@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 using Corona_B.I.E.R_V1.DataLogic;
 using Corona_B.I.E.R_V1.ExtensionMethods;
 using Corona_B.I.E.R_V1.Models;
@@ -9,12 +10,17 @@ using Corona_B.I.E.R_V1.Models.CalendarModels;
 using DataLayerLibrary.DataLogic;
 using DataLayerLibrary.DataModels;
 using Microsoft.AspNetCore.Mvc;
+using Controller = Microsoft.AspNetCore.Mvc.Controller;
+using JsonResult = Microsoft.AspNetCore.Mvc.JsonResult;
+
 //
 
 namespace Corona_B.I.E.R_V1.Controllers
 {
+    [Authorize]
     public class AgendaController : Controller
     {
+        
         public IActionResult Schedule()
         {
             if (TempData["error"] != null)
@@ -33,7 +39,7 @@ namespace Corona_B.I.E.R_V1.Controllers
         {
             List<EventDataModel> dataEvents = CalendarProcessor.LoadAllEvents();
             List<CalendarEventModel> events = new List<CalendarEventModel>();
-            foreach(EventDataModel dataModel in dataEvents)
+            foreach (EventDataModel dataModel in dataEvents)
             {
                 EmployeeModel employee = new EmployeeModel();
                 employee.MapDataModel(EmployeeProcessor.GetUserById(dataModel.Employee_ID));
@@ -41,7 +47,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                 {
                     ID = dataModel.ID,
                     Employee_id = dataModel.Employee_ID,
-                    EmployeeName = employee.Firstname+" "+employee.Prefix+" "+employee.Lastname,
+                    EmployeeName = employee.Firstname + " " + employee.Prefix + " " + employee.Lastname,
                     Title = dataModel.Title,
                     Description = dataModel.Description,
                     DatetimeStart = dataModel.DatetimeStart,
@@ -76,8 +82,8 @@ namespace Corona_B.I.E.R_V1.Controllers
             return new JsonResult(new { Data = events });
         }
 
-        [HttpPost]
-        public IActionResult CreateEvent(CalendarCreateEventModel eventModel)
+        [Microsoft.AspNetCore.Mvc.HttpPost]
+        public IActionResult CreateEvent([FromForm]CalendarCreateEventModel eventModel)
         {
             if (ModelState.IsValid)
             {
@@ -92,13 +98,9 @@ namespace Corona_B.I.E.R_V1.Controllers
                     "standby"
                     );
             }
-            else
-            {
-
-            }
             return RedirectToAction("Schedule", "Agenda");
         }
-        [HttpPost]
+        [Microsoft.AspNetCore.Mvc.HttpPost]
         public IActionResult UpdateEvent(CalendarCreateEventModel eventModel)
         {
             if (ModelState.IsValid)
@@ -114,13 +116,20 @@ namespace Corona_B.I.E.R_V1.Controllers
                     endDateTime,
                     "standby"
                     );
-            }          
-            return RedirectToAction("Schedule", "Agenda");
+            }
+            return View("Schedule");
         }
 
-        public IActionResult DeleteEvent(int id)
+        [Microsoft.AspNetCore.Mvc.HttpPost]
+        public IActionResult DeleteEvent([FromBody] string id)
         {
-            CalendarProcessor.DeleteEvent(id);
+            if (int.TryParse(id, out int eventid))
+            {
+                if (CalendarProcessor.GetEventById(eventid) != null)
+                {
+                    CalendarProcessor.DeleteEvent(eventid);
+                }
+            }
             return RedirectToAction("Schedule", "Agenda");
         }
     }

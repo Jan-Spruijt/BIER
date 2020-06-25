@@ -6,6 +6,12 @@
     margin: 15px 0px 15px 0px ;
 }
 
+.fixed {
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
 /*.fa {
     position: relative;
     display: table-cell !important;
@@ -15,9 +21,7 @@
     vertical-align: middle;
     font-size: 25px;
 }*/
-
-
-.table {
+.tablefix {
     width: 250px;
 }
 
@@ -51,6 +55,9 @@
 }
 .size_width {
     width: 60px;
+}
+.MarginUserTop {
+    margin-top: 200px !important;
 }
 
 .user_img {

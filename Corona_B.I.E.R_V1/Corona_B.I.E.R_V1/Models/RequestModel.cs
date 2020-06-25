@@ -55,8 +55,11 @@ namespace Corona_B.I.E.R_V1.Models
     }
 
     public enum RequestStatus {
+        [Display(Name = "Open")]
         open,
+        [Display(Name = "Geaccepteerd")]
         accepted,
+        [Display(Name = "Verlopen")]
         expired
     }
 

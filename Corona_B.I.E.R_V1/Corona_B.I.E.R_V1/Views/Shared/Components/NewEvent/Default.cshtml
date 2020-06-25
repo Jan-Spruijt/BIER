@@ -15,7 +15,7 @@
             <hr />
         </div>
         
-        <form asp-action="CreateEvent">
+        <form asp-action="CreateEvent" id="CreateEventForm" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="input-group">
 
@@ -43,11 +43,15 @@
                 <input asp-for="TimeEnd" class="form-control" />
                 <span asp-validation-for="TimeEnd" class="text-danger"></span>
             </div>
+            <div class="input-group checkboxRepeat">
+                <input type="checkbox" id="RepeatEvent" />
+                <label for="RepeatEvent" class="control-label">Herhaal item</label>
+            </div>
 
             <div id="CustomEmployeeDropdown">
                 <label asp-for="Employee_ID" class="control-label"></label>
                 <section id="EmployeeDropdownToggle">
-                    <img id="SelectedImg" src="../img/Icons/search.png" class="SearchIcon"><input id="SearchEmployee" type="text" placeholder="Zoek.." autocomplete="off"/><span class="fc-icon fc-icon-chevron-right"></span>
+                    <img id="SelectedImg" src="../img/Icons/search.png" class="SearchIcon"><input id="SearchEmployee" type="text" placeholder="Zoek.." autocomplete="off" /><span class="fc-icon fc-icon-chevron-right"></span>
                 </section>
                 <ul>
                     @foreach (var item in Model.Employees)
@@ -56,6 +60,7 @@
                         <li value="@item.id"><img src="@photoPath" />@item.Firstname @item.Prefix @item.Lastname</li>
                     }
                 </ul>
+                <span asp-validation-for="Employee_ID" class="text-danger"></span>
             </div>
             <input type="hidden" asp-for="Employee_ID" class="form-control" />
             <input type="hidden" asp-for="Event_ID" class="form-control" />
@@ -69,7 +74,7 @@
                 <hr />
                 <div class="form-group">
                     <input type="button" value="Annuleer" class="btn btn-primary btn-cancel" />
-                    <input type="submit" value="Opslaan" class="btn btn-primary" />
+                    <input type="button" id="btnAddNewEvent" value="Opslaan" class="btn btn-primary" />
                 </div>
             </div>
         </form>

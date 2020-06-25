@@ -188,3 +188,14 @@
 html, #PopUpForm{
     visibility: hidden;
 }
+
+.checkboxRepeat {
+    align-items: center;
+    margin: 7px 0px;
+}
+    .checkboxRepeat label {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        margin-left: 5px;
+    }

@@ -24,12 +24,13 @@ namespace Corona_B.I.E.R_V1.Controllers
         {
             _hostingEnvironment = hostingEnvironment;
         }
+        [Authorize]
         public IActionResult RegisterEmployee()
         {
             return View();
         }
 
-
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult RegisterEmployee(EmployeeCreateModel employee)
@@ -93,7 +94,7 @@ namespace Corona_B.I.E.R_V1.Controllers
 
             return View(employees);
         }
-
+        [Authorize]
         public IActionResult LogOutEmployee()
         {
             if (@User.Identity.IsAuthenticated)
@@ -144,7 +145,7 @@ namespace Corona_B.I.E.R_V1.Controllers
 
             return View();
         }
-
+        [Authorize]
         public IActionResult UpdateEmployee(int user_Id)
         {
             bool hasAccess = false;
@@ -183,7 +184,7 @@ namespace Corona_B.I.E.R_V1.Controllers
             }
             
         }
-
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult UpdateEmployee(EmployeeModel model)

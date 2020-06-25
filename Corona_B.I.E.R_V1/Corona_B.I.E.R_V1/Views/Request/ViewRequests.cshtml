@@ -13,11 +13,11 @@
 <div class="content bg_white_block">
     <div class="row">
         <div class="col-md-6">
-            <h1>ViewRequests</h1>
+            <h1>Bekijk aanvragen</h1>
         </div>
         <div class="col-md-3 offset-3">
             <p>
-                <a class="btn btn-lg btn-primary btn-block" href="../request/Selectrequest">Create New</a>
+                <a class="btn btn-lg btn-primary btn-block" href="../request/Selectrequest">Nieuwe aanvraag maken</a>
             </p>
         </div>
     </div>
@@ -83,11 +83,11 @@
 
                             @if (Context.GetCurrentEmployeeModel().Role.ToString() == "Admin" || Context.GetCurrentEmployeeModel().Id == item.EmployeeId)
                             {
-                                @Html.ActionLink("Edit", "Edit", new { id = item.RequestId })
+                                @Html.ActionLink("Aanpassen", "Edit", new { id = item.RequestId })
                             }
 
 
-                            @Html.ActionLink("Accept", "Accept", new { id = item.RequestId })
+                            @Html.ActionLink("Accepteren", "Accept", new { id = item.RequestId })
                             @Html.ActionLink("Details", "Details", new { id = item.RequestId })
                         </td>
                     </tr>
