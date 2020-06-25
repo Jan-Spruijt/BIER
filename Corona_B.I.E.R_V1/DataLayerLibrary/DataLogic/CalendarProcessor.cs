@@ -14,6 +14,11 @@ namespace DataLayerLibrary.DataLogic
             string sql = "SELECT * FROM schedule;";
             return SQLDataAccess.LoadData<EventDataModel>(sql);
         }
+        public static EventDataModel GetEventById(int employeeId)
+        {
+            string sql = $"SELECT * FROM schedule WHERE id ={employeeId};";
+            return SQLDataAccess.LoadFirstData<EventDataModel>(sql);
+        }
         public static List<EventDataModel> LoadEmployeeEvents(int employee_id)
         {
             string sql = $"SELECT * FROM schedule WHERE employee_id ={employee_id};";

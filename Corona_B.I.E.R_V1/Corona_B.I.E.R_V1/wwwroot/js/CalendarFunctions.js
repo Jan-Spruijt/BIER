@@ -1,18 +1,20 @@
 ﻿
-
 $(document).ready(function () {
     document.getElementsByTagName("html")[0].style.visibility = "visible";
     document.getElementById('PopUpForm').style.visibility = "visible";
-    var events = [];
-    console.log("start");
+    LoadEvents(true);
+})
+
+var Events = [];
+function LoadEvents(loadAllEvents) {
     $.ajax({
         type: "GET",
         url: "/agenda/GetEvents",
         success: function (data) {
-
+            Events = [];
             $.each(data, function () {
                 $.each(this, function () {
-                    events.push({
+                    Events.push({
                         title: this.title,
                         start: this.datetimeStart,
                         end: this.datetimeEnd,
@@ -23,16 +25,23 @@ $(document).ready(function () {
                     })
                 })
             })
-            GenerateCalendender(events);
+            if (loadAllEvents) {
+                GenerateCalendender();
+            } else {
+                Calendar.removeAllEvents();
+                Calendar.addEventSource(Events);
+            }
+            
         },
         error: function (error) {
             console.log("Ajax failed");
         }
     })
-
-    function GenerateCalendender(event) {
+};
+    var Calendar;
+    function GenerateCalendender() {
         var calendarEl = document.getElementById('Calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
+         Calendar = new FullCalendar.Calendar(calendarEl, {
             lang: 'nl',
             locale: 'nl',
             plugins: ['interaction', 'dayGrid', 'timeGrid'],
@@ -43,15 +52,11 @@ $(document).ready(function () {
                 center: 'title',
                 right: 'dayGridMonth,timeGridWeek,timeGridDay'
             },
-            events: event,
+             events: Events,
             eventRender: function (info) {
-               console.log(info.event);
-                console.log(info.event.end);
                 $(info.el).find('.fc-time').append('<span class="fc-time"> - ' + moment(info.event.end).format('HH.mm') + '</span>');
                 $(info.el).find('.fc-title').append('<div class="hr-line-solid-no-margin"></div><span class="fc-employee" style="font-size: 10px">' + info.event.extendedProps.employee + '</span></div>');
             },
-            editable: true,
-            droppable: true,
             dateClick: function (info) {
                 ToggelPopUpForm();
                 SetDatum(moment(info.dateStr).format('YYYY-MM-DD'));
@@ -67,15 +72,91 @@ $(document).ready(function () {
                     description: info.event.extendedProps.explanation
                 };
                 ToggelPopUpForm("update",UpdateData);
-            },
-            eventDrop: function (info) {
-                if (!confirm("Weet u zeker dat u " + info.event.title + " wilt verplaatsen naar " + moment(info.event.start).format("DD/MM/YYYY"))) {
-                    info.revert();
-                }
             }
         });
-        calendar.render();
+        Calendar.render();
     }
+
+    $("#btnAddNewEvent").click(function () {
+        var form = $("#CreateEventForm");
+            var obj = $(form).serialize();
+            var action = $(form).attr("action");
+
+            if ($("#RepeatEvent").is(':checked')) {
+                var dates = getDatesBetweenDates($("#DateStart").val(), $("#DateEnd").val())
+                var counter = 0;
+                $.each(dates, function () {
+                    counter += 1;
+                    var date = moment(this).format('YYYY-MM-DD');
+                    $("#DateStart").val(date);
+                    $("#DateEnd").val(date);
+                    var obj = $(form).serialize();
+                    if (counter == dates.length) {
+                        postNewEvent(obj, true);
+                    } else {
+                        postNewEvent(obj, false);
+                    }
+                    console.log(date);
+                })
+            } else {
+                postNewEvent(obj, true);
+            }
+            console.log(action);
+            $("#RepeatEvent").prop("checked", false);
+            ToggelPopUpForm();
+    }) 
+
+function postNewEvent(eventObj, loadEvents) {
+    var form = $("#CreateEventForm");
+    var action = $(form).attr("action");
+    $.ajax({
+        type: "post",
+        url: action,
+        contentType: 'json',
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+        data: eventObj,
+        success: function () {
+            if (loadEvents) {
+                LoadEvents(false);
+            }
+        },
+        error: function (err) {
+            console.error("Ajax Could not create new event")
+        }
+    });
+}
+
+function getDatesBetweenDates(startDate, endDate) {
+    var dates = [];
+    var currDate = moment(startDate).startOf('day');
+    var lastDate = moment(endDate).startOf('day').add(1, 'days');
+
+    while (currDate.diff(lastDate) < 0) {
+        console.log(currDate.toDate());
+        dates.push(currDate.clone().toDate());
+        currDate.add(1, 'days');
+    }
+    return dates;
+};
+
+function RemoveEvent(eventId) {
+    $.ajax({
+        type: "post",
+        url: '/Agenda/DeleteEvent',
+        contentType: 'application/json',
+        dataType: 'json',
+        data: JSON.stringify(eventId.toString()),
+        success: function () {
+            LoadEvents(false);
+        },
+        error: function (err) {
+            LoadEvents(false);
+        }
+    });
+    ToggelPopUpForm();
+}
+
+
     function SetDatum(Datum) {
         $('#DateStart').attr("value", Datum);
         $('#DateStart').val(Datum);
@@ -94,12 +175,12 @@ $(document).ready(function () {
         $('#Event_ID').val(updateData.event_id);
         $("li[value='" + updateData.employee_id + "']").trigger("click");
         $('#Description').val(updateData.description);
-        $('#HeaderForm h2').first().text("Calendar item");
+        $('#HeaderForm h2').first().text("Agenda-item");
         $('#BottomForm').hide();
         $('#EmployeeDropdownToggle .active-icon ').first().hide();
         $("#PopUpForm input, #PopUpForm textarea").attr("disabled", true);
         $('#CustomEmployeeDropdown section, #SearchEmployee').css("background", "#e9ecef");
-        $('<span class="icon-container"><i class="edit-icon fa fa-pencil-square-o"></i><a href="/agenda/DeleteEvent/' + updateData.event_id +'"><i class="fa fa-trash-o"></i></a></span>').insertAfter("#HeaderForm h2");
+        $('<span class="icon-container"><i class="edit-icon fa fa-pencil-square-o"></i><a onclick="RemoveEvent(' + updateData.event_id +')"><i class="fa fa-trash-o"></i></a></span>').insertAfter("#HeaderForm h2");
     }
     $(document).on("click", ".edit-icon", function () {
         $("#PopUpForm input, #PopUpForm textarea").attr("disabled", false);
@@ -108,7 +189,7 @@ $(document).ready(function () {
         $('.icon-container').fadeOut("fast");
         $('#CustomEmployeeDropdown section, #SearchEmployee').css("background", "white");
         $('#PopUpForm form').first().attr('action', '/Agenda/UpdateEvent');
-        $('#HeaderForm h2').first().text("Update calendar item");
+        $('#HeaderForm h2').first().text("Agenda-item bewerken");
     });
        
     
@@ -121,6 +202,9 @@ $(document).ready(function () {
         } 
         if (action == "update") {
             SetFormUpdateData(updateData);
+            $(".checkboxRepeat").hide();
+        } else {
+            $(".checkboxRepeat").show();
         }
     }
     $('#Overlay').click(function () {
@@ -145,7 +229,6 @@ $(document).ready(function () {
 
     $('#SearchEmployee').on('keyup', function () {
         var filter = $('#SearchEmployee').val().toUpperCase();
-        console.log(filter);
         var items = $('#CustomEmployeeDropdown li');
         filterList(filter, items);
     })
@@ -207,10 +290,9 @@ $(document).ready(function () {
         $('.icon-container').fadeOut("fast");
         $('#CustomEmployeeDropdown section, #SearchEmployee').css("background", "white");
         $('#PopUpForm form').first().attr('action', '/Agenda/CreateEvent');
-        $('#HeaderForm h2').first().text("Create calendar item"); 
+        $('#HeaderForm h2').first().text("Creëer agenda-item"); 
     }
 
     $('#PopUpForm .btn-cancel').first().click(function () {
         ToggelPopUpForm();
     })
-});
