@@ -26,7 +26,7 @@ using Corona_B.I.E.R_V1.Models;
 #line default
 #line hidden
 #nullable disable
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"60590bbfd78eb0fa38751b1c809a3196c7c7eb4a", @"/Views/Shared/Components/NewEvent/Default.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"079c9510b29277c974ba59247c069e7cda86d59b", @"/Views/Shared/Components/NewEvent/Default.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6b1d5b3fe91d0c9aedbf4c4df65d917f00b093a1", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Components_NewEvent_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Corona_B.I.E.R_V1.Models.CalendarModels.CalendarCreateEventModel>
     {
@@ -35,6 +35,8 @@ using Corona_B.I.E.R_V1.Models;
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_2 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("form-control"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_3 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("type", "hidden", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_4 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "CreateEvent", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_5 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("id", new global::Microsoft.AspNetCore.Html.HtmlString("CreateEventForm"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_6 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("enctype", new global::Microsoft.AspNetCore.Html.HtmlString("multipart/form-data"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         #line hidden
         #pragma warning disable 0649
         private global::Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext __tagHelperExecutionContext;
@@ -387,7 +389,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral(@"
                 <section id=""EmployeeDropdownToggle"">
-                    <img id=""SelectedImg"" src=""../img/Icons/search.png"" class=""SearchIcon""><input id=""SearchEmployee"" type=""text"" placeholder=""Zoek.."" autocomplete=""off""/><span class=""fc-icon fc-icon-chevron-right""></span>
+                    <img id=""SelectedImg"" src=""../img/Icons/search.png"" class=""SearchIcon""><input id=""SearchEmployee"" type=""text"" placeholder=""Zoek.."" autocomplete=""off"" /><span class=""fc-icon fc-icon-chevron-right""></span>
                 </section>
                 <ul>
 ");
@@ -401,7 +403,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
 #line hidden
 #nullable disable
                 WriteLiteral("                        <li");
-                BeginWriteAttribute("value", " value=\"", 2544, "\"", 2560, 1);
+                BeginWriteAttribute("value", " value=\"", 2815, "\"", 2831, 1);
 #nullable restore
 #line 56 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Shared\Components\NewEvent\Default.cshtml"
 WriteAttributeValue("", 2552, item.id, 2552, 8, false);
@@ -411,7 +413,7 @@ WriteAttributeValue("", 2552, item.id, 2552, 8, false);
 #nullable disable
                 EndWriteAttribute();
                 WriteLiteral("><img");
-                BeginWriteAttribute("src", " src=\"", 2566, "\"", 2582, 1);
+                BeginWriteAttribute("src", " src=\"", 2837, "\"", 2853, 1);
 #nullable restore
 #line 56 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Shared\Components\NewEvent\Default.cshtml"
 WriteAttributeValue("", 2572, photoPath, 2572, 10, false);
@@ -573,7 +575,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
                 <hr />
                 <div class=""form-group"">
                     <input type=""button"" value=""Annuleer"" class=""btn btn-primary btn-cancel"" />
-                    <input type=""submit"" value=""Opslaan"" class=""btn btn-primary"" />
+                    <input type=""button"" id=""btnAddNewEvent"" value=""Opslaan"" class=""btn btn-primary"" />
                 </div>
             </div>
         ");
@@ -585,6 +587,8 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
             __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_RenderAtEndOfFormTagHelper);
             __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper.Action = (string)__tagHelperAttribute_4.Value;
             __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_4);
+            __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_5);
+            __tagHelperExecutionContext.AddHtmlAttribute(__tagHelperAttribute_6);
             await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
             if (!__tagHelperExecutionContext.Output.IsContentModified)
             {

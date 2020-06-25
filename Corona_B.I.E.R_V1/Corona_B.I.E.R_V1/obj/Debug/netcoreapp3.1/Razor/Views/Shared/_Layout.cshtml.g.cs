@@ -184,7 +184,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
             WriteLiteral("\r\n");
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0c63931c5ce8aad799258e3d91eda4b8293d383117749", async() => {
                 WriteLiteral(@"
-   
+
     <div class=""container"">
         <main role=""main"" class=""pb-3"">
             <div class=""area""></div>
@@ -246,15 +246,15 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral(@"
 
-                        </li>
-                        <div class=""line""></div>
-                        <li class=""margin"">
-                            <a href=""../Request/ViewRequests"">
-                                <i class=""fa fa-sitemap nav-icon""></i>
-                                <span class=""nav-text"">
-                                    Aanvragen
-                                </span>
-                            </a>
+                    </li>
+                    <div class=""line""></div>
+                    <li class=""margin"">
+                        <a href=""../Request/ViewRequests"">
+                            <i class=""fa fa-sitemap nav-icon""></i>
+                            <span class=""nav-text"">
+                                Aanvragen
+                            </span>
+                        </a>
 
                         </li>
                         <div class=""line""></div>
@@ -310,7 +310,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
                 }
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
-                WriteLiteral("\r\n                        </li>\r\n                    </ul>\r\n                        ");
+                WriteLiteral("\r\n                    </li>\r\n                </ul>\r\n                ");
 #nullable restore
 #line 78 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Shared\_Layout.cshtml"
                    Write(await Component.InvokeAsync("SideBar"));
@@ -318,7 +318,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 #line default
 #line hidden
 #nullable disable
-                WriteLiteral("\r\n                </nav>\r\n\r\n\r\n            ");
+                WriteLiteral("\r\n            </nav>\r\n\r\n\r\n            ");
 #nullable restore
 #line 82 "D:\github\BIER\Corona_B.I.E.R_V1\Corona_B.I.E.R_V1\Views\Shared\_Layout.cshtml"
        Write(RenderBody());

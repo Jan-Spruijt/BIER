@@ -18,41 +18,41 @@
     <div class="container-fluid">
         <main role="main" class="pb-3">
             <div class="area"></div>
-                <nav class="main-menu">
-                    <ul>
-                        <li class="margin">
-                            <div class="padding table">
-                                <div class="size_width cell"></div>
-                                <img class="mb-4 cell show" src="~/images/logo.png">
-                            </div>
-                        </li>
-                        <li class="margin">
-                            <a asp-controller="Home" asp-action="Dashboard">
-                                <i class="fa fa-home nav-icon"></i>
-                                <span class="nav-text">
-                                    Dashboard
-                                </span>
-                            </a>
+            <nav class="main-menu">
+                <ul>
+                    <li class="margin">
+                        <div class="padding table">
+                            <div class="size_width cell"></div>
+                            <img class="mb-4 cell show" src="~/images/logo.png">
+                        </div>
+                    </li>
+                    <li class="margin">
+                        <a asp-controller="Home" asp-action="Dashboard">
+                            <i class="fa fa-home nav-icon"></i>
+                            <span class="nav-text">
+                                Dashboard
+                            </span>
+                        </a>
 
-                        </li>
-                        <div class="line"></div>
-                        <li class="margin">
-                            <a asp-controller="Incident" asp-action="ViewIncidents">
-                                <i class="fa fa-times nav-icon"></i>
-                                <span class="nav-text">
-                                    Incidenten
-                                </span>
-                            </a>
+                    </li>
+                    <div class="line"></div>
+                    <li class="margin">
+                        <a asp-controller="Incident" asp-action="ViewIncidents">
+                            <i class="fa fa-times nav-icon"></i>
+                            <span class="nav-text">
+                                Incidenten
+                            </span>
+                        </a>
 
-                        </li>
-                        <div class="line"></div>
-                        <li class="margin">
-                            <a href="../Request/ViewRequests">
-                                <i class="fa fa-sitemap nav-icon"></i>
-                                <span class="nav-text">
-                                    Aanvragen
-                                </span>
-                            </a>
+                    </li>
+                    <div class="line"></div>
+                    <li class="margin">
+                        <a href="../Request/ViewRequests">
+                            <i class="fa fa-sitemap nav-icon"></i>
+                            <span class="nav-text">
+                                Aanvragen
+                            </span>
+                        </a>
 
                         </li>
                         <div class="line"></div>
@@ -64,19 +64,19 @@
                                 </span>
                             </a>
 
-                        </li>
-                        <div class="line"></div>
-                        <li class="margin">
-                            <a asp-action="myschedule" asp-controller="Agenda">
-                                <i class="fa fa-calendar nav-icon"></i>
-                                <span class="nav-text">
-                                    Mijn agenda
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                        @await Component.InvokeAsync("SideBar")
-                </nav>
+                    </li>
+                    <div class="line"></div>
+                    <li class="margin">
+                        <a asp-action="myschedule" asp-controller="Agenda">
+                            <i class="fa fa-calendar nav-icon"></i>
+                            <span class="nav-text">
+                                Mijn agenda
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                @await Component.InvokeAsync("SideBar")
+            </nav>
 
 
             @RenderBody()
@@ -84,10 +84,10 @@
     </div>
 
     @*<footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - Corona_B.I.E.R_V1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>*@
+            <div class="container">
+                &copy; 2020 - Corona_B.I.E.R_V1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>*@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

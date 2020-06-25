@@ -33,7 +33,7 @@ namespace Corona_B.I.E.R_V1.Controllers
         {
             List<EventDataModel> dataEvents = CalendarProcessor.LoadAllEvents();
             List<CalendarEventModel> events = new List<CalendarEventModel>();
-            foreach(EventDataModel dataModel in dataEvents)
+            foreach (EventDataModel dataModel in dataEvents)
             {
                 EmployeeModel employee = new EmployeeModel();
                 employee.MapDataModel(EmployeeProcessor.GetUserById(dataModel.Employee_ID));
@@ -41,7 +41,7 @@ namespace Corona_B.I.E.R_V1.Controllers
                 {
                     ID = dataModel.ID,
                     Employee_id = dataModel.Employee_ID,
-                    EmployeeName = employee.Firstname+" "+employee.Prefix+" "+employee.Lastname,
+                    EmployeeName = employee.Firstname + " " + employee.Prefix + " " + employee.Lastname,
                     Title = dataModel.Title,
                     Description = dataModel.Description,
                     DatetimeStart = dataModel.DatetimeStart,
@@ -77,7 +77,7 @@ namespace Corona_B.I.E.R_V1.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateEvent(CalendarCreateEventModel eventModel)
+        public IActionResult CreateEvent([FromForm]CalendarCreateEventModel eventModel)
         {
             if (ModelState.IsValid)
             {
@@ -91,10 +91,6 @@ namespace Corona_B.I.E.R_V1.Controllers
                     endDateTime,
                     "standby"
                     );
-            }
-            else
-            {
-
             }
             return RedirectToAction("Schedule", "Agenda");
         }
@@ -114,13 +110,20 @@ namespace Corona_B.I.E.R_V1.Controllers
                     endDateTime,
                     "standby"
                     );
-            }          
-            return RedirectToAction("Schedule", "Agenda");
+            }
+            return View("Schedule");
         }
 
-        public IActionResult DeleteEvent(int id)
+        [HttpPost]
+        public IActionResult DeleteEvent([FromBody] string id)
         {
-            CalendarProcessor.DeleteEvent(id);
+            if (int.TryParse(id, out int eventid))
+            {
+                if (CalendarProcessor.GetEventById(eventid) != null)
+                {
+                    CalendarProcessor.DeleteEvent(eventid);
+                }
+            }
             return RedirectToAction("Schedule", "Agenda");
         }
     }

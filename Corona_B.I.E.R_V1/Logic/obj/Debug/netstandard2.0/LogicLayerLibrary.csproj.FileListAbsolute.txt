@@ -24,3 +24,4 @@ C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandar
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.AssemblyInfo.cs
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.dll
 C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.pdb
+C:\Users\DRoze\Documents\school\githubBier\BIER\Corona_B.I.E.R_V1\Logic\obj\Debug\netstandard2.0\LogicLayerLibrary.csproj.CoreCompileInputs.cache
