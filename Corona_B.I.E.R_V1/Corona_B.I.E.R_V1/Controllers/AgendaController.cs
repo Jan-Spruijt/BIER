@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 using Corona_B.I.E.R_V1.DataLogic;
 using Corona_B.I.E.R_V1.ExtensionMethods;
 using Corona_B.I.E.R_V1.Models;
@@ -9,12 +10,17 @@ using Corona_B.I.E.R_V1.Models.CalendarModels;
 using DataLayerLibrary.DataLogic;
 using DataLayerLibrary.DataModels;
 using Microsoft.AspNetCore.Mvc;
+using Controller = Microsoft.AspNetCore.Mvc.Controller;
+using JsonResult = Microsoft.AspNetCore.Mvc.JsonResult;
+
 //
 
 namespace Corona_B.I.E.R_V1.Controllers
 {
+    [Authorize]
     public class AgendaController : Controller
     {
+        
         public IActionResult Schedule()
         {
             if (TempData["error"] != null)
@@ -76,7 +82,7 @@ namespace Corona_B.I.E.R_V1.Controllers
             return new JsonResult(new { Data = events });
         }
 
-        [HttpPost]
+        [Microsoft.AspNetCore.Mvc.HttpPost]
         public IActionResult CreateEvent([FromForm]CalendarCreateEventModel eventModel)
         {
             if (ModelState.IsValid)
@@ -94,7 +100,7 @@ namespace Corona_B.I.E.R_V1.Controllers
             }
             return RedirectToAction("Schedule", "Agenda");
         }
-        [HttpPost]
+        [Microsoft.AspNetCore.Mvc.HttpPost]
         public IActionResult UpdateEvent(CalendarCreateEventModel eventModel)
         {
             if (ModelState.IsValid)
@@ -114,7 +120,7 @@ namespace Corona_B.I.E.R_V1.Controllers
             return View("Schedule");
         }
 
-        [HttpPost]
+        [Microsoft.AspNetCore.Mvc.HttpPost]
         public IActionResult DeleteEvent([FromBody] string id)
         {
             if (int.TryParse(id, out int eventid))

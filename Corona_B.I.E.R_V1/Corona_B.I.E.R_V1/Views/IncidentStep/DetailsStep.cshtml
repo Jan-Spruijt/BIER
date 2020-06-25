@@ -17,30 +17,26 @@
 
 <div>
     <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.incident_id)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.incident_id)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.context)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.context)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.title)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.title)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.status)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.status)
-        </dd>
+        <div class="col-md-5 bg_white_incident">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.context)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.context)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.title)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.title)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.status)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.status)
+            </dd>
+        </div>
     </dl>
 </div>
 <table class="table">

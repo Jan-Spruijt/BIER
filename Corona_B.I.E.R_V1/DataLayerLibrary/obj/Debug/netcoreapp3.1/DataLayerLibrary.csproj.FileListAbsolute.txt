@@ -28,3 +28,6 @@ D:\github\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Debug\netcoreapp3.1\DataLa
 D:\github\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\bin\Debug\netcoreapp3.1\LogicLayerLibrary.dll
 D:\github\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\bin\Debug\netcoreapp3.1\LogicLayerLibrary.pdb
 D:\github\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Debug\netcoreapp3.1\DataLayerLibrary.csproj.CopyComplete
+C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\bin\Debug\netcoreapp3.1\LogicLayerLibrary.dll
+C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\bin\Debug\netcoreapp3.1\LogicLayerLibrary.pdb
+C:\Users\gijs\Documents\GitHub\BIER\Corona_B.I.E.R_V1\DataLayerLibrary\obj\Debug\netcoreapp3.1\DataLayerLibrary.csproj.CopyComplete

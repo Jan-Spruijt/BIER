@@ -6,10 +6,12 @@ using Corona_B.I.E.R_V1.DataLogic;
 using Corona_B.I.E.R_V1.ExtensionMethods;
 using Corona_B.I.E.R_V1.Models;
 using DataLayerLibrary.DataLogic;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Corona_B.I.E.R_V1.Controllers
 {
+    [Authorize]
     public class IncidentStepController : Controller
     {
         public IActionResult CreateStep(int id)

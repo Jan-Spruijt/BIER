@@ -54,15 +54,15 @@
                             </span>
                         </a>
 
-                        </li>
-                        <div class="line"></div>
-                        <li class="margin">
-                            <a asp-controller="Employee" asp-action="UpdateEmployee" asp-route-user_Id="@Context.GetCurrentEmployeeModel().Id">
-                                <i class="fa fa-user nav-icon"></i>
-                                <span class="nav-text">
-                                    Profiel
-                                </span>
-                            </a>
+                    </li>
+                    <div class="line"></div>
+                    <li class="margin">
+                        <a asp-controller="Employee" asp-action="UpdateEmployee" asp-route-user_Id="@Context.GetCurrentEmployeeModel().Id">
+                            <i class="fa fa-user nav-icon"></i>
+                            <span class="nav-text">
+                                Profiel
+                            </span>
+                        </a>
 
                     </li>
                     <div class="line"></div>
@@ -71,6 +71,15 @@
                             <i class="fa fa-calendar nav-icon"></i>
                             <span class="nav-text">
                                 Mijn agenda
+                            </span>
+                        </a>
+                    </li>
+                    <div class="line"></div>
+                    <li class="margin">
+                        <a asp-action="ViewHours" asp-controller="Hour">
+                            <i class="fa fa-clock-o nav-icon"></i>
+                            <span class="nav-text">
+                                Mijn uren
                             </span>
                         </a>
                     </li>

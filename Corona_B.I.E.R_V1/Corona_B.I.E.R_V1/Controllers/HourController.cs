@@ -23,6 +23,7 @@ using Corona_B.I.E.R_V1.ExtensionMethods;
 
 namespace Corona_B.I.E.R_V1.Controllers
 {
+    [Authorize]
     public class HourController : Controller
     {
         private readonly IWebHostEnvironment _hostingEnvironment;

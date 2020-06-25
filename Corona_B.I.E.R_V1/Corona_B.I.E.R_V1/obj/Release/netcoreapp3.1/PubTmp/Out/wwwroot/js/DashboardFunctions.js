@@ -28,7 +28,6 @@
     })
 
     function GenerateCalendender(event) {
-       event = event.slice(0, 4);
         var calendarEl = document.getElementById('Calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
             lang: 'nl',

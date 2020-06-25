@@ -9,6 +9,7 @@ using Corona_B.I.E.R_V1.Models;
 
 namespace Corona_B.I.E.R_V1.Controllers
 {
+    
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

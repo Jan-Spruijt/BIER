@@ -10,10 +10,12 @@ using DataLayerLibrary.DataModels;
 using Microsoft.AspNetCore.Mvc;
 using LogicLayerLibrary;
 using LogicLayerLibrary.ExtensionMethods;
+using Microsoft.AspNetCore.Authorization;
 using Org.BouncyCastle.Asn1.Ocsp;
 
 namespace Corona_B.I.E.R_V1.Controllers
 {
+    [Authorize]
     public class RequestController : Controller
     {
         public IActionResult SelectRequest()

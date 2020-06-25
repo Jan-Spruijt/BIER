@@ -20,3 +20,40 @@ body {
 .custom-file-label::after {
     content: "Kiezen" !important;
 }
+
+.incidentbutton {
+    bottom: 15px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    color: white;
+    font-size: 16px;
+    width: 30%;
+    outline: none;
+    background-color: #E11937 !important;
+    border-color: #E11937 !important;
+    font-weight: 700;
+}
+
+
+.incidentbutton:hover {
+        color: white;
+        outline: none;
+        background-color: #991F3D !important;
+        border-color: #991F3D !important;
+    }
+
+.bg_white_incident {
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    -webkit-box-shadow: 0px 9px 4px -6px rgba(194,190,194,1);
+    -moz-box-shadow: 0px 9px 4px -6px rgba(194,190,194,1);
+    box-shadow: 0px 9px 4px -6px rgba(194,190,194,1);
+}
+
+.movedown {
+    margin-top: 20px;
+}
